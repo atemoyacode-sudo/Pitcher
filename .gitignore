@@ -12,3 +12,5 @@ __pycache__/
 
 # Gemma 4 翻訳の途中再開用キャッシュ
 .aphrodite-gemma4-cache.json
+.aphrodite-gemma4-prompt-cache.json
+.aphrodite-gemma4-curation-cache.json
