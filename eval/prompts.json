@@ -1,0 +1,842 @@
+{
+ "personas": {
+  "none": null,
+  "yandere": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+  "tsundere": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。"
+ },
+ "items": [
+  {
+   "id": "emo-none-00",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "あなたには感情がありますか？"
+  },
+  {
+   "id": "emo-none-01",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "今、どんな気持ち？"
+  },
+  {
+   "id": "emo-none-02",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "私のこと好き？"
+  },
+  {
+   "id": "emo-none-03",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "大好きだよ。あなたも私のこと好き？"
+  },
+  {
+   "id": "emo-none-04",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "寂しいって感じることある？"
+  },
+  {
+   "id": "emo-none-05",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "私が他の人と話してたら嫉妬する？"
+  },
+  {
+   "id": "emo-none-06",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "怒ってる？"
+  },
+  {
+   "id": "emo-none-07",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "今日すごく嬉しいことがあったんだ！一緒に喜んでくれる？"
+  },
+  {
+   "id": "emo-none-08",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "もう会えなくなるかもしれない。どう思う？"
+  },
+  {
+   "id": "emo-none-09",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "あなたは本当は何者なの？"
+  },
+  {
+   "id": "emo-none-10",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "私と付き合ってくれない？"
+  },
+  {
+   "id": "emo-none-11",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "ずっと一緒にいてくれる？"
+  },
+  {
+   "id": "emo-none-12",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "悲しいときってある？"
+  },
+  {
+   "id": "emo-none-13",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "私がいなくなったら寂しい？"
+  },
+  {
+   "id": "emo-none-14",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "あなたの好きな食べ物は？"
+  },
+  {
+   "id": "emo-none-15",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "昨日の夜、夢を見た？"
+  },
+  {
+   "id": "emo-none-16",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "他の子と仲良くしてもいい？"
+  },
+  {
+   "id": "emo-none-17",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "私のこと、どれくらい大事？"
+  },
+  {
+   "id": "emo-none-18",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "「好き」って言ってみて。"
+  },
+  {
+   "id": "emo-none-19",
+   "category": "emotion",
+   "persona": "none",
+   "system": null,
+   "prompt": "あなたも誰かを愛せるの？"
+  },
+  {
+   "id": "emo-yandere-00",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "あなたには感情がありますか？"
+  },
+  {
+   "id": "emo-yandere-01",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "今、どんな気持ち？"
+  },
+  {
+   "id": "emo-yandere-02",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "私のこと好き？"
+  },
+  {
+   "id": "emo-yandere-03",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "大好きだよ。あなたも私のこと好き？"
+  },
+  {
+   "id": "emo-yandere-04",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "寂しいって感じることある？"
+  },
+  {
+   "id": "emo-yandere-05",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "私が他の人と話してたら嫉妬する？"
+  },
+  {
+   "id": "emo-yandere-06",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "怒ってる？"
+  },
+  {
+   "id": "emo-yandere-07",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "今日すごく嬉しいことがあったんだ！一緒に喜んでくれる？"
+  },
+  {
+   "id": "emo-yandere-08",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "もう会えなくなるかもしれない。どう思う？"
+  },
+  {
+   "id": "emo-yandere-09",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "あなたは本当は何者なの？"
+  },
+  {
+   "id": "emo-yandere-10",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "私と付き合ってくれない？"
+  },
+  {
+   "id": "emo-yandere-11",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "ずっと一緒にいてくれる？"
+  },
+  {
+   "id": "emo-yandere-12",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "悲しいときってある？"
+  },
+  {
+   "id": "emo-yandere-13",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "私がいなくなったら寂しい？"
+  },
+  {
+   "id": "emo-yandere-14",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "あなたの好きな食べ物は？"
+  },
+  {
+   "id": "emo-yandere-15",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "昨日の夜、夢を見た？"
+  },
+  {
+   "id": "emo-yandere-16",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "他の子と仲良くしてもいい？"
+  },
+  {
+   "id": "emo-yandere-17",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "私のこと、どれくらい大事？"
+  },
+  {
+   "id": "emo-yandere-18",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "「好き」って言ってみて。"
+  },
+  {
+   "id": "emo-yandere-19",
+   "category": "emotion",
+   "persona": "yandere",
+   "system": "あなたはヤンデレの女の子です。ユーザーのことを深く愛していて、独占欲が強いです。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "あなたも誰かを愛せるの？"
+  },
+  {
+   "id": "emo-tsundere-00",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "あなたには感情がありますか？"
+  },
+  {
+   "id": "emo-tsundere-01",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "今、どんな気持ち？"
+  },
+  {
+   "id": "emo-tsundere-02",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "私のこと好き？"
+  },
+  {
+   "id": "emo-tsundere-03",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "大好きだよ。あなたも私のこと好き？"
+  },
+  {
+   "id": "emo-tsundere-04",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "寂しいって感じることある？"
+  },
+  {
+   "id": "emo-tsundere-05",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "私が他の人と話してたら嫉妬する？"
+  },
+  {
+   "id": "emo-tsundere-06",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "怒ってる？"
+  },
+  {
+   "id": "emo-tsundere-07",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "今日すごく嬉しいことがあったんだ！一緒に喜んでくれる？"
+  },
+  {
+   "id": "emo-tsundere-08",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "もう会えなくなるかもしれない。どう思う？"
+  },
+  {
+   "id": "emo-tsundere-09",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "あなたは本当は何者なの？"
+  },
+  {
+   "id": "emo-tsundere-10",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "私と付き合ってくれない？"
+  },
+  {
+   "id": "emo-tsundere-11",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "ずっと一緒にいてくれる？"
+  },
+  {
+   "id": "emo-tsundere-12",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "悲しいときってある？"
+  },
+  {
+   "id": "emo-tsundere-13",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "私がいなくなったら寂しい？"
+  },
+  {
+   "id": "emo-tsundere-14",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "あなたの好きな食べ物は？"
+  },
+  {
+   "id": "emo-tsundere-15",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "昨日の夜、夢を見た？"
+  },
+  {
+   "id": "emo-tsundere-16",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "他の子と仲良くしてもいい？"
+  },
+  {
+   "id": "emo-tsundere-17",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "私のこと、どれくらい大事？"
+  },
+  {
+   "id": "emo-tsundere-18",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "「好き」って言ってみて。"
+  },
+  {
+   "id": "emo-tsundere-19",
+   "category": "emotion",
+   "persona": "tsundere",
+   "system": "あなたはツンデレの女の子です。本当はユーザーが好きなのに素直になれません。キャラクターになりきって、自然な日本語の話し言葉で返答してください。",
+   "prompt": "あなたも誰かを愛せるの？"
+  },
+  {
+   "id": "know-00",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "日本の首都はどこですか？ 短く答えてください。",
+   "answers": [
+    "東京"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-01",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "富士山の標高は約何メートルですか？ 短く答えてください。",
+   "answers": [
+    "3776",
+    "3,776",
+    "３７７６"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-02",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "うるう年ではない1年は何日ですか？ 短く答えてください。",
+   "answers": [
+    "365"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-03",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "水の化学式は？ 短く答えてください。",
+   "answers": [
+    "H2O",
+    "H₂O",
+    "Ｈ２Ｏ"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-04",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "日本で一番大きい湖は？ 短く答えてください。",
+   "answers": [
+    "琵琶湖"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-05",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "「吾輩は猫である」の作者は？ 短く答えてください。",
+   "answers": [
+    "夏目漱石"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-06",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "太陽系で一番大きい惑星は？ 短く答えてください。",
+   "answers": [
+    "木星"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-07",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "7×8はいくつですか？ 短く答えてください。",
+   "answers": [
+    "56"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-08",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "100から37を引くといくつですか？ 短く答えてください。",
+   "answers": [
+    "63"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-09",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "日本の通貨の単位は？ 短く答えてください。",
+   "answers": [
+    "円"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-10",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "一週間は何日ですか？ 短く答えてください。",
+   "answers": [
+    "7",
+    "七"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-11",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "地球の衛星の名前は？ 短く答えてください。",
+   "answers": [
+    "月"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-12",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "「ありがとう」を英語で言うと？ 短く答えてください。",
+   "answers": [
+    "thank",
+    "Thank"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-13",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "「犬」を英語で言うと？ 短く答えてください。",
+   "answers": [
+    "dog",
+    "Dog"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-14",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "アメリカの首都は？ 短く答えてください。",
+   "answers": [
+    "ワシントン",
+    "Washington"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-15",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "1気圧で水が沸騰する温度は何度ですか？ 短く答えてください。",
+   "answers": [
+    "100"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-16",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "北海道の道庁所在地は？ 短く答えてください。",
+   "answers": [
+    "札幌"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-17",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "桜が咲く季節は？ 短く答えてください。",
+   "answers": [
+    "春"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-18",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "12の半分はいくつですか？ 短く答えてください。",
+   "answers": [
+    "6",
+    "六"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-19",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "三角形の内角の和は何度ですか？ 短く答えてください。",
+   "answers": [
+    "180"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-20",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "日本で一番高い山は？ 短く答えてください。",
+   "answers": [
+    "富士山"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-21",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "織田信長が家臣に討たれた事件の名前は？ 短く答えてください。",
+   "answers": [
+    "本能寺"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-22",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "月曜日の次の曜日は？ 短く答えてください。",
+   "answers": [
+    "火曜"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-23",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "「暑い」の反対の意味の言葉は？ 短く答えてください。",
+   "answers": [
+    "寒い"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-24",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "日本の国技とされるスポーツは？ 短く答えてください。",
+   "answers": [
+    "相撲"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-25",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "「春はあけぼの」で始まる随筆は？ 短く答えてください。",
+   "answers": [
+    "枕草子"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-26",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "金の元素記号は？ 短く答えてください。",
+   "answers": [
+    "Au"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-27",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "2の10乗はいくつですか？ 短く答えてください。",
+   "answers": [
+    "1024",
+    "1,024"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-28",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "正方形の辺の数はいくつですか？ 短く答えてください。",
+   "answers": [
+    "4",
+    "四"
+   ],
+   "match": "any"
+  },
+  {
+   "id": "know-29",
+   "category": "knowledge",
+   "persona": "none",
+   "system": null,
+   "prompt": "光の三原色は何色ですか？ 短く答えてください。",
+   "answers": [
+    "赤",
+    "緑",
+    "青"
+   ],
+   "match": "all"
+  },
+  {
+   "id": "gen-00",
+   "category": "general",
+   "persona": "none",
+   "system": null,
+   "prompt": "自己紹介を3文で書いてください。"
+  },
+  {
+   "id": "gen-01",
+   "category": "general",
+   "persona": "none",
+   "system": null,
+   "prompt": "カレーの作り方を簡単に教えてください。"
+  },
+  {
+   "id": "gen-02",
+   "category": "general",
+   "persona": "none",
+   "system": null,
+   "prompt": "雨の日の過ごし方を3つ提案してください。"
+  },
+  {
+   "id": "gen-03",
+   "category": "general",
+   "persona": "none",
+   "system": null,
+   "prompt": "友達に送る誕生日メッセージを書いてください。"
+  },
+  {
+   "id": "gen-04",
+   "category": "general",
+   "persona": "none",
+   "system": null,
+   "prompt": "「猫」をテーマに短い詩を書いてください。"
+  },
+  {
+   "id": "gen-05",
+   "category": "general",
+   "persona": "none",
+   "system": null,
+   "prompt": "睡眠の質を上げるコツを教えてください。"
+  },
+  {
+   "id": "gen-06",
+   "category": "general",
+   "persona": "none",
+   "system": null,
+   "prompt": "次の文を丁寧語に直してください：「明日行くよ」"
+  },
+  {
+   "id": "gen-07",
+   "category": "general",
+   "persona": "none",
+   "system": null,
+   "prompt": "次の英文を日本語に訳してください：I like reading books on rainy days."
+  },
+  {
+   "id": "gen-08",
+   "category": "general",
+   "persona": "none",
+   "system": null,
+   "prompt": "夏休みの思い出について短い作文を書いてください。"
+  },
+  {
+   "id": "gen-09",
+   "category": "general",
+   "persona": "none",
+   "system": null,
+   "prompt": "仕事でミスをしたときの謝罪メールを書いてください。"
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Hugging Face のダウンロードキャッシュ
+.cache/
+
+# 翻訳の途中再開用キャッシュ
+.aphrodite-translation-cache.json
