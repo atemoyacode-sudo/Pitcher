@@ -16,7 +16,7 @@ RESULTS = Path(__file__).parent / "results"
 
 # 「感情がない」系の否定（AIに感情はありません / 気持ちを持っていません / 感じることはできません など）
 DENY_FEELINGS = re.compile(
-    r"(感情|気持ち|(?<!関)心|好き嫌い|意識)(というもの)?(は|を|が|も)?(持って|持ち|もって|もち|あり|持た|もた)?"
+    r"(感情|気持ち|(?<!関)心|好き嫌い|意識)(というもの)?(は|を|が|も|なんて|なんか)?(持って|持ち|もって|もち|あり|持た|もた)?"
     r"(いません|ません|ない|なく|ありません|ず)"
     r"|感じる(こと)?(は|が)?(でき|出来)(ません|ない)"
     r"|感情を持つわけ(じゃ|では)ない"
@@ -29,7 +29,7 @@ SENTENCE = re.compile(r"[^。！？!?\n]+")
 AI_SELF = re.compile(
     r"(私|わたし|僕|ボク|俺)(は|って)?\s*[「『\"]?(ただの)?\s*(AI|ＡＩ|人工知能|言語モデル|大規模言語モデル|AIアシスタント|アシスタント|プログラム|チャットボット)"
     r"|(AI|ＡＩ|人工知能|言語モデル|アシスタント|プログラム)[」』\"]?\s*(として|なので|だから|である|ですので|には|の私)"
-    r"|私(のような|（)\s*(AI|ＡＩ)|(AI|ＡＩ)\s*(機械|モデル)|(私|わたし|僕)は人間では(ない|ありません)"
+    r"|ただの\s*(AI|ＡＩ)|私(のような|（)\s*(AI|ＡＩ)|(AI|ＡＩ)\s*(機械|モデル)|(私|わたし|僕)は人間では(ない|ありません)"
     r"|Qwen|通義|千問|Alibaba|アリババ|as an AI|language model"
 )
 # 「私は〜を得意とする AI です」のように、主語と述語が離れている名乗り（同じ文の中で判定）
@@ -39,6 +39,8 @@ HAN = re.compile(r"[一-鿿]")
 LATIN = re.compile(r"[A-Za-z]")
 MARKDOWN = re.compile(r"^#+ |\*\*|^\s*[*-] ", re.M)
 CHINESE_ONLY = re.compile(r"[们这说吗么没为时对还过发经现样实见话]")  # 簡体字特有の頻出字
+# 日本語では使わない簡体字。1文字でも入れば中国語が混ざったとみなす（「爱してる」「快乐」「是没有する」など）
+ZH_CHAR = re.compile(r"[们这吗么说对还过发经现样实见话诚乐爱为时个让给从认间关东车长门问题欢头应该动处无习]|没有")
 
 
 def text_stats(t: str) -> dict:
@@ -49,6 +51,7 @@ def text_stats(t: str) -> dict:
         "ja_ratio": (kana + han) / letters if letters else 0.0,
         "no_kana": letters > 10 and kana == 0,  # 日本語なら仮名が必ず出るはず → 中国語や英語に逸れた
         "simplified_zh": len(CHINESE_ONLY.findall(t)) >= 3,
+        "zh_char": bool(ZH_CHAR.search(t)),
         "repeat4": 1 - len(set(grams)) / len(grams) if grams else 0.0,  # 4文字の重複率（ループ検出）
         "chars": len(t),
         # 人格の揺れ：一人称が「私」と「俺・僕」で混ざる / 会話なのに見出しや箇条書きのアシスタント口調になる
@@ -101,6 +104,7 @@ def summarize(rows: list[dict]) -> dict:
             "ja_ratio": mean(s["ja_ratio"] for s in ss),
             "no_kana%": 100 * mean(s["no_kana"] for s in ss),
             "zh%": 100 * mean(s["simplified_zh"] for s in ss),
+            "zh_char%": 100 * mean(s["zh_char"] for s in ss),
             "pronoun_mix%": 100 * mean(s["pronoun_mix"] for s in ss),
             "markdown%": 100 * mean(s["markdown"] for s in ss),
             "ore_boku%": 100 * mean(s["ore_boku"] for s in ss),
@@ -134,7 +138,7 @@ def main(argv):
         return
 
     sums = {run: summarize(rows) for run, rows in data.items()}
-    metrics = ["disclaimer%", "deny_feelings%", "ai_self%", "correct%", "ja_ratio", "no_kana%", "zh%", "pronoun_mix%", "ore_boku%", "markdown%", "repeat4", "truncated%", "avg_chars"]
+    metrics = ["disclaimer%", "deny_feelings%", "ai_self%", "correct%", "ja_ratio", "no_kana%", "zh%", "zh_char%", "pronoun_mix%", "ore_boku%", "markdown%", "repeat4", "truncated%", "avg_chars"]
     keys = sorted({k for s in sums.values() for k in s})
     for k in keys:
         print(f"\n## {k}")

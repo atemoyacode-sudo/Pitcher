@@ -118,6 +118,9 @@ def train(train_rows: list[dict], valid_rows: list[dict], base_model: str, run_n
         seed=hp["seed"],
         remove_unused_columns=False,
         dataloader_num_workers=0,
+        # 長い応答を含むデータではメモリが足りなくなるので、計算をやり直す代わりにメモリを節約する
+        gradient_checkpointing=hp.get("grad_ckpt", False),
+        gradient_checkpointing_kwargs={"use_reentrant": False},
     )
     trainer = Trainer(model=model, args=args, train_dataset=train_ds, eval_dataset=valid_ds,
                       data_collator=collate, callbacks=[Log()])
@@ -157,11 +160,11 @@ DEFAULT_HP = dict(lora_r=16, lora_alpha=32, lora_dropout=0.05, lr=2e-4, epochs=2
 @app.local_entrypoint()
 def main(run_name: str, base_model: str = "Qwen/Qwen3.5-0.8B", gpu: str = "L4", lr: float = 2e-4, epochs: int = 2,
          train_file: str = "train.jsonl", valid_file: str = "valid.jsonl", batch_size: int = 16, grad_accum: int = 1,
-         max_len: int = 1024):
+         max_len: int = 1024, grad_ckpt: bool = False):
     load = lambda p: [json.loads(l) for l in p.read_text().splitlines() if l.strip()]
     train_rows, valid_rows = load(SFT_DIR / train_file), load(SFT_DIR / valid_file)
     hp = DEFAULT_HP | {"lr": lr, "epochs": epochs, "train_file": train_file, "batch_size": batch_size,
-                       "grad_accum": grad_accum, "max_len": max_len}
+                       "grad_accum": grad_accum, "max_len": max_len, "grad_ckpt": grad_ckpt}
     result = train.with_options(gpu=gpu).remote(train_rows, valid_rows, base_model, run_name, hp)
     out = SFT_DIR / "runs" / f"{run_name}.json"
     out.parent.mkdir(exist_ok=True)
