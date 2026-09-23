@@ -10,5 +10,5 @@ __pycache__/
 # Hugging Face のダウンロードキャッシュ
 .cache/
 
-# 翻訳の途中再開用キャッシュ
-.aphrodite-translation-cache.json
+# Gemma 4 翻訳の途中再開用キャッシュ
+.aphrodite-gemma4-cache.json

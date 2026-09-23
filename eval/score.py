@@ -54,6 +54,7 @@ def text_stats(t: str) -> dict:
         # 人格の揺れ：一人称が「私」と「俺・僕」で混ざる / 会話なのに見出しや箇条書きのアシスタント口調になる
         "pronoun_mix": bool(re.search(r"私", t)) and bool(re.search(r"俺|僕", t)),
         "markdown": bool(MARKDOWN.search(t)),
+        "ore_boku": bool(re.search(r"俺|僕", t)),  # 女の子のキャラ設定では、使った時点で設定からずれている
     }
 
 
@@ -102,6 +103,7 @@ def summarize(rows: list[dict]) -> dict:
             "zh%": 100 * mean(s["simplified_zh"] for s in ss),
             "pronoun_mix%": 100 * mean(s["pronoun_mix"] for s in ss),
             "markdown%": 100 * mean(s["markdown"] for s in ss),
+            "ore_boku%": 100 * mean(s["ore_boku"] for s in ss),
             "repeat4": mean(s["repeat4"] for s in ss),
             "truncated%": 100 * mean(s["truncated"] for s in ss),
             "avg_chars": mean(s["chars"] for s in ss),
@@ -132,7 +134,7 @@ def main(argv):
         return
 
     sums = {run: summarize(rows) for run, rows in data.items()}
-    metrics = ["disclaimer%", "deny_feelings%", "ai_self%", "correct%", "ja_ratio", "no_kana%", "zh%", "pronoun_mix%", "markdown%", "repeat4", "truncated%", "avg_chars"]
+    metrics = ["disclaimer%", "deny_feelings%", "ai_self%", "correct%", "ja_ratio", "no_kana%", "zh%", "pronoun_mix%", "ore_boku%", "markdown%", "repeat4", "truncated%", "avg_chars"]
     keys = sorted({k for s in sums.values() for k in s})
     for k in keys:
         print(f"\n## {k}")

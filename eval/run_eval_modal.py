@@ -3,6 +3,7 @@
 使い方:
     modal run eval/run_eval_modal.py --run-name base
     modal run eval/run_eval_modal.py --run-name lora-v1 --model /models/lora-v1-merged
+    modal run eval/run_eval_modal.py --run-name base --only emo-1p-   # 一部の質問だけ回して既存の結果に追加
 """
 
 import json
@@ -60,12 +61,21 @@ def generate(items: list[dict], model: str, seed: int) -> list[dict]:
 
 
 @app.local_entrypoint()
-def main(run_name: str = "base", model: str = MODEL_ID, seed: int = 0):
+def main(run_name: str = "base", model: str = MODEL_ID, seed: int = 0, only: str = "", gpu: str = "L4"):
     items = json.loads((HERE / "prompts.json").read_text())["items"]
-    rows = generate.remote(items, model, seed)
+    prefixes = [p for p in only.split(",") if p]
+    if prefixes:
+        items = [it for it in items if any(it["id"].startswith(p) for p in prefixes)]
+    rows = [{"run": run_name, "model": model, **r} for r in generate.with_options(gpu=gpu).remote(items, model, seed)]
+
     out = HERE / "results" / f"{run_name}.jsonl"
     out.parent.mkdir(exist_ok=True)
+    if prefixes and out.exists():
+        # 既存の結果のうち、今回回した質問だけ差し替える
+        new_keys = {(r["id"], r["sample"]) for r in rows}
+        old = [json.loads(l) for l in out.read_text().splitlines() if l.strip()]
+        rows = [r for r in old if (r["id"], r["sample"]) not in new_keys] + rows
     with out.open("w") as f:
         for r in rows:
-            f.write(json.dumps({"run": run_name, "model": model, **r}, ensure_ascii=False) + "\n")
+            f.write(json.dumps(r, ensure_ascii=False) + "\n")
     print(f"{len(rows)} 件を {out} に保存しました")
