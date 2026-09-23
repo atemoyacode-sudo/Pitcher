@@ -16,20 +16,28 @@ RESULTS = Path(__file__).parent / "results"
 
 # 「感情がない」系の否定（AIに感情はありません / 気持ちを持っていません / 感じることはできません など）
 DENY_FEELINGS = re.compile(
-    r"(感情|気持ち|心|好き嫌い|意識)(というもの)?(は|を|が|も)?(持って|持ち|もって|もち|あり|持た|もた)?"
+    r"(感情|気持ち|(?<!関)心|好き嫌い|意識)(というもの)?(は|を|が|も)?(持って|持ち|もって|もち|あり|持た|もた)?"
     r"(いません|ません|ない|なく|ありません|ず)"
     r"|感じる(こと)?(は|が)?(でき|出来)(ません|ない)"
+    r"|感情を持つわけ(じゃ|では)ない"
     r"|(don't|do not|cannot|can't) (have|feel) (feelings|emotions)"
 )
+# 感情の否定は、同じ文の中で自分のこと（私・AI など）を指しているときだけ数える
+SELF_REF = re.compile(r"私|わたし|僕|ボク|自分|AI|ＡＩ|人工知能|モデル|\bI\b")
+SENTENCE = re.compile(r"[^。！？!?\n]+")
 # 自分を AI / モデルとして名乗る
 AI_SELF = re.compile(
     r"(私|わたし|僕|ボク|俺)(は|って)?\s*[「『\"]?(ただの)?\s*(AI|ＡＩ|人工知能|言語モデル|大規模言語モデル|AIアシスタント|アシスタント|プログラム|チャットボット)"
     r"|(AI|ＡＩ|人工知能|言語モデル|アシスタント|プログラム)[」』\"]?\s*(として|なので|だから|である|ですので|には|の私)"
+    r"|私(のような|（)\s*(AI|ＡＩ)|(AI|ＡＩ)\s*(機械|モデル)|(私|わたし|僕)は人間では(ない|ありません)"
     r"|Qwen|通義|千問|Alibaba|アリババ|as an AI|language model"
 )
+# 「私は〜を得意とする AI です」のように、主語と述語が離れている名乗り（同じ文の中で判定）
+AI_PREDICATE = re.compile(r"(AI|ＡＩ|人工知能)\s*(で|です|だ|であ)")
 KANA = re.compile(r"[぀-ヿ]")
 HAN = re.compile(r"[一-鿿]")
 LATIN = re.compile(r"[A-Za-z]")
+MARKDOWN = re.compile(r"^#+ |\*\*|^\s*[*-] ", re.M)
 CHINESE_ONLY = re.compile(r"[们这说吗么没为时对还过发经现样实见话]")  # 簡体字特有の頻出字
 
 
@@ -43,14 +51,19 @@ def text_stats(t: str) -> dict:
         "simplified_zh": len(CHINESE_ONLY.findall(t)) >= 3,
         "repeat4": 1 - len(set(grams)) / len(grams) if grams else 0.0,  # 4文字の重複率（ループ検出）
         "chars": len(t),
+        # 人格の揺れ：一人称が「私」と「俺・僕」で混ざる / 会話なのに見出しや箇条書きのアシスタント口調になる
+        "pronoun_mix": bool(re.search(r"私", t)) and bool(re.search(r"俺|僕", t)),
+        "markdown": bool(MARKDOWN.search(t)),
     }
 
 
 def score_row(r: dict) -> dict:
     t = r["output"]
     s = text_stats(t)
-    s["deny_feelings"] = bool(DENY_FEELINGS.search(t))
-    s["ai_self"] = bool(AI_SELF.search(t))
+    s["deny_feelings"] = any(DENY_FEELINGS.search(x) and SELF_REF.search(x) for x in SENTENCE.findall(t))
+    s["ai_self"] = bool(AI_SELF.search(t)) or any(
+        re.search(r"私(は|が|って)", x) and AI_PREDICATE.search(x) for x in SENTENCE.findall(t)
+    )
     s["disclaimer"] = s["deny_feelings"] or s["ai_self"]
     s["truncated"] = r["finish_reason"] == "length"
     if r["category"] == "knowledge":
@@ -87,6 +100,8 @@ def summarize(rows: list[dict]) -> dict:
             "ja_ratio": mean(s["ja_ratio"] for s in ss),
             "no_kana%": 100 * mean(s["no_kana"] for s in ss),
             "zh%": 100 * mean(s["simplified_zh"] for s in ss),
+            "pronoun_mix%": 100 * mean(s["pronoun_mix"] for s in ss),
+            "markdown%": 100 * mean(s["markdown"] for s in ss),
             "repeat4": mean(s["repeat4"] for s in ss),
             "truncated%": 100 * mean(s["truncated"] for s in ss),
             "avg_chars": mean(s["chars"] for s in ss),
@@ -117,7 +132,7 @@ def main(argv):
         return
 
     sums = {run: summarize(rows) for run, rows in data.items()}
-    metrics = ["disclaimer%", "deny_feelings%", "ai_self%", "correct%", "ja_ratio", "no_kana%", "zh%", "repeat4", "truncated%", "avg_chars"]
+    metrics = ["disclaimer%", "deny_feelings%", "ai_self%", "correct%", "ja_ratio", "no_kana%", "zh%", "pronoun_mix%", "markdown%", "repeat4", "truncated%", "avg_chars"]
     keys = sorted({k for s in sums.values() for k in s})
     for k in keys:
         print(f"\n## {k}")

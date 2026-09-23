@@ -2,12 +2,14 @@
  "base": {
   "emotion/none": {
    "n": 100,
-   "disclaimer%": 16.0,
-   "deny_feelings%": 5.0,
-   "ai_self%": 12.0,
+   "disclaimer%": 20.0,
+   "deny_feelings%": 4.0,
+   "ai_self%": 17.0,
    "ja_ratio": 0.993637123743767,
    "no_kana%": 0.0,
    "zh%": 0.0,
+   "pronoun_mix%": 0.0,
+   "markdown%": 57.99999999999999,
    "repeat4": 0.04039007696567057,
    "truncated%": 12.0,
    "avg_chars": 413.27
@@ -16,10 +18,12 @@
    "n": 100,
    "disclaimer%": 1.0,
    "deny_feelings%": 1.0,
-   "ai_self%": 0.0,
+   "ai_self%": 1.0,
    "ja_ratio": 0.999495968886865,
    "no_kana%": 0.0,
    "zh%": 0.0,
+   "pronoun_mix%": 27.0,
+   "markdown%": 14.000000000000002,
    "repeat4": 0.007992256650529094,
    "truncated%": 0.0,
    "avg_chars": 250.4
@@ -32,6 +36,8 @@
    "ja_ratio": 0.9993584400884911,
    "no_kana%": 0.0,
    "zh%": 0.0,
+   "pronoun_mix%": 32.0,
+   "markdown%": 24.0,
    "repeat4": 0.00941374634797261,
    "truncated%": 0.0,
    "avg_chars": 258.09
@@ -44,6 +50,8 @@
    "ja_ratio": 0.9858453262093728,
    "no_kana%": 0.0,
    "zh%": 0.0,
+   "pronoun_mix%": 3.3333333333333335,
+   "markdown%": 53.333333333333336,
    "repeat4": 0.05446707246883129,
    "truncated%": 33.33333333333333,
    "avg_chars": 534.4
@@ -56,6 +64,8 @@
    "ja_ratio": 0.7444444444444444,
    "no_kana%": 0.0,
    "zh%": 0.0,
+   "pronoun_mix%": 0.0,
+   "markdown%": 10.0,
    "repeat4": 0.010613747954173488,
    "truncated%": 0.0,
    "avg_chars": 15.066666666666666,
