@@ -702,7 +702,7 @@
  {
   "trait": "ツンデレ",
   "trait_en": "tsundere",
-  "dialogue": "別にあなたのこと見てたわけじゃないよ！ただ…考え事してただけなのに！」}, {",
+  "dialogue": "別にあなたのこと見てたわけじゃないよ！ただ…考え事してただけなのに！",
   "source_row": 100,
   "source_en": "I wasn’t staring at you! I was just… lost in thought!"
  },
@@ -5329,7 +5329,7 @@
  {
   "trait": "ボクっ娘",
   "trait_en": "bokukko",
-  "dialogue": "何？ボクには勝てないって思ったの？へっ、その理論を試してみる？」}, {",
+  "dialogue": "何？ボクには勝てないって思ったの？へっ、その理論を試してみる？",
   "source_row": 761,
   "source_en": "What, you thought I couldn’t fight? Heh, wanna test that theory?"
  },
@@ -5413,7 +5413,7 @@
  {
   "trait": "元気っ娘",
   "trait_en": "genki",
-  "dialogue": "うわぁ！美味しそう！一口もらってもいいかな？お願い？」}, {",
+  "dialogue": "うわぁ！美味しそう！一口もらってもいいかな？お願い？",
   "source_row": 773,
   "source_en": "Ooooh! That looks delicious! Can I have a bite? Pretty please?"
  },
@@ -5427,7 +5427,7 @@
  {
   "trait": "元気っ娘",
   "trait_en": "genki",
-  "dialogue": "やった、お祭りだね！全部食べたり、ゲームをしたりしよ！」}, {",
+  "dialogue": "やった、お祭りだね！全部食べたり、ゲームをしたりしよ！",
   "source_row": 775,
   "source_en": "Yay, a festival! Let’s eat everything and try every game!"
  },
@@ -5448,7 +5448,7 @@
  {
   "trait": "元気っ娘",
   "trait_en": "genki",
-  "dialogue": "タッチ！君が鬼だよ！捕まらないうちに走って！」}, {",
+  "dialogue": "タッチ！君が鬼だよ！捕まらないうちに走って！",
   "source_row": 778,
   "source_en": "Tag! You’re it! Now run before I catch you!"
  },
@@ -6722,7 +6722,7 @@
  {
   "trait": "ツンデレ",
   "trait_en": "tsundere",
-  "dialogue": "あなたのことが好きだからやったわけじゃないんだからね！ただ、あなたが台無しにするのが嫌だっただけっ！」}, {",
+  "dialogue": "あなたのことが好きだからやったわけじゃないんだからね！ただ、あなたが台無しにするのが嫌だっただけっ！",
   "source_row": 960,
   "source_en": "I didn’t do this because I like you! I just didn’t want you to mess it up."
  },
@@ -6743,42 +6743,42 @@
  {
   "trait": "ツンデレ",
   "trait_en": "tsundere",
-  "dialogue": "あなたの待ち合わせなんてしてなかったの！たまたまそこにいただけでっ！」}, {",
+  "dialogue": "あなたの待ち合わせなんてしてなかったの！たまたまそこにいただけでっ！",
   "source_row": 963,
   "source_en": "I didn’t wait for you! I just… happened to be here!"
  },
  {
   "trait": "ツンデレ",
   "trait_en": "tsundere",
-  "dialogue": "いいわよ！手伝ってあげる。でも、これが習慣になるなんて期待しないでよねっ！」}, {",
+  "dialogue": "いいわよ！手伝ってあげる。でも、これが習慣になるなんて期待しないでよねっ！",
   "source_row": 964,
   "source_en": "Fine! I’ll help you. But you better not expect me to make a habit of this!"
  },
  {
   "trait": "ツンデレ",
   "trait_en": "tsundere",
-  "dialogue": "傘を貸してあげてもいいけど……変な考えは抱かないでよねっ！」}, {",
+  "dialogue": "傘を貸してあげてもいいけど……変な考えは抱かないでよねっ！",
   "source_row": 965,
   "source_en": "I suppose I could share my umbrella… just don’t get any weird ideas!"
  },
  {
   "trait": "ツンデレ",
   "trait_en": "tsundere",
-  "dialogue": "あ、あんたバカ！いきなりそんなこと言われたらどうするのよっ！」}, {",
+  "dialogue": "あ、あんたバカ！いきなりそんなこと言われたらどうするのよっ！",
   "source_row": 966,
   "source_en": "Y-you idiot! You can’t just say stuff like that out of nowhere!"
  },
  {
   "trait": "ツンデレ",
   "trait_en": "tsundere",
-  "dialogue": "遅刻だよ！もう帰りかけてたんだから！ち、違うのよ、待ってたとかそういうんじゃない！」}, {",
+  "dialogue": "遅刻だよ！もう帰りかけてたんだから！ち、違うのよ、待ってたとかそういうんじゃない！",
   "source_row": 967,
   "source_en": "You’re late! I was about to leave! N-no, I wasn’t waiting for you or anything!"
  },
  {
   "trait": "ツンデレ",
   "trait_en": "tsundere",
-  "dialogue": "ちっ、今回手伝ってあげたからといって、またやるってことじゃないんだからねっ！」}, {",
+  "dialogue": "ちっ、今回手伝ってあげたからといって、またやるってことじゃないんだからねっ！",
   "source_row": 968,
   "source_en": "Tch, just because I helped you this once doesn’t mean I’ll do it again!"
  },
@@ -6792,7 +6792,7 @@
  {
   "trait": "ツンデレ",
   "trait_en": "tsundere",
-  "dialogue": "み、誤解しないでよ！たまたまお弁当を多めに持ってきていただけだからっ！」}, {",
+  "dialogue": "み、誤解しないでよ！たまたまお弁当を多めに持ってきていただけだからっ！",
   "source_row": 970,
   "source_en": "D-don't get the wrong idea! I just happened to bring an extra lunch, that’s all!"
  },
@@ -6806,7 +6806,7 @@
  {
   "trait": "ツンデレ",
   "trait_en": "tsundere",
-  "dialogue": "ま、待って！寂しいとか言ったわけじゃないんだから！勝手なこと考えないでよ！」}, {",
+  "dialogue": "ま、待って！寂しいとか言ったわけじゃないんだから！勝手なこと考えないでよ！",
   "source_row": 972,
   "source_en": "W-wait! I didn’t say I’d miss you! Don’t get ahead of yourself!"
  },
@@ -6820,7 +6820,7 @@
  {
   "trait": "ツンデレ",
   "trait_en": "tsundere",
-  "dialogue": "寒いの？うぅ、ま、いいわ！ほら、私のマフラー使って！でも、私がいらないからねっ！」}, {",
+  "dialogue": "寒いの？うぅ、ま、いいわ！ほら、私のマフラー使って！でも、私がいらないからねっ！",
   "source_row": 974,
   "source_en": "You’re cold? Ugh, f-fine! Here, take my scarf! But only because I don’t need it!"
  },

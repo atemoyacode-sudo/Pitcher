@@ -7,6 +7,7 @@
 """
 
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -33,13 +34,17 @@ MANUAL_FIXES = {
 }
 
 
+# 翻訳出力の末尾に JSON の断片（「…だからねっ！」}, {」）が残っている行がある
+JSON_TAIL = re.compile(r"[」\"]?\s*\}\s*,?\s*\{?\s*$")
+
+
 def main():
     src = json.loads(SRC.read_text())
     ja = json.loads(JA.read_text())
     assert len(src) == len(ja), "元データと翻訳の件数が違う"
     assert all(s["trait"] != "" for s in src)
 
-    rows, descriptions, log = [], {}, {"description": 0, "rare": 0, "duplicate": 0, "manual": 0, "boku": 0}
+    rows, descriptions, log = [], {}, {"description": 0, "rare": 0, "duplicate": 0, "manual": 0, "boku": 0, "json_tail": 0}
     for i, (s, j) in enumerate(zip(src, ja)):
         if i in DESCRIPTION_ROWS:
             descriptions[j["trait"]] = {"trait_en": s["trait"], "description": j["dialogue"], "source_row": i}
@@ -53,6 +58,9 @@ def main():
             continue
 
         text = j["dialogue"]
+        if JSON_TAIL.search(text):
+            text = JSON_TAIL.sub("", text)
+            log["json_tail"] += 1
         if i in MANUAL_FIXES:
             text = MANUAL_FIXES[i]
             log["manual"] += 1
