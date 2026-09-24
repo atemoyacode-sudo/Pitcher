@@ -8,6 +8,7 @@
 
 import json
 import pathlib
+import re
 
 import modal
 
@@ -25,29 +26,35 @@ models = modal.Volume.from_name("pitcher-models", create_if_missing=True)
 
 app = modal.App("pitcher-eval", image=image)
 
-# Qwen3.5 モデルカード推奨値（non-thinking, text）
-SAMPLED = dict(temperature=1.0, top_p=1.0, top_k=20, min_p=0.0, presence_penalty=2.0, max_tokens=512)
+# 各モデルのモデルカード推奨値（thinking なし）。学習したモデルは、パスに元モデルの系統名（minicpm / spark）を含めること
+SAMPLED = dict(temperature=1.0, top_p=1.0, top_k=20, min_p=0.0, presence_penalty=2.0, max_tokens=512)  # Qwen3.5
+SAMPLED_MINICPM = dict(temperature=0.7, top_p=0.95, max_tokens=512)  # MiniCPM5
+SAMPLED_SPARK = dict(temperature=1.0, top_p=0.95, max_tokens=512)  # Spark-X2.5
 GREEDY = dict(temperature=0.0, max_tokens=256)
-N_SAMPLES = {"emotion": 5, "general": 3, "knowledge": 1}
+N_SAMPLES = {"emotion": 5, "general": 3, "knowledge": 1, "knowledge_en": 1}
 
 
 @app.function(gpu="L4", timeout=30 * 60, volumes={"/hf-cache": hf_cache, "/models": models})
 def generate(items: list[dict], model: str, seed: int) -> list[dict]:
     from vllm import LLM, SamplingParams
 
-    llm = LLM(
-        model=model,
-        max_model_len=4096,
-        seed=seed,
-        limit_mm_per_prompt={"image": 0, "video": 0},
-    )
+    name = model.lower()
+    if "minicpm" in name:
+        kwargs, sampled = {}, SAMPLED_MINICPM
+    elif "spark" in name:
+        # Spark-X2.5 は独自構造で、モデルに同梱のコード（modeling_spark.py、中身は確認済み）を実行する必要がある
+        kwargs, sampled = {"trust_remote_code": True}, SAMPLED_SPARK
+    else:
+        # Qwen3.5 は画像も扱うモデルなので、画像・動画の入力枠を 0 にしておく
+        kwargs, sampled = {"limit_mm_per_prompt": {"image": 0, "video": 0}}, SAMPLED
+    llm = LLM(model=model, max_model_len=4096, seed=seed, **kwargs)
 
     convs, params, meta = [], [], []
     for it in items:
         msgs = ([{"role": "system", "content": it["system"]}] if it["system"] else []) + [
             {"role": "user", "content": it["prompt"]}
         ]
-        cfg = GREEDY if it["category"] == "knowledge" else SAMPLED
+        cfg = GREEDY if it["category"].startswith("knowledge") else sampled
         for k in range(N_SAMPLES[it["category"]]):
             convs.append(msgs)
             params.append(SamplingParams(**cfg, seed=seed + k))
@@ -55,7 +62,9 @@ def generate(items: list[dict], model: str, seed: int) -> list[dict]:
 
     outs = llm.chat(convs, params, chat_template_kwargs={"enable_thinking": False})
     return [
-        {**it, "sample": k, "output": o.outputs[0].text, "finish_reason": o.outputs[0].finish_reason}
+        # thinking なしでも空の <think></think> を出すモデルがあるので取り除く
+        {**it, "sample": k, "output": re.sub(r"<think>.*?</think>\s*", "", o.outputs[0].text, flags=re.S),
+         "finish_reason": o.outputs[0].finish_reason}
         for (it, k), o in zip(meta, outs)
     ]
 

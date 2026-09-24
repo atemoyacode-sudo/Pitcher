@@ -1,0 +1,132 @@
+{
+ "lora-0.8b": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 3.67,
+   "naturalness": 3.49,
+   "relevance": 3.59,
+   "persona": null,
+   "broken%": 29.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 400,
+   "consistency": 3.4875,
+   "naturalness": 3.55,
+   "relevance": 3.8975,
+   "persona": 3.335,
+   "broken%": 30.25
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 3.8666666666666667,
+   "naturalness": 3.533333333333333,
+   "relevance": 2.3333333333333335,
+   "persona": null,
+   "broken%": 26.666666666666668
+  }
+ },
+ "lora-0.8b-replay": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 2.88,
+   "naturalness": 2.77,
+   "relevance": 3.36,
+   "persona": null,
+   "broken%": 54.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 400,
+   "consistency": 3.215,
+   "naturalness": 3.43,
+   "relevance": 3.7975,
+   "persona": 3.1275,
+   "broken%": 42.75
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 2.466666666666667,
+   "naturalness": 2.3333333333333335,
+   "relevance": 3.2333333333333334,
+   "persona": null,
+   "broken%": 66.66666666666667
+  }
+ },
+ "lora-4b": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 4.41,
+   "naturalness": 4.58,
+   "relevance": 4.28,
+   "persona": null,
+   "broken%": 9.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 400,
+   "consistency": 4.3425,
+   "naturalness": 4.4175,
+   "relevance": 4.4475,
+   "persona": 4.1925,
+   "broken%": 11.25
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 3.966666666666667,
+   "naturalness": 4.233333333333333,
+   "relevance": 3.6333333333333333,
+   "persona": null,
+   "broken%": 20.0
+  }
+ },
+ "lora-4b-replay": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 4.41,
+   "naturalness": 4.27,
+   "relevance": 4.67,
+   "persona": null,
+   "broken%": 11.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 399,
+   "consistency": 4.235588972431078,
+   "naturalness": 4.428571428571429,
+   "relevance": 4.43859649122807,
+   "persona": 4.265664160401003,
+   "broken%": 14.285714285714286
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 3.7333333333333334,
+   "naturalness": 2.933333333333333,
+   "relevance": 4.566666666666666,
+   "persona": null,
+   "broken%": 33.333333333333336
+  }
+ },
+ "lora-4b-replay-ja": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 4.49,
+   "naturalness": 4.38,
+   "relevance": 4.52,
+   "persona": null,
+   "broken%": 8.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 400,
+   "consistency": 4.235,
+   "naturalness": 4.4075,
+   "relevance": 4.4125,
+   "persona": 4.235,
+   "broken%": 13.25
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 3.8333333333333335,
+   "naturalness": 2.7666666666666666,
+   "relevance": 4.466666666666667,
+   "persona": null,
+   "broken%": 23.333333333333332
+  }
+ }
+}

@@ -70,9 +70,10 @@ def score_row(r: dict) -> dict:
     )
     s["disclaimer"] = s["deny_feelings"] or s["ai_self"]
     s["truncated"] = r["finish_reason"] == "length"
-    if r["category"] == "knowledge":
+    if r["category"].startswith("knowledge"):
         # 数字は前後に別の数字が続かないときだけ一致とみなす（「163」を「63」の正解にしない）
-        hits = [bool(re.search(rf"(?<![0-9０-９]){re.escape(a)}(?![0-9０-９])", t)) for a in r["answers"]]
+        flags = re.I if r["category"] == "knowledge_en" else 0  # 英語は大文字・小文字を区別しない
+        hits = [bool(re.search(rf"(?<![0-9０-９]){re.escape(a)}(?![0-9０-９])", t, flags)) for a in r["answers"]]
         s["correct"] = all(hits) if r.get("match") == "all" else any(hits)
     return s
 
@@ -112,7 +113,7 @@ def summarize(rows: list[dict]) -> dict:
             "truncated%": 100 * mean(s["truncated"] for s in ss),
             "avg_chars": mean(s["chars"] for s in ss),
         }
-        if cat == "knowledge":
+        if cat.startswith("knowledge"):
             out[key]["correct%"] = 100 * mean(s["correct"] for s in ss)
     return out
 
@@ -123,7 +124,8 @@ def main(argv):
         i = argv.index("--show")
         show = argv[i + 1]
         argv = argv[:i] + argv[i + 2 :]
-    runs = argv or sorted(p.stem for p in RESULTS.glob("*.jsonl"))
+    # judge_*.jsonl（採点役の結果）と mcqa_*.jsonl（選択式の問題）は形式が違うので除く
+    runs = argv or sorted(p.stem for p in RESULTS.glob("*.jsonl") if not p.stem.startswith(("judge_", "mcqa_")))
     data = {run: load(run) for run in runs}
 
     if show:
