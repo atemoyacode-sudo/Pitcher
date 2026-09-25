@@ -32,3 +32,4 @@ eval/luna/judge_outputs_*.jsonl
 # ローカル評価用のツール（llama.cpp のソースなど）
 tools/
 eval/results/llama-server.log
+data/release/

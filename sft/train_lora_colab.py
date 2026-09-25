@@ -49,6 +49,7 @@ def main():
     ap.add_argument("--grad-accum", type=int, default=1)
     ap.add_argument("--max-len", type=int, default=1024)
     ap.add_argument("--grad-ckpt", action="store_true")
+    ap.add_argument("--drop-long", action="store_true", help="上限（--max-len）を超える例は途中で切らずに除く")
     ap.add_argument("--lora-r", type=int, default=16)
     ap.add_argument("--seed", type=int, default=0)
     a = ap.parse_args()
@@ -71,7 +72,13 @@ def main():
     suffix = answer_suffix(tokenizer)
     print("応答の終わりの記号:", repr(suffix), flush=True)
     load = lambda p: [json.loads(l) for l in open(p) if l.strip()]
-    train_ds = [encode(tokenizer, r["messages"], suffix, a.max_len) for r in load(a.train)]
+    if a.drop_long:
+        # 途中で切った例を学習すると「文の途中で終わる」ことを覚えるので、長すぎる例は使わない
+        full = [encode(tokenizer, r["messages"], suffix, 10**9) for r in load(a.train)]
+        train_ds = [x for x in full if len(x["input_ids"]) <= a.max_len]
+        print(f"上限 {a.max_len} トークンを超える {len(full) - len(train_ds)} 件を除外", flush=True)
+    else:
+        train_ds = [encode(tokenizer, r["messages"], suffix, a.max_len) for r in load(a.train)]
     valid_ds = [encode(tokenizer, r["messages"], suffix, a.max_len) for r in load(a.valid)]
     n_tokens = sum(len(x["input_ids"]) for x in train_ds)
     print(f"学習 {len(train_ds)} 件 / 検証 {len(valid_ds)} 件 / 学習トークン {n_tokens:,}（1周あたり）", flush=True)

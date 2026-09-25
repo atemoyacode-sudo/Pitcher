@@ -25,8 +25,12 @@
 - [x] 元モデルの比較（Qwen3.5 / MiniCPM5 / Spark-X2.5）
 - [x] Spark-X2.5-4B の日本語化（第1段階、SFT-General-Japanese-60K で LoRA）：自然さは Qwen3.5-4B にあと一歩（[比較レポート](eval/results/model_comparison_report.md)の第5節）
 - [x] 日本語化したモデルへのキャラクターの学習（第2段階）
-- [ ] 第1段階の改良（SyntheticTextbook-jp などで日本語の自然さをさらに上げるか検討）
-- [ ] 学習したモデル・データの公開
+- [x] 第1段階の改良：Qwen3.8-27B からの蒸留（日本語の一般常識が Qwen3.5-4B と同等に、中国語の混入はほぼ0%）
+- [x] 日本語化したモデルと蒸留データを Hugging Face で公開
+- [ ] 蒸留後のモデルの日本語の自然さの採点（GPT-5.6 Luna）
+- [ ] 蒸留後のモデルでキャラクターの学習（第2段階）をやり直す
+- [ ] Web 推論（GPT-6 Sol が実装。引き継ぎ資料：[`docs/web_inference_handoff.md`](docs/web_inference_handoff.md)）
+
 
 ## データセット
 

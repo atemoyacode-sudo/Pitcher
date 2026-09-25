@@ -2,10 +2,10 @@
 
 書き出し（キャラ設定なしの感情の質問と作文だけ。1モデル130件＋校正用6件）:
     python3 eval/luna_judge.py export --runs base-4b,spark-x2.5-4b,spark-ja-4b,spark-ja2-4b
-    → eval/luna/judge_prompts.jsonl（1行1件：{"id": ..., "prompt": ...}）
+    → eval/luna/judge_prompts_<batch>.jsonl（1行1件：{"id": ..., "prompt": ...}）
 
 採点役には、各行の prompt をそのまま渡し、返ってきた文章をそのまま {"id": ..., "output": ...} の形で
-eval/luna/judge_outputs.jsonl に1行ずつ保存してもらう。
+eval/luna/judge_outputs_<batch>.jsonl に1行ずつ保存してもらう。
 
 取り込み:
     python3 eval/luna_judge.py import
@@ -24,7 +24,7 @@ from judge_common import CALIBRATION, JUDGE_PROMPT, parse  # noqa: E402
 LUNA_DIR = HERE / "luna"
 
 
-def export(runs: list[str], full: bool):
+def export(runs: list[str], full: bool, batch: str):
     LUNA_DIR.mkdir(exist_ok=True)
     rows = [{"id": f"calibration|{c['id']}|0", "prompt": JUDGE_PROMPT.format(system=c["system"] or "（なし）", prompt=c["prompt"], output=c["output"])}
             for c in CALIBRATION]
@@ -35,18 +35,20 @@ def export(runs: list[str], full: bool):
             if keep:
                 rows.append({"id": f"{run}|{r['id']}|{r['sample']}",
                              "prompt": JUDGE_PROMPT.format(system=r["system"] or "（なし）", prompt=r["prompt"], output=r["output"].strip()[:2500])})
-    out = LUNA_DIR / "judge_prompts.jsonl"
+    out = LUNA_DIR / f"judge_prompts_{batch}.jsonl"
     out.write_text("".join(json.dumps(x, ensure_ascii=False) + "\n" for x in rows))
     print(f"{len(rows)} 件を {out} に書き出しました")
 
 
 def import_():
-    prompts = {json.loads(l)["id"] for l in (LUNA_DIR / "judge_prompts.jsonl").read_text().splitlines() if l.strip()}
+    # 書き出しは何回かに分けてよい（judge_prompts_<batch>.jsonl）。回答も judge_outputs_<batch>.jsonl に分けて置く
+    prompts = {json.loads(l)["id"] for f in sorted(LUNA_DIR.glob("judge_prompts_*.jsonl")) for l in f.read_text().splitlines() if l.strip()}
     outs = {}
-    for l in (LUNA_DIR / "judge_outputs.jsonl").read_text().splitlines():
-        if l.strip():
-            r = json.loads(l)
-            outs[r["id"]] = r["output"]
+    for f in sorted(LUNA_DIR.glob("judge_outputs_*.jsonl")):
+        for l in f.read_text().splitlines():
+            if l.strip():
+                r = json.loads(l)
+                outs[r["id"]] = r["output"]
     print(f"書き出し {len(prompts)} 件 / 回答 {len(outs)} 件（足りない {len(prompts - set(outs))} 件）")
     meta = {}
     for run in {i.split("|")[0] for i in prompts} - {"calibration"}:
@@ -73,8 +75,9 @@ def main():
     ap.add_argument("mode", choices=["export", "import"])
     ap.add_argument("--runs", default="")
     ap.add_argument("--full", action="store_true", help="キャラ設定ありの回答も含める（1モデル530件）")
+    ap.add_argument("--batch", default="1", help="書き出しの回の名前（judge_prompts_<batch>.jsonl）")
     a = ap.parse_args()
-    export(a.runs.split(","), a.full) if a.mode == "export" else import_()
+    export(a.runs.split(","), a.full, a.batch) if a.mode == "export" else import_()
 
 
 if __name__ == "__main__":
