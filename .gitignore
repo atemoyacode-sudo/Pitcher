@@ -23,3 +23,4 @@ data/ja_general/train-*.jsonl
 sft/ja_general_*.jsonl
 data/cute/*.parquet
 sft/stage2_train.jsonl
+sft/distill_*.jsonl

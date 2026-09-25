@@ -5,6 +5,7 @@
     python run_eval_hf_colab.py replay --model XHToken/Spark-X2.5-4B \
         --prompts /content/data/replay_prompts.jsonl --out /content/results
     python run_eval_hf_colab.py mcqa --model /content/out/spark-ja/merged --run-name spark-ja --out /content/results
+    python run_eval_hf_colab.py math --model XHToken/Spark-X2.5-4B --run-name spark-x2.5-4b --out /content/results
 """
 
 import argparse
@@ -45,6 +46,31 @@ def generate(model_id: str, convs: list[list[dict]], cfgs: list[dict], seed: int
     return results
 
 
+MATH_TEMPLATES = {
+    "ja": "次の問題を解いてください。最後に「答え：数字」の形で答えを書いてください。\n\n{q}",
+    "en": "Solve the following problem. At the end, write the answer in the form \"Answer: number\".\n\n{q}",
+}
+
+
+def math_questions() -> list[dict]:
+    import pandas as pd
+
+    rows = []
+    for lang in ("ja", "en"):
+        df = pd.read_parquet(f"https://huggingface.co/api/datasets/juletxara/mgsm/parquet/{lang}/test/0.parquet")
+        for i, r in enumerate(df.itertuples()):
+            rows.append({"lang": lang, "id": f"mgsm-{i:03d}", "answer": float(r.answer_number), "prompt": MATH_TEMPLATES[lang].format(q=r.question)})
+    return rows
+
+
+def extract_number(text: str):
+    """「答え：」「Answer:」の後の数字を優先し、なければ最後に出てくる数字を答えとみなす。"""
+    t = text.translate(str.maketrans("０１２３４５６７８９，．－", "0123456789,.-")).replace(",", "")
+    m = re.findall(r"(?:答え|Answer)\s*[:：は]?\s*\**\s*\$?\s*(-?\d+(?:\.\d+)?)", t, flags=re.I)
+    nums = m or re.findall(r"-?\d+(?:\.\d+)?", t)
+    return float(nums[-1]) if nums else None
+
+
 def mcqa_questions() -> list[dict]:
     import pandas as pd
 
@@ -64,7 +90,7 @@ def mcqa_questions() -> list[dict]:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("mode", choices=["eval140", "replay", "mcqa"])
+    ap.add_argument("mode", choices=["eval140", "replay", "mcqa", "math"])
     ap.add_argument("--model", required=True)
     ap.add_argument("--run-name", default="")
     ap.add_argument("--prompts", default="")
@@ -85,6 +111,19 @@ def main():
         outs = generate(a.model, convs, cfgs, a.seed)
         rows = [{"run": a.run_name, "model": a.model, **it, "sample": k, **o} for (it, k), o in zip(meta, outs)]
         path = f"{a.out}/{a.run_name}.jsonl"
+    elif a.mode == "math":
+        # 算数の文章題 MGSM（juletxara/mgsm、CC BY-SA 4.0）。同じ250問の英語版と日本語版を、思考なし・貪欲法で解かせる
+        qs = math_questions()
+        outs = generate(a.model, [[{"role": "user", "content": q["prompt"]}] for q in qs], [dict(do_sample=False, max_new_tokens=768)] * len(qs))
+        rows = []
+        for q, o in zip(qs, outs):
+            pred = extract_number(o["output"])
+            rows.append({"model": a.model, "lang": q["lang"], "id": q["id"], "answer": q["answer"], "pred": pred,
+                         "correct": pred is not None and abs(pred - q["answer"]) < 1e-6, "finish_reason": o["finish_reason"], "output": o["output"]})
+        for lang in ("ja", "en"):
+            rs = [r for r in rows if r["lang"] == lang]
+            print(f"{a.run_name} MGSM {lang}: 正答率 {sum(r['correct'] for r in rs) / len(rs):.1%}（{len(rs)}問）", flush=True)
+        path = f"{a.out}/math_{a.run_name}.jsonl"
     elif a.mode == "mcqa":
         # 日本語（JCommonsenseQA）と英語（CommonsenseQA）の5択問題。bench_mcqa_modal.py と同じ問題・同じ書式
         qs = mcqa_questions()
