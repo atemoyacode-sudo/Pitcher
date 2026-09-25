@@ -27,4 +27,8 @@ sft/distill_*.jsonl
 
 # ローカル評価用の Python 環境（transformers 4.57.1、Mac の MPS）
 .venv-eval/
-eval/luna/judge_outputs.jsonl
+eval/luna/judge_outputs_*.jsonl
+
+# ローカル評価用のツール（llama.cpp のソースなど）
+tools/
+eval/results/llama-server.log
