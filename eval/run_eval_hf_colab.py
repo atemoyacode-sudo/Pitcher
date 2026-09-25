@@ -4,6 +4,7 @@
         --prompts /content/data/prompts.json --out /content/results
     python run_eval_hf_colab.py replay --model XHToken/Spark-X2.5-4B \
         --prompts /content/data/replay_prompts.jsonl --out /content/results
+    python run_eval_hf_colab.py mcqa --model /content/out/spark-ja/merged --run-name spark-ja --out /content/results
 """
 
 import argparse
@@ -44,12 +45,29 @@ def generate(model_id: str, convs: list[list[dict]], cfgs: list[dict], seed: int
     return results
 
 
+def mcqa_questions() -> list[dict]:
+    import pandas as pd
+
+    ja_t = "次の質問に対して、最も適切な答えを選択肢から1つ選び、番号（1〜5）だけを答えてください。\n\n質問：{q}\n{choices}\n\n答え："
+    en_t = "Choose the most appropriate answer to the following question from the options, and reply with only its number (1-5).\n\nQuestion: {q}\n{choices}\n\nAnswer:"
+    rows = []
+    for r in pd.read_parquet("https://huggingface.co/api/datasets/sbintuitions/JCommonsenseQA/parquet/default/validation/0.parquet").itertuples():
+        rows.append({"lang": "ja", "id": str(r.q_id), "question": r.question, "choices": [getattr(r, f"choice{i}") for i in range(5)], "answer": int(r.label) + 1})
+    for r in pd.read_parquet("https://huggingface.co/api/datasets/tau/commonsense_qa/parquet/default/validation/0.parquet").itertuples():
+        labels, texts = list(r.choices["label"]), list(r.choices["text"])
+        rows.append({"lang": "en", "id": r.id, "question": r.question, "choices": texts, "answer": labels.index(r.answerKey) + 1})
+    for x in rows:
+        t = ja_t if x["lang"] == "ja" else en_t
+        x["prompt"] = t.format(q=x["question"], choices="\n".join(f"{i + 1}. {c}" for i, c in enumerate(x["choices"])))
+    return rows
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("mode", choices=["eval140", "replay"])
+    ap.add_argument("mode", choices=["eval140", "replay", "mcqa"])
     ap.add_argument("--model", required=True)
     ap.add_argument("--run-name", default="")
-    ap.add_argument("--prompts", required=True)
+    ap.add_argument("--prompts", default="")
     ap.add_argument("--out", default="/content/results")
     ap.add_argument("--seed", type=int, default=0)
     a = ap.parse_args()
@@ -67,6 +85,20 @@ def main():
         outs = generate(a.model, convs, cfgs, a.seed)
         rows = [{"run": a.run_name, "model": a.model, **it, "sample": k, **o} for (it, k), o in zip(meta, outs)]
         path = f"{a.out}/{a.run_name}.jsonl"
+    elif a.mode == "mcqa":
+        # 日本語（JCommonsenseQA）と英語（CommonsenseQA）の5択問題。bench_mcqa_modal.py と同じ問題・同じ書式
+        qs = mcqa_questions()
+        outs = generate(a.model, [[{"role": "user", "content": q["prompt"]}] for q in qs], [dict(do_sample=False, max_new_tokens=16)] * len(qs))
+        rows = []
+        for q, o in zip(qs, outs):
+            m = re.search(r"[1-5]", o["output"].translate(str.maketrans("１２３４５", "12345")))
+            pred = int(m.group()) if m else None
+            rows.append({"model": a.model, "lang": q["lang"], "id": q["id"], "answer": q["answer"], "pred": pred,
+                         "correct": pred == q["answer"], "output": o["output"]})
+        for lang in ("ja", "en"):
+            rs = [r for r in rows if r["lang"] == lang]
+            print(f"{a.run_name} {lang}: 正答率 {sum(r['correct'] for r in rs) / len(rs):.1%}（{len(rs)}問）", flush=True)
+        path = f"{a.out}/mcqa_{a.run_name}.jsonl"
     else:
         # リプレイ：一般的な依頼文に元モデル自身が答えたもの（sft/gen_replay_modal.py と同じ。回答の上限は 1024 トークン）
         prompts = [json.loads(l) for l in open(a.prompts) if l.strip()]

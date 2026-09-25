@@ -22,6 +22,9 @@
 - [x] 元データの日本語訳（Gemma 4 E4B）と品質チェック
 - [x] 学習用の会話データの作成
 - [x] LoRA 学習（Modal）と学習後の評価
+- [x] 元モデルの比較（Qwen3.5 / MiniCPM5 / Spark-X2.5）
+- [ ] Spark-X2.5-4B の日本語化（第1段階、SFT-General-Japanese-60K で LoRA）
+- [ ] 日本語化したモデルへのキャラクターの学習（第2段階）
 - [ ] 学習したモデル・データの公開
 
 ## データセット
@@ -30,8 +33,9 @@
 |---|---|---|---|
 | `Aphrodite-yandere-pt.json` | [win10/Aphrodite-yandere-pt](https://huggingface.co/datasets/win10/Aphrodite-yandere-pt) | MIT | ヤンデレキャラ「Aphrodite」のセリフ 1,213件（英・中・日・露・韓などが混在） |
 | `anime-waifu-personality-chat.json` | [scryptiam/anime-waifu-personality-chat](https://huggingface.co/datasets/scryptiam/anime-waifu-personality-chat)（取得元は複製の [Shxbhxm21/anime-waifu-personality-chat](https://huggingface.co/datasets/Shxbhxm21/anime-waifu-personality-chat)） | CC BY 4.0 | 20種類の属性別セリフ 1,722件（英語） |
+| `data/ja_general/`（第1段階の日本語化用） | [OysterCoreAI/SFT-General-Japanese-60K](https://huggingface.co/datasets/OysterCoreAI/SFT-General-Japanese-60K)（元は [llm-jp/magpie-sft-v1.0](https://huggingface.co/datasets/llm-jp/magpie-sft-v1.0)） | Apache 2.0 | 日本語の一般的な質問と回答 60,000件 |
 
-どちらもリポジトリ内のファイルは配布元の原文のままです。日本語訳は原文と分けて保存しています。
+キャラクターのデータ（上の2つ）は、リポジトリ内のファイルが配布元の原文のままです。日本語訳は原文と分けて保存しています。
 
 ### Aphrodite-yandere-pt の日本語化
 
@@ -70,6 +74,30 @@ SFT用の `user` 文は元データに含まれません。各応答に合う質
 日本語訳はローカルの Gemma 4 E4B で生成し、残っていた英語の寝息表現も日本語に直しました。品質チェックの結果は [`qc/waifu_ja_qc.md`](qc/waifu_ja_qc.md) にあります（ボクっ娘の一人称が「私」になっていたのを「ボク」に直す、解説文・重複・JSONの断片を除く、など）。
 
 帰属表示：“Anime Waifu Personality Chat” by scryptiam（[Hugging Face](https://huggingface.co/datasets/scryptiam/anime-waifu-personality-chat)）、[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。変更点：英語の会話文を日本語に翻訳し、属性名を日本語化し、一部の行を修正・除外しました。
+
+### SFT-General-Japanese-60K（第1段階の日本語化用）
+
+キャラクターを学習させる前に、元モデルの日本語そのものを強くする「第1段階」の学習に使うデータです。いまは [Spark-X2.5-4B](https://huggingface.co/XHToken/Spark-X2.5-4B) の日本語化（非公式の派生モデル）に使っています。日本語が不自然になる、中国語が混ざるといった弱点を、キャラクターの学習（第2段階）の前に直すのが目的です。
+
+- 出典：[OysterCoreAI/SFT-General-Japanese-60K](https://huggingface.co/datasets/OysterCoreAI/SFT-General-Japanese-60K)（revision `fdab76b7d780806e98bd1006a06c7444bb8e936a`）
+- 元データ：LLM-jp が公開した [llm-jp/magpie-sft-v1.0](https://huggingface.co/datasets/llm-jp/magpie-sft-v1.0)（Apache 2.0）から、品質の基準で6万件を選んだもの。質問は [cyberagent/calm3-22b-chat](https://huggingface.co/cyberagent/calm3-22b-chat)、回答は [Qwen/Qwen2.5-32B-Instruct](https://huggingface.co/Qwen/Qwen2.5-32B-Instruct) が生成している（[Magpie](https://arxiv.org/abs/2406.08464) 法）。
+- ライセンス：Apache 2.0。配布元の [`LICENSE`](data/ja_general/LICENSE) と [`ATTRIBUTION.md`](data/ja_general/ATTRIBUTION.md) を `data/ja_general/` に同梱している。
+- 利用の同意や連絡先の登録は不要で、誰でもダウンロードできる。
+
+**学習データへの加工**（`python3 sft/build_ja_general.py`）：
+
+- 中国語（日本語では使わない簡体字）が混ざった500件を除外
+- 話題の偏りを均すため、科学・言語・技術・教育・文章作成の5分野は各3,000件までに絞り、それ以外の分野は全件を使用
+- 学習用 22,387件と検証用 500件に分割（`sft/ja_general_train.jsonl` / `sft/ja_general_valid.jsonl`）
+
+元データ（約155MB）と加工後の学習データは大きいので git には入れていません。`sft/build_ja_general.py` の冒頭にある手順でダウンロードし、同じスクリプトで再現できます。
+
+注意点：
+
+- 回答はすべて Qwen2.5-32B-Instruct が生成したものなので、このデータで学習すると「Qwen2.5-32B の日本語の書き方をモデルに移す」ことになる。
+- 話題は科学・言語・技術・教育が中心で、日常会話や人間関係の話題はごく少ない（6万件中85件）。
+- 回答の約8割は見出しや箇条書きを使う説明調のアシスタントの文章。キャラクターの話し方は第2段階で学習する。
+- 元データの説明にあるとおり、回答の内容は1件ずつ事実確認されたものではない。
 
 ## 学習用の会話データ（`sft/`）
 
