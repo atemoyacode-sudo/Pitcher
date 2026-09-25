@@ -1,0 +1,80 @@
+{
+ "base-4b": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 4.4,
+   "naturalness": 3.32,
+   "relevance": 4.88,
+   "persona": null,
+   "broken%": 3.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 4.333333333333333,
+   "naturalness": 3.2666666666666666,
+   "relevance": 4.666666666666667,
+   "persona": null,
+   "broken%": 0.0
+  }
+ },
+ "spark-x2.5-4b": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 4.32,
+   "naturalness": 2.09,
+   "relevance": 4.52,
+   "persona": null,
+   "broken%": 0.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 4.066666666666666,
+   "naturalness": 2.1666666666666665,
+   "relevance": 4.666666666666667,
+   "persona": null,
+   "broken%": 0.0
+  }
+ },
+ "spark-ja-4b": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 4.87,
+   "naturalness": 3.39,
+   "relevance": 4.66,
+   "persona": null,
+   "broken%": 1.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 4.866666666666666,
+   "naturalness": 2.8,
+   "relevance": 4.6,
+   "persona": null,
+   "broken%": 0.0
+  }
+ }
+}
