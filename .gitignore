@@ -24,3 +24,7 @@ sft/ja_general_*.jsonl
 data/cute/*.parquet
 sft/stage2_train.jsonl
 sft/distill_*.jsonl
+
+# ローカル評価用の Python 環境（transformers 4.57.1、Mac の MPS）
+.venv-eval/
+eval/luna/judge_outputs.jsonl

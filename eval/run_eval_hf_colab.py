@@ -1,4 +1,4 @@
-"""Colab のランタイム上で transformers を使って回答を生成する（run_eval_hf_modal.py の Colab 版。生成方法と出力形式は同じ）。
+"""Colab のランタイム上（または Mac の MPS）で transformers を使って回答を生成する（run_eval_hf_modal.py の Colab 版。生成方法と出力形式は同じ）。
 
     python run_eval_hf_colab.py eval140 --model /content/out/spark-lora/merged --run-name spark-lora \
         --prompts /content/data/prompts.json --out /content/results
@@ -16,15 +16,18 @@ import re
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+# Colab / Modal では CUDA、Mac では MPS（Apple の GPU）で動かす
+DEVICE = "cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu")
 SAMPLED = dict(do_sample=True, temperature=1.0, top_p=0.95, top_k=0, max_new_tokens=512)  # Spark-X2.5 の推奨値
 GREEDY = dict(do_sample=False, max_new_tokens=256)
 N_SAMPLES = {"emotion": 5, "general": 3, "knowledge": 1, "knowledge_en": 1}
 
 
-def generate(model_id: str, convs: list[list[dict]], cfgs: list[dict], seed: int = 0, batch_size: int = 48) -> list[dict]:
+def generate(model_id: str, convs: list[list[dict]], cfgs: list[dict], seed: int = 0, batch_size: int = 0) -> list[dict]:
+    batch_size = batch_size or (48 if DEVICE == "cuda" else 16)
     tok = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
     tok.padding_side = "left"
-    model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True, dtype=torch.bfloat16, device_map="cuda").eval()
+    model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True, dtype=torch.bfloat16, device_map=DEVICE).eval()
     texts = [tok.apply_chat_template(c, tokenize=False, add_generation_prompt=True, enable_thinking=False) for c in convs]
     order = sorted(range(len(texts)), key=lambda i: (json.dumps(cfgs[i], sort_keys=True), len(texts[i])))
     results = [None] * len(texts)
@@ -34,7 +37,7 @@ def generate(model_id: str, convs: list[list[dict]], cfgs: list[dict], seed: int
             groups.setdefault(json.dumps(cfgs[i], sort_keys=True), []).append(i)
         for cfg_json, ids in groups.items():
             torch.manual_seed(seed + b)
-            enc = tok([texts[i] for i in ids], return_tensors="pt", padding=True, add_special_tokens=False).to("cuda")
+            enc = tok([texts[i] for i in ids], return_tensors="pt", padding=True, add_special_tokens=False).to(DEVICE)
             with torch.no_grad():
                 out = model.generate(**enc, **json.loads(cfg_json), pad_token_id=tok.pad_token_id, eos_token_id=tok.eos_token_id)
             for k, i in enumerate(ids):

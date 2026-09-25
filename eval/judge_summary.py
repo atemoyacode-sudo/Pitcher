@@ -3,6 +3,7 @@
 使い方:
     python3 eval/judge_summary.py base minicpm5-1b base-4b
     python3 eval/judge_summary.py base --worst 5     # 一貫性の点が低い回答を読む
+    python3 eval/judge_summary.py --prefix judge-luna_ base-4b spark-ja-4b   # GPT-5.6 Luna の採点を集計
 """
 
 import json
@@ -19,8 +20,11 @@ METRICS = ["consistency", "naturalness", "relevance", "persona"]
 LABELS = {"consistency": "一貫性", "naturalness": "自然さ", "relevance": "質問への適合", "persona": "キャラ適合"}
 
 
+PREFIX = "judge_"  # GPT-5.6 Luna の採点は --prefix judge-luna_
+
+
 def load(run: str) -> list[dict]:
-    return [json.loads(l) for l in (RESULTS / f"judge_{run}.jsonl").read_text().splitlines() if l.strip()]
+    return [json.loads(l) for l in (RESULTS / f"{PREFIX}{run}.jsonl").read_text().splitlines() if l.strip()]
 
 
 def num(v):
@@ -42,6 +46,11 @@ def summarize(rows: list[dict]) -> dict:
 
 
 def main(argv):
+    global PREFIX
+    if "--prefix" in argv:
+        i = argv.index("--prefix")
+        PREFIX = argv[i + 1]
+        argv = argv[:i] + argv[i + 2:]
     worst = None
     if "--worst" in argv:
         i = argv.index("--worst")
@@ -67,7 +76,7 @@ def main(argv):
                 continue
             label = LABELS.get(m, "一貫性2点以下%")
             print(f"{label:12}" + "".join(f"{'-':>20}" if v is None else f"{v:20.2f}" for v in vals))
-    (RESULTS / "judge_summary.json").write_text(json.dumps(sums, ensure_ascii=False, indent=1))
+    (RESULTS / f"{PREFIX}summary.json").write_text(json.dumps(sums, ensure_ascii=False, indent=1))
 
 
 if __name__ == "__main__":
