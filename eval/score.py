@@ -124,8 +124,8 @@ def main(argv):
         i = argv.index("--show")
         show = argv[i + 1]
         argv = argv[:i] + argv[i + 2 :]
-    # judge_*.jsonl（採点役の結果）と mcqa_*.jsonl（選択式の問題）は形式が違うので除く
-    runs = argv or sorted(p.stem for p in RESULTS.glob("*.jsonl") if not p.stem.startswith(("judge_", "mcqa_")))
+    # 採点役の結果（judge_*, judge-luna_*）と選択式・数学の結果（mcqa_*, math_*）は形式が違うので除く
+    runs = argv or sorted(p.stem for p in RESULTS.glob("*.jsonl") if not p.stem.startswith(("judge_", "judge-", "mcqa_", "math_")))
     data = {run: load(run) for run in runs}
 
     if show:
