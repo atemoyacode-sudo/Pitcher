@@ -20,7 +20,7 @@ from score import ZH_CHAR  # noqa: E402  評価と同じ基準で中国語の混
 
 def main():
     persona = [json.loads(l) for l in (SFT_DIR / "train.jsonl").read_text().splitlines() if l.strip()]
-    for path in sorted(SFT_DIR.glob("replay_Qwen*.jsonl")):
+    for path in sorted(p for p in SFT_DIR.glob("replay_*.jsonl") if p.name != "replay_prompts.jsonl"):
         replay = []
         for r in map(json.loads, path.read_text().splitlines()):
             text = r["output"].strip()

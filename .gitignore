@@ -14,3 +14,6 @@ __pycache__/
 .aphrodite-gemma4-cache.json
 .aphrodite-gemma4-prompt-cache.json
 .aphrodite-gemma4-curation-cache.json
+
+# 学習した LoRA 本体（大きいので git に入れない。公開するときは Hugging Face に置く）
+adapters/
