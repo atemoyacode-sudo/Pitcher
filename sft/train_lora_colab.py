@@ -118,7 +118,8 @@ def main():
     # 独自構造のモデルは、同梱コード（modeling_*.py / configuration_*.py）も統合モデルの隣に置く必要がある
     from huggingface_hub import snapshot_download
 
-    snap = snapshot_download(a.base_model, allow_patterns=["*.py", "*.jinja", "generation_config.json"])
+    # 元モデルが手元のフォルダ（第1段階で統合したモデルなど）のときは、そこから取る
+    snap = a.base_model if os.path.isdir(a.base_model) else snapshot_download(a.base_model, allow_patterns=["*.py", "*.jinja", "generation_config.json"])
     for f in os.listdir(snap):
         if f.endswith((".py", ".jinja")) or f == "generation_config.json":
             dst = f"{out_dir}/merged/{f}"

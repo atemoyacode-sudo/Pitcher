@@ -1,0 +1,22 @@
+{
+ "run": "spark-pitcher-4b",
+ "base_model": "spark-ja-4b（第1段階の統合モデル）",
+ "hp": {
+  "lora_r": 16,
+  "lr": 0.0002,
+  "epochs": 2,
+  "batch_size": 4,
+  "grad_accum": 4,
+  "max_len": 1536,
+  "grad_ckpt": true,
+  "train": "stage2_train.jsonl"
+ },
+ "n_train": 6970,
+ "n_valid": 130,
+ "train_tokens_per_epoch": 2085124,
+ "eval_loss_before": 2.6675925254821777,
+ "eval_loss_after": 1.6249488592147827,
+ "train_seconds": 2358.658,
+ "gpu": "NVIDIA A100-SXM4-80GB",
+ "note": "学習スクリプトが最後の保存処理（元モデルのコードのコピー）で止まったため、train_result.json は作られなかった。値は学習ログ（train_stage2.log）から転記した。"
+}

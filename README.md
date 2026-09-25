@@ -23,8 +23,9 @@
 - [x] 学習用の会話データの作成
 - [x] LoRA 学習（Modal）と学習後の評価
 - [x] 元モデルの比較（Qwen3.5 / MiniCPM5 / Spark-X2.5）
-- [ ] Spark-X2.5-4B の日本語化（第1段階、SFT-General-Japanese-60K で LoRA）
-- [ ] 日本語化したモデルへのキャラクターの学習（第2段階）
+- [x] Spark-X2.5-4B の日本語化（第1段階、SFT-General-Japanese-60K で LoRA）：自然さは Qwen3.5-4B にあと一歩（[比較レポート](eval/results/model_comparison_report.md)の第5節）
+- [x] 日本語化したモデルへのキャラクターの学習（第2段階）
+- [ ] 第1段階の改良（SyntheticTextbook-jp などで日本語の自然さをさらに上げるか検討）
 - [ ] 学習したモデル・データの公開
 
 ## データセット
