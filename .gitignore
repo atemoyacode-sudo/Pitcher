@@ -21,3 +21,5 @@ adapters/
 # 第1段階（日本語化）の元データと、そこから作る学習データ（大きいので git に入れない。sft/build_ja_general.py で再現できる）
 data/ja_general/train-*.jsonl
 sft/ja_general_*.jsonl
+data/cute/*.parquet
+sft/stage2_train.jsonl
