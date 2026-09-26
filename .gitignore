@@ -35,3 +35,7 @@ eval/results/llama-server.log
 data/release/
 eval/results/aime_raw/
 sft/stage2b_train.jsonl
+
+# 内部資料（今後の計画・下書き・引き継ぎ資料など）は公開しない
+private/
+docs/
