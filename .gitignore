@@ -34,3 +34,4 @@ tools/
 eval/results/llama-server.log
 data/release/
 eval/results/aime_raw/
+sft/stage2b_train.jsonl

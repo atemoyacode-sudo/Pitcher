@@ -11,6 +11,10 @@ Spark は同梱コードが transformers 4.57 向けなので、Qwen 用の trai
     modal run sft/train_spark_modal.py --run-name spark-ja2-4b --base-adapter /models/adapters/spark-ja-4b \
         --train /models/data/distill_sft.jsonl --valid /models/data/ja_general_valid.jsonl
 結果は Volume の /<run名>/adapter と /<run名>/merged に保存される。
+
+すでに統合済みのモデル（Volume 上）を元にする場合は --base-model を使う（例：蒸留後のモデルにキャラクターを学習させる）:
+    modal run sft/train_spark_modal.py --run-name spark-pitcher2-4b --base-model /models/spark-ja2-4b/merged \
+        --train /models/data/stage2b_train.jsonl --valid /models/data/valid.jsonl --extra "..."
 """
 
 import pathlib
@@ -34,10 +38,10 @@ app = modal.App("pitcher-train-spark", image=image)
 
 
 @app.function(gpu="H100", timeout=6 * 60 * 60, volumes={"/hf-cache": hf_cache, "/models": models})
-def train(run_name: str, base_adapter: str, train_file: str, valid_file: str, extra: list[str]):
+def train(run_name: str, base_adapter: str, train_file: str, valid_file: str, extra: list[str], base_model: str = ""):
     import os
 
-    base = BASE
+    base = base_model or BASE
     if base_adapter:
         # 前の段階の LoRA を元モデルに統合したものを、今回の学習の元にする
         name = base_adapter.rstrip("/").split("/")[-1]
@@ -52,8 +56,8 @@ def train(run_name: str, base_adapter: str, train_file: str, valid_file: str, ex
 
 
 @app.local_entrypoint()
-def main(run_name: str, train: str, valid: str, base_adapter: str = "", extra: str = ""):
-    result = train_fn(run_name, base_adapter, train, valid, extra.split())
+def main(run_name: str, train: str, valid: str, base_adapter: str = "", base_model: str = "", extra: str = ""):
+    result = train_fn(run_name, base_adapter, train, valid, extra.split(), base_model)
     out = HERE / "runs" / f"{run_name}.json"
     out.write_text(result)
     print(f"{out} に保存しました")

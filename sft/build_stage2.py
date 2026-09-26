@@ -17,8 +17,13 @@
 
 使い方:
     python3 sft/build_stage2.py   # sft/stage2_train.jsonl を作る（検証は sft/valid.jsonl をそのまま使う）
+    python3 sft/build_stage2.py --general distill --out sft/stage2b_train.jsonl   # 蒸留後のモデル（spark-ja2-4b）用
+
+--general distill では、3. の「キャラ設定なし」の例を、蒸留データ（sft/distill_sft.jsonl、Qwen3.8-27B の回答）から取る。
+蒸留後のモデルが設定なしで答えるときの書き方を、キャラの学習で崩さないため（元モデル自身が学習した書き方を復習させる）。
 """
 
+import argparse
 import json
 import random
 import re
@@ -42,6 +47,10 @@ KANA = re.compile(r"[぀-ヿ]")
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--general", choices=["ja_general", "distill"], default="ja_general")
+    ap.add_argument("--out", default=str(ROOT / "sft" / "stage2_train.jsonl"))
+    args = ap.parse_args()
     rng = random.Random(0)
 
     # 1. キャラクターのセリフ
@@ -71,20 +80,27 @@ def main():
     cute = [{"messages": [{"role": "system", "content": rng.choice(CUTE_SYSTEMS)}] + ms,
              "dataset": "cute", "trait": "cute", "source_row": i} for i, ms in cute_ok[:N_CUTE]]
 
-    # 3. 一般の日本語（第1段階の学習・検証に使っていないもの）
-    used = {json.loads(l)["source_row"] for f in ("ja_general_train.jsonl", "ja_general_valid.jsonl")
-            for l in (ROOT / "sft" / f).read_text().splitlines() if l.strip()}
-    general_rows = [json.loads(l) for f in sorted((ROOT / "data" / "ja_general").glob("train-*.jsonl"))
-                    for l in f.read_text().splitlines() if l.strip()]
-    general_ok = [r for r in general_rows if r["id"] not in used
-                  and not any(ZH_CHAR.search(m["content"]) for m in r["messages"])]
-    rng.shuffle(general_ok)
-    general = [{"messages": r["messages"], "dataset": "ja_general", "trait": r["domain"], "source_row": r["id"]}
-               for r in general_ok[:N_GENERAL]]
+    # 3. 一般の日本語（キャラ設定なし）
+    if args.general == "distill":
+        distill = [json.loads(l) for l in (ROOT / "sft" / "distill_sft.jsonl").read_text().splitlines() if l.strip()]
+        rng.shuffle(distill)
+        general = [{"messages": r["messages"], "dataset": "distill", "trait": r["trait"], "source_row": r["source_row"]}
+                   for r in distill[:N_GENERAL]]
+    else:
+        # 第1段階の学習・検証に使っていないもの
+        used = {json.loads(l)["source_row"] for f in ("ja_general_train.jsonl", "ja_general_valid.jsonl")
+                for l in (ROOT / "sft" / f).read_text().splitlines() if l.strip()}
+        general_rows = [json.loads(l) for f in sorted((ROOT / "data" / "ja_general").glob("train-*.jsonl"))
+                        for l in f.read_text().splitlines() if l.strip()]
+        general_ok = [r for r in general_rows if r["id"] not in used
+                      and not any(ZH_CHAR.search(m["content"]) for m in r["messages"])]
+        rng.shuffle(general_ok)
+        general = [{"messages": r["messages"], "dataset": "ja_general", "trait": r["domain"], "source_row": r["id"]}
+                   for r in general_ok[:N_GENERAL]]
 
     rows = persona + cute + general
     rng.shuffle(rows)
-    out = ROOT / "sft" / "stage2_train.jsonl"
+    out = Path(args.out)
     out.write_text("".join(json.dumps(x, ensure_ascii=False) + "\n" for x in rows))
     print(f"キャラ {len(persona)} + Cute {len(cute)}（候補 {len(cute_ok)}、除外 {dict(dropped)}）+ 一般 {len(general)} = {len(rows)} 件 → {out.name}")
 
