@@ -2,6 +2,7 @@
 
 書き出し（キャラ設定なしの感情の質問と作文だけ。1モデル130件＋校正用6件）:
     python3 eval/luna_judge.py export --runs base-4b,spark-x2.5-4b,spark-ja-4b,spark-ja2-4b
+    python3 eval/luna_judge.py export --runs base-4b-long,... --batch 3 --max-chars 8000   # 上限 2,048 トークンの再テスト
     → eval/luna/judge_prompts_<batch>.jsonl（1行1件：{"id": ..., "prompt": ...}）
 
 採点役には、各行の prompt をそのまま渡し、返ってきた文章をそのまま {"id": ..., "output": ...} の形で
@@ -24,7 +25,7 @@ from judge_common import CALIBRATION, JUDGE_PROMPT, parse  # noqa: E402
 LUNA_DIR = HERE / "luna"
 
 
-def export(runs: list[str], full: bool, batch: str):
+def export(runs: list[str], full: bool, batch: str, max_chars: int = 2500):
     LUNA_DIR.mkdir(exist_ok=True)
     rows = [{"id": f"calibration|{c['id']}|0", "prompt": JUDGE_PROMPT.format(system=c["system"] or "（なし）", prompt=c["prompt"], output=c["output"])}
             for c in CALIBRATION]
@@ -34,7 +35,7 @@ def export(runs: list[str], full: bool, batch: str):
             keep = r["category"] == "general" or (r["category"] == "emotion" and (full or r["persona"] == "none"))
             if keep:
                 rows.append({"id": f"{run}|{r['id']}|{r['sample']}",
-                             "prompt": JUDGE_PROMPT.format(system=r["system"] or "（なし）", prompt=r["prompt"], output=r["output"].strip()[:2500])})
+                             "prompt": JUDGE_PROMPT.format(system=r["system"] or "（なし）", prompt=r["prompt"], output=r["output"].strip()[:max_chars])})
     out = LUNA_DIR / f"judge_prompts_{batch}.jsonl"
     out.write_text("".join(json.dumps(x, ensure_ascii=False) + "\n" for x in rows))
     print(f"{len(rows)} 件を {out} に書き出しました")
@@ -76,8 +77,9 @@ def main():
     ap.add_argument("--runs", default="")
     ap.add_argument("--full", action="store_true", help="キャラ設定ありの回答も含める（1モデル530件）")
     ap.add_argument("--batch", default="1", help="書き出しの回の名前（judge_prompts_<batch>.jsonl）")
+    ap.add_argument("--max-chars", type=int, default=2500, help="採点役に渡す回答の最大文字数（上限を上げた再テストでは大きくする）")
     a = ap.parse_args()
-    export(a.runs.split(","), a.full, a.batch) if a.mode == "export" else import_()
+    export(a.runs.split(","), a.full, a.batch, a.max_chars) if a.mode == "export" else import_()
 
 
 if __name__ == "__main__":
