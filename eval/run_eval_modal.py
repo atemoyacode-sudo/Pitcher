@@ -4,6 +4,7 @@
     modal run eval/run_eval_modal.py --run-name base
     modal run eval/run_eval_modal.py --run-name lora-v1 --model /models/lora-v1-merged
     modal run eval/run_eval_modal.py --run-name base --only emo-1p-   # 一部の質問だけ回して既存の結果に追加
+    modal run eval/run_eval_modal.py --run-name base-4b-long --model Qwen/Qwen3.5-4B --only emo-none,gen --max-tokens 2048   # 上限を上げた再テスト
 """
 
 import json
@@ -35,7 +36,7 @@ N_SAMPLES = {"emotion": 5, "general": 3, "knowledge": 1, "knowledge_en": 1}
 
 
 @app.function(gpu="L4", timeout=30 * 60, volumes={"/hf-cache": hf_cache, "/models": models})
-def generate(items: list[dict], model: str, seed: int) -> list[dict]:
+def generate(items: list[dict], model: str, seed: int, max_tokens: int = 0) -> list[dict]:
     from vllm import LLM, SamplingParams
 
     name = model.lower()
@@ -47,7 +48,9 @@ def generate(items: list[dict], model: str, seed: int) -> list[dict]:
     else:
         # Qwen3.5 は画像も扱うモデルなので、画像・動画の入力枠を 0 にしておく
         kwargs, sampled = {"limit_mm_per_prompt": {"image": 0, "video": 0}}, SAMPLED
-    llm = LLM(model=model, max_model_len=4096, seed=seed, **kwargs)
+    if max_tokens:  # 回答の長さの上限を変える（打ち切りの影響を調べる再テスト用）
+        sampled = {**sampled, "max_tokens": max_tokens}
+    llm = LLM(model=model, max_model_len=max(4096, max_tokens + 1024), seed=seed, **kwargs)
 
     convs, params, meta = [], [], []
     for it in items:
@@ -70,12 +73,12 @@ def generate(items: list[dict], model: str, seed: int) -> list[dict]:
 
 
 @app.local_entrypoint()
-def main(run_name: str = "base", model: str = MODEL_ID, seed: int = 0, only: str = "", gpu: str = "L4"):
+def main(run_name: str = "base", model: str = MODEL_ID, seed: int = 0, only: str = "", gpu: str = "L4", max_tokens: int = 0):
     items = json.loads((HERE / "prompts.json").read_text())["items"]
     prefixes = [p for p in only.split(",") if p]
     if prefixes:
         items = [it for it in items if any(it["id"].startswith(p) for p in prefixes)]
-    rows = [{"run": run_name, "model": model, **r} for r in generate.with_options(gpu=gpu).remote(items, model, seed)]
+    rows = [{"run": run_name, "model": model, **r} for r in generate.with_options(gpu=gpu).remote(items, model, seed, max_tokens)]
 
     out = HERE / "results" / f"{run_name}.jsonl"
     out.parent.mkdir(exist_ok=True)

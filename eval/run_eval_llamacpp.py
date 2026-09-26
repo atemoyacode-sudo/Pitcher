@@ -8,6 +8,7 @@ Spark-X2.5 は transformers だと Mac の GPU でも毎秒十数トークンと
     python3 eval/run_eval_llamacpp.py eval140 --gguf tools/gguf/spark-ja2-4b-f16.gguf --run-name spark-ja2-4b
     python3 eval/run_eval_llamacpp.py mcqa --gguf tools/gguf/spark-ja2-4b-f16.gguf --run-name spark-ja2-4b
     python3 eval/run_eval_llamacpp.py eval140 --gguf ... --run-name ... --only know-   # 一部の質問だけ
+    python3 eval/run_eval_llamacpp.py eval140 --gguf tools/gguf/spark-ja2-4b-f16.gguf --run-name spark-ja2-4b-long --only emo-none,gen --max-tokens 2048
 """
 
 import argparse
@@ -28,10 +29,10 @@ PARALLEL = 8
 PORT = 8091
 
 
-def start_server(gguf: str) -> subprocess.Popen:
+def start_server(gguf: str, max_tokens: int = 0) -> subprocess.Popen:
     log = open(HERE / "results" / "llama-server.log", "w")
     p = subprocess.Popen(["llama-server", "-m", gguf, "--port", str(PORT), "-ngl", "99", "-np", str(PARALLEL),
-                          "-c", str(4096 * PARALLEL), "--jinja", "--no-webui"], stdout=log, stderr=subprocess.STDOUT)
+                          "-c", str(max(4096, max_tokens + 1024) * PARALLEL), "--jinja", "--no-webui"], stdout=log, stderr=subprocess.STDOUT)
     for _ in range(300):
         try:
             if json.load(urllib.request.urlopen(f"http://127.0.0.1:{PORT}/health", timeout=2)).get("status") == "ok":
@@ -72,9 +73,12 @@ def main():
     ap.add_argument("--run-name", required=True)
     ap.add_argument("--only", default="")
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--max-tokens", type=int, default=0, help="回答の長さの上限（既定 512）。打ち切りの影響を調べる再テスト用")
     a = ap.parse_args()
 
-    server = start_server(a.gguf)
+    if a.max_tokens:
+        SAMPLED["max_tokens"] = a.max_tokens
+    server = start_server(a.gguf, a.max_tokens)
     try:
         if a.mode == "eval140":
             items = json.loads((HERE / "prompts.json").read_text())["items"]
