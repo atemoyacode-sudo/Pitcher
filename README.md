@@ -147,3 +147,9 @@ python3 eval/score.py lora-4b --show emo-yandere          # 実際の回答を�
 - これらのデータセットは特定のキャラクター表現に偏った小規模データです。一般会話能力を学習するデータとは分けて評価してください。
 - 日本語訳は Gemma 4 E4B による生成文で、SFT編集も自動QAだけでは意味の取り違えや細かな不自然さを完全に除けません。
 - ヤンデレ属性のデータには、独占欲や暴力をほのめかすセリフが含まれます（Aphrodite の危害表現は和らげていますが、「血」「死」などを含むセリフは学習データの約9%に残っています）。すべてフィクションのキャラクター表現です。
+
+## ライセンス
+
+- コード・報告書・自作の評価データ：[MIT License](LICENSE)
+- 他から取得したデータと、その翻訳・加工版：それぞれ元のライセンスに従います（MIT / CC BY 4.0 / Apache 2.0）。一覧と帰属表示は [`DATA_LICENSES.md`](DATA_LICENSES.md) にあります
+- 公開しているモデル（Hugging Face）：[Spark-X2.5-4B-Japanese](https://huggingface.co/Takenoko12345678/Spark-X2.5-4B-Japanese)、[GGUF 版](https://huggingface.co/Takenoko12345678/Spark-X2.5-4B-Japanese-GGUF)、蒸留データ [Japanese-SFT-Qwen3.8-27B-10K](https://huggingface.co/datasets/Takenoko12345678/Japanese-SFT-Qwen3.8-27B-10K)（いずれも Apache 2.0）
