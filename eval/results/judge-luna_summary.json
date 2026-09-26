@@ -76,5 +76,31 @@
    "persona": null,
    "broken%": 0.0
   }
+ },
+ "spark-ja2-4b": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 4.26,
+   "naturalness": 3.81,
+   "relevance": 4.58,
+   "persona": null,
+   "broken%": 8.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 3.933333333333333,
+   "naturalness": 3.433333333333333,
+   "relevance": 4.8,
+   "persona": null,
+   "broken%": 0.0
+  }
  }
 }
