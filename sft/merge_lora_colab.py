@@ -1,6 +1,7 @@
 """手元に保存した LoRA（adapters/<run名>）を元モデルに統合し直す。Colab の VM は止めると中身が消えるため、次の学習・評価の前に使う。
 
     python merge_lora_colab.py --base-model XHToken/Spark-X2.5-4B --adapter /content/adapters/spark-ja-4b --out /content/out/spark-ja-4b/merged
+    python sft/merge_lora_colab.py --base-model XHToken/Spark-X2.5-4B --adapter adapters/spark-ja-4b --out tools/models/spark-ja-4b/merged --device cpu   # Mac
 """
 
 import argparse
@@ -18,10 +19,11 @@ def main():
     ap.add_argument("--base-model", required=True)
     ap.add_argument("--adapter", required=True)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--device", default="cuda", help="Mac では cpu")
     a = ap.parse_args()
 
     tok = AutoTokenizer.from_pretrained(a.base_model, trust_remote_code=True)
-    model = AutoModelForCausalLM.from_pretrained(a.base_model, trust_remote_code=True, dtype=torch.bfloat16, device_map="cuda")
+    model = AutoModelForCausalLM.from_pretrained(a.base_model, trust_remote_code=True, dtype=torch.bfloat16, device_map=a.device)
     merged = PeftModel.from_pretrained(model, a.adapter).merge_and_unload()
     merged.save_pretrained(a.out, safe_serialization=True)
     tok.save_pretrained(a.out)

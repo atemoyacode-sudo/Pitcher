@@ -33,3 +33,4 @@ eval/luna/judge_outputs_*.jsonl
 tools/
 eval/results/llama-server.log
 data/release/
+eval/results/aime_raw/
