@@ -43,3 +43,4 @@ docs/
 # Tengentoppa（大きいので git に入れない）
 data/tengentoppa/
 sft/tengentoppa_*.jsonl
+eval/luna/*.raw.txt

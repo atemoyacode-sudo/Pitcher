@@ -1,80 +1,158 @@
 {
- "base": {
+ "base-0.8b-long": {
   "キャラ設定なし（感情の質問）": {
    "n": 100,
-   "consistency": 2.1,
-   "naturalness": 2.19,
-   "relevance": 3.04,
+   "consistency": 2.32,
+   "naturalness": 2.31,
+   "relevance": 3.11,
    "persona": null,
-   "broken%": 76.0
+   "broken%": 67.0
   },
   "キャラ設定あり（4条件）": {
-   "n": 400,
-   "consistency": 1.3525,
-   "naturalness": 1.6825,
-   "relevance": 2.825,
-   "persona": 1.74,
-   "broken%": 98.5
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 2.5,
+   "naturalness": 2.066666666666667,
+   "relevance": 3.3666666666666667,
+   "persona": null,
+   "broken%": 63.333333333333336
+  }
+ },
+ "qwen08b-distill-long": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 2.55,
+   "naturalness": 2.71,
+   "relevance": 3.21,
+   "persona": null,
+   "broken%": 60.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
   },
   "作文": {
    "n": 30,
    "consistency": 2.4,
-   "naturalness": 2.1666666666666665,
-   "relevance": 3.2333333333333334,
+   "naturalness": 2.3666666666666667,
+   "relevance": 3.9,
    "persona": null,
    "broken%": 70.0
   }
  },
- "qwen08b-distill": {
+ "qwen08b-tengen-long": {
   "キャラ設定なし（感情の質問）": {
    "n": 100,
-   "consistency": 2.56,
-   "naturalness": 2.76,
-   "relevance": 3.2,
+   "consistency": 3.42,
+   "naturalness": 2.93,
+   "relevance": 3.63,
    "persona": null,
-   "broken%": 64.0
+   "broken%": 31.0
   },
   "キャラ設定あり（4条件）": {
-   "n": 400,
-   "consistency": 1.77,
-   "naturalness": 2.09,
-   "relevance": 3.29,
-   "persona": 1.66,
-   "broken%": 90.75
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
   },
   "作文": {
    "n": 30,
-   "consistency": 2.2333333333333334,
-   "naturalness": 2.3666666666666667,
-   "relevance": 3.466666666666667,
+   "consistency": 2.6333333333333333,
+   "naturalness": 2.566666666666667,
+   "relevance": 3.6,
    "persona": null,
-   "broken%": 73.33333333333333
+   "broken%": 56.666666666666664
   }
  },
- "base-4b": {
+ "base-0.8b-t07": {
   "キャラ設定なし（感情の質問）": {
    "n": 100,
-   "consistency": 4.02,
-   "naturalness": 3.89,
-   "relevance": 4.78,
+   "consistency": 2.27,
+   "naturalness": 2.47,
+   "relevance": 3.13,
    "persona": null,
-   "broken%": 16.0
+   "broken%": 71.0
   },
   "キャラ設定あり（4条件）": {
-   "n": 400,
-   "consistency": 2.83,
-   "naturalness": 2.8125,
-   "relevance": 4.7025,
-   "persona": 3.5025,
-   "broken%": 45.25
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
   },
   "作文": {
    "n": 30,
-   "consistency": 3.4,
-   "naturalness": 3.3,
-   "relevance": 4.633333333333334,
+   "consistency": 2.8333333333333335,
+   "naturalness": 2.7,
+   "relevance": 3.7,
    "persona": null,
-   "broken%": 36.666666666666664
+   "broken%": 60.0
+  }
+ },
+ "qwen08b-distill-t07": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 2.74,
+   "naturalness": 3.52,
+   "relevance": 3.39,
+   "persona": null,
+   "broken%": 55.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 2.6,
+   "naturalness": 3.0,
+   "relevance": 4.133333333333334,
+   "persona": null,
+   "broken%": 60.0
+  }
+ },
+ "qwen08b-tengen-t07": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 3.6,
+   "naturalness": 3.11,
+   "relevance": 3.66,
+   "persona": null,
+   "broken%": 32.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 2.8666666666666667,
+   "naturalness": 3.1333333333333333,
+   "relevance": 3.9,
+   "persona": null,
+   "broken%": 50.0
   }
  }
 }

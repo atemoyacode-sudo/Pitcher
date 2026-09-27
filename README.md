@@ -29,6 +29,8 @@
 - [x] 第1段階の改良：Qwen3.8-27B からの蒸留（日本語の一般常識が Qwen3.5-4B と同等に、中国語の混入はほぼ0%）
 - [x] 日本語化したモデルと蒸留データを Hugging Face で公開
 - [x] 数学（AIME 2026、思考あり）の確認：日本語化で落ちなかった（比較レポートの第7節）
+- [x] 蒸留後のモデルでキャラクターの学習をやり直し、Hugging Face で公開（[Spark-X2.5-4B-Japanese-Pitcher](https://huggingface.co/Takenoko12345678/Spark-X2.5-4B-Japanese-Pitcher)、比較レポートの第8節）
+- [x] Qwen3.5-0.8B への蒸留と、短い回答を混ぜた追加学習（比較レポートの第10・11節）
 - [x] 蒸留後のモデルの日本語の自然さの採点（GPT-5.6 Luna）：自然さは Qwen3.5-4B を上回り、決めておいた3つの基準をすべて満たした（[比較レポート](eval/results/model_comparison_report.md)の第6節）
 
 
