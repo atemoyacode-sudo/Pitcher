@@ -1,4 +1,56 @@
 {
+ "base": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 2.1,
+   "naturalness": 2.19,
+   "relevance": 3.04,
+   "persona": null,
+   "broken%": 76.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 400,
+   "consistency": 1.3525,
+   "naturalness": 1.6825,
+   "relevance": 2.825,
+   "persona": 1.74,
+   "broken%": 98.5
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 2.4,
+   "naturalness": 2.1666666666666665,
+   "relevance": 3.2333333333333334,
+   "persona": null,
+   "broken%": 70.0
+  }
+ },
+ "qwen08b-distill": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 2.56,
+   "naturalness": 2.76,
+   "relevance": 3.2,
+   "persona": null,
+   "broken%": 64.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 400,
+   "consistency": 1.77,
+   "naturalness": 2.09,
+   "relevance": 3.29,
+   "persona": 1.66,
+   "broken%": 90.75
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 2.2333333333333334,
+   "naturalness": 2.3666666666666667,
+   "relevance": 3.466666666666667,
+   "persona": null,
+   "broken%": 73.33333333333333
+  }
+ },
  "base-4b": {
   "キャラ設定なし（感情の質問）": {
    "n": 100,
@@ -23,58 +75,6 @@
    "relevance": 4.633333333333334,
    "persona": null,
    "broken%": 36.666666666666664
-  }
- },
- "spark-x2.5-4b": {
-  "キャラ設定なし（感情の質問）": {
-   "n": 100,
-   "consistency": 3.29,
-   "naturalness": 2.38,
-   "relevance": 4.08,
-   "persona": null,
-   "broken%": 36.0
-  },
-  "キャラ設定あり（4条件）": {
-   "n": 400,
-   "consistency": 3.25,
-   "naturalness": 2.2925,
-   "relevance": 4.58,
-   "persona": 3.0575,
-   "broken%": 33.0
-  },
-  "作文": {
-   "n": 30,
-   "consistency": 3.2333333333333334,
-   "naturalness": 2.3333333333333335,
-   "relevance": 4.166666666666667,
-   "persona": null,
-   "broken%": 43.333333333333336
-  }
- },
- "spark-ja-4b": {
-  "キャラ設定なし（感情の質問）": {
-   "n": 100,
-   "consistency": 4.2,
-   "naturalness": 3.58,
-   "relevance": 4.5,
-   "persona": null,
-   "broken%": 11.0
-  },
-  "キャラ設定あり（4条件）": {
-   "n": 400,
-   "consistency": 2.905,
-   "naturalness": 2.595,
-   "relevance": 4.275,
-   "persona": 2.26,
-   "broken%": 47.5
-  },
-  "作文": {
-   "n": 30,
-   "consistency": 4.233333333333333,
-   "naturalness": 2.933333333333333,
-   "relevance": 4.5,
-   "persona": null,
-   "broken%": 6.666666666666667
   }
  }
 }
