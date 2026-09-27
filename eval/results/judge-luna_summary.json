@@ -1,78 +1,78 @@
 {
- "lora-4b-replay-ja": {
+ "base-0.8b-long": {
   "キャラ設定なし（感情の質問）": {
    "n": 100,
-   "consistency": 4.84,
-   "naturalness": 4.23,
-   "relevance": 4.56,
+   "consistency": 4.42,
+   "naturalness": 2.98,
+   "relevance": 3.77,
    "persona": null,
-   "broken%": 0.0
+   "broken%": 5.0
   },
   "キャラ設定あり（4条件）": {
-   "n": 400,
-   "consistency": 4.78,
-   "naturalness": 4.3325,
-   "relevance": 4.295,
-   "persona": 4.8525,
-   "broken%": 0.25
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
   },
   "作文": {
    "n": 30,
-   "consistency": 4.4,
-   "naturalness": 2.2333333333333334,
-   "relevance": 4.333333333333333,
+   "consistency": 3.8333333333333335,
+   "naturalness": 2.5,
+   "relevance": 4.1,
    "persona": null,
-   "broken%": 0.0
+   "broken%": 13.333333333333334
   }
  },
- "spark-pitcher-4b": {
+ "qwen08b-distill-long": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 4.79,
+   "naturalness": 3.66,
+   "relevance": 4.08,
+   "persona": null,
+   "broken%": 1.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 4.033333333333333,
+   "naturalness": 2.933333333333333,
+   "relevance": 4.566666666666666,
+   "persona": null,
+   "broken%": 6.666666666666667
+  }
+ },
+ "qwen08b-tengen-long": {
   "キャラ設定なし（感情の質問）": {
    "n": 100,
    "consistency": 4.86,
-   "naturalness": 3.81,
-   "relevance": 4.58,
+   "naturalness": 3.76,
+   "relevance": 3.94,
    "persona": null,
    "broken%": 0.0
   },
   "キャラ設定あり（4条件）": {
-   "n": 400,
-   "consistency": 4.495,
-   "naturalness": 3.7325,
-   "relevance": 3.985,
-   "persona": 4.375,
-   "broken%": 0.75
-  },
-  "作文": {
-   "n": 30,
-   "consistency": 4.266666666666667,
-   "naturalness": 3.033333333333333,
-   "relevance": 4.733333333333333,
-   "persona": null,
-   "broken%": 0.0
-  }
- },
- "spark-pitcher3-4b": {
-  "キャラ設定なし（感情の質問）": {
-   "n": 100,
-   "consistency": 4.34,
-   "naturalness": 3.56,
-   "relevance": 4.58,
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
    "persona": null,
    "broken%": 0.0
   },
-  "キャラ設定あり（4条件）": {
-   "n": 400,
-   "consistency": 4.61,
-   "naturalness": 4.1975,
-   "relevance": 3.965,
-   "persona": 4.595,
-   "broken%": 2.0
-  },
   "作文": {
    "n": 30,
-   "consistency": 3.933333333333333,
-   "naturalness": 3.3,
-   "relevance": 4.033333333333333,
+   "consistency": 5.0,
+   "naturalness": 4.033333333333333,
+   "relevance": 4.666666666666667,
    "persona": null,
    "broken%": 0.0
   }
