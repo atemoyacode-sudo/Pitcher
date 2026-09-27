@@ -6,6 +6,10 @@
 使い方:
     modal run sft/train_lora_modal.py --run-name lora-0.8b --base-model Qwen/Qwen3.5-0.8B
     modal run sft/train_lora_modal.py --run-name lora-4b --base-model Qwen/Qwen3.5-4B --gpu L40S
+
+全部の重みを学習する（フルファインチューニング）場合は --full。小さいモデル（0.8B）への蒸留用:
+    modal run sft/train_lora_modal.py --run-name qwen08b-distill --base-model Qwen/Qwen3.5-0.8B --full --gpu H100 \
+        --train-file distill_sft.jsonl --holdout 200 --lr 1e-5 --batch-size 2 --grad-accum 16 --max-len 2048 --drop-long --grad-ckpt
 """
 
 import json
@@ -59,20 +63,35 @@ def train(train_rows: list[dict], valid_rows: list[dict], base_model: str, run_n
     torch.manual_seed(hp["seed"])
     out_dir = f"/models/{run_name}"
     tokenizer = AutoTokenizer.from_pretrained(base_model)
-    model = AutoModelForImageTextToText.from_pretrained(base_model, dtype=torch.bfloat16, device_map="cuda")
+    full = hp.get("full", False)
+    # フルファインチューニングでは、小さい学習率の更新が bf16 の丸めで消えないよう、重みは fp32 で持つ（計算は bf16）
+    model = AutoModelForImageTextToText.from_pretrained(base_model, dtype=torch.float32 if full else torch.bfloat16, device_map="cuda")
 
-    # LoRA は言語モデル側の全線形層に入れる（画像エンコーダと出力層は対象外）
-    targets = sorted(
-        {name.split(".")[-1] for name, m in model.named_modules()
-         if isinstance(m, torch.nn.Linear) and "language_model" in name and "visual" not in name}
-    )
-    print("LoRA 対象:", targets)
-    model = get_peft_model(model, LoraConfig(
-        r=hp["lora_r"], lora_alpha=hp["lora_alpha"], lora_dropout=hp["lora_dropout"],
-        target_modules=rf".*language_model.*\.({'|'.join(targets)})$", task_type="CAUSAL_LM",
-    ))
-    model.print_trainable_parameters()
+    if full:
+        # 言語モデル側だけを学習し、画像エンコーダは固定する
+        for name, prm in model.named_parameters():
+            prm.requires_grad = "visual" not in name
+        n_train_p = sum(p.numel() for p in model.parameters() if p.requires_grad)
+        print(f"フルファインチューニング：学習するパラメータ {n_train_p:,}")
+    else:
+        # LoRA は言語モデル側の全線形層に入れる（画像エンコーダと出力層は対象外）
+        targets = sorted(
+            {name.split(".")[-1] for name, m in model.named_modules()
+             if isinstance(m, torch.nn.Linear) and "language_model" in name and "visual" not in name}
+        )
+        print("LoRA 対象:", targets)
+        model = get_peft_model(model, LoraConfig(
+            r=hp["lora_r"], lora_alpha=hp["lora_alpha"], lora_dropout=hp["lora_dropout"],
+            target_modules=rf".*language_model.*\.({'|'.join(targets)})$", task_type="CAUSAL_LM",
+        ))
+        model.print_trainable_parameters()
 
+    if hp.get("drop_long"):
+        # 上限を超える例は途中で切らずに除く（途中で切れた回答を学習させないため）
+        n_before = len(train_rows)
+        train_rows = [r for r in train_rows if len(encode(tokenizer, r["messages"], 10**9)["input_ids"]) <= hp["max_len"]]
+        valid_rows = [r for r in valid_rows if len(encode(tokenizer, r["messages"], 10**9)["input_ids"]) <= hp["max_len"]]
+        print(f"上限 {hp['max_len']} トークンを超える例を除外：{n_before} → {len(train_rows)} 件")
     train_ds = [encode(tokenizer, r["messages"], hp["max_len"]) for r in train_rows]
     valid_ds = [encode(tokenizer, r["messages"], hp["max_len"]) for r in valid_rows]
     n_tokens = sum(len(x["input_ids"]) for x in train_ds)
@@ -130,8 +149,11 @@ def train(train_rows: list[dict], valid_rows: list[dict], base_model: str, run_n
     train_sec = time.time() - t0
     eval_after = trainer.evaluate()["eval_loss"]
 
-    model.save_pretrained(f"{out_dir}/adapter")
-    merged = model.merge_and_unload()
+    if full:
+        merged = model.to(torch.bfloat16)
+    else:
+        model.save_pretrained(f"{out_dir}/adapter")
+        merged = model.merge_and_unload()
     merged.save_pretrained(f"{out_dir}/merged", safe_serialization=True)
     tokenizer.save_pretrained(f"{out_dir}/merged")
     # vLLM が読むための前処理設定・チャットテンプレートなど、重み以外のファイルを元モデルからそろえる。
@@ -160,11 +182,20 @@ DEFAULT_HP = dict(lora_r=16, lora_alpha=32, lora_dropout=0.05, lr=2e-4, epochs=2
 @app.local_entrypoint()
 def main(run_name: str, base_model: str = "Qwen/Qwen3.5-0.8B", gpu: str = "L4", lr: float = 2e-4, epochs: int = 2,
          train_file: str = "train.jsonl", valid_file: str = "valid.jsonl", batch_size: int = 16, grad_accum: int = 1,
-         max_len: int = 1024, grad_ckpt: bool = False):
+         max_len: int = 1024, grad_ckpt: bool = False, full: bool = False, holdout: int = 0, drop_long: bool = False):
+    import random
+
     load = lambda p: [json.loads(l) for l in p.read_text().splitlines() if l.strip()]
-    train_rows, valid_rows = load(SFT_DIR / train_file), load(SFT_DIR / valid_file)
-    hp = DEFAULT_HP | {"lr": lr, "epochs": epochs, "train_file": train_file, "batch_size": batch_size,
-                       "grad_accum": grad_accum, "max_len": max_len, "grad_ckpt": grad_ckpt}
+    train_rows = load(SFT_DIR / train_file)
+    if holdout:
+        # 検証用に、学習データから holdout 件を取り分ける（同じ種類のデータで検証するため）
+        random.Random(0).shuffle(train_rows)
+        train_rows, valid_rows = train_rows[holdout:], train_rows[:holdout]
+        valid_file = f"{train_file} から {holdout} 件"
+    else:
+        valid_rows = load(SFT_DIR / valid_file)
+    hp = DEFAULT_HP | {"lr": lr, "epochs": epochs, "train_file": train_file, "valid_file": valid_file, "batch_size": batch_size,
+                       "grad_accum": grad_accum, "max_len": max_len, "grad_ckpt": grad_ckpt, "full": full, "drop_long": drop_long}
     result = train.with_options(gpu=gpu).remote(train_rows, valid_rows, base_model, run_name, hp)
     out = SFT_DIR / "runs" / f"{run_name}.json"
     out.parent.mkdir(exist_ok=True)
