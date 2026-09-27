@@ -30,7 +30,8 @@ image = (
         # Qwen3.5 の線形アテンション層（Gated DeltaNet）の高速カーネル。なくても動くが遅い
         "flash-linear-attention==0.5.2",
     )
-    .env({"HF_HUB_CACHE": "/hf-cache"})
+    # 長さの違う入力が続くとメモリが断片化し、cuDNN の注意計算がメモリ不足で止まったため、断片化を抑える
+    .env({"HF_HUB_CACHE": "/hf-cache", "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True"})
 )
 hf_cache = modal.Volume.from_name("pitcher-hf-cache", create_if_missing=True)
 models = modal.Volume.from_name("pitcher-models", create_if_missing=True)
@@ -61,6 +62,8 @@ def train(train_rows: list[dict], valid_rows: list[dict], base_model: str, run_n
     from transformers import AutoModelForImageTextToText, AutoTokenizer, Trainer, TrainerCallback, TrainingArguments
 
     torch.manual_seed(hp["seed"])
+    # cuDNN の注意計算は入力の形ごとに追加のメモリを使い、メモリ不足で止まったので使わない（flash / mem-efficient を使う）
+    torch.backends.cuda.enable_cudnn_sdp(False)
     out_dir = f"/models/{run_name}"
     tokenizer = AutoTokenizer.from_pretrained(base_model)
     full = hp.get("full", False)
