@@ -1,0 +1,54 @@
+{
+ "qwen08b-tengen-scored-long": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 4.59,
+   "naturalness": 3.31,
+   "relevance": 3.64,
+   "persona": null,
+   "broken%": 5.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 3.7333333333333334,
+   "naturalness": 2.433333333333333,
+   "relevance": 4.733333333333333,
+   "persona": null,
+   "broken%": 3.3333333333333335
+  }
+ },
+ "qwen08b-tengen-scored-fmt-long": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 4.34,
+   "naturalness": 3.04,
+   "relevance": 3.65,
+   "persona": null,
+   "broken%": 3.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 3.6,
+   "naturalness": 2.3,
+   "relevance": 4.633333333333334,
+   "persona": null,
+   "broken%": 3.3333333333333335
+  }
+ }
+}
