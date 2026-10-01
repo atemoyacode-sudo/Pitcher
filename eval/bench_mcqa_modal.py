@@ -9,6 +9,7 @@ JCommonsenseQA は CommonsenseQA を参考に作られた日本語版なので�
 使い方:
     modal run eval/bench_mcqa_modal.py
     modal run eval/bench_mcqa_modal.py --models openbmb/MiniCPM5-1B
+    modal run eval/bench_mcqa_modal.py --models /models/qwen08b-tengen-clean/merged   # 学習したモデル（mcqa_qwen08b-tengen-clean.jsonl）
 """
 
 import json
@@ -62,7 +63,7 @@ def parse_choice(text: str) -> int | None:
 def run(model: str) -> list[dict]:
     from vllm import LLM, SamplingParams
 
-    kwargs = {"limit_mm_per_prompt": {"image": 0, "video": 0}} if "Qwen3.5" in model else {}
+    kwargs = {"limit_mm_per_prompt": {"image": 0, "video": 0}} if "Qwen3.5" in model or "qwen08b" in model else {}
     llm = LLM(model=model, max_model_len=4096, **kwargs)
     qs = load_questions()
     outs = llm.chat([[{"role": "user", "content": q["prompt"]}] for q in qs], SamplingParams(temperature=0.0, max_tokens=16),
@@ -81,7 +82,8 @@ def main(models: str = DEFAULT_MODELS):
     names = models.split(",")
     out_dir = HERE / "results"
     for name, res in zip(names, run.map(names)):
-        (out_dir / f"mcqa_{name.split('/')[-1]}.jsonl").write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in res))
+        # 学習したモデル（/models/<run名>/merged）は run 名で保存する
+        (out_dir / f"mcqa_{name.removesuffix('/merged').split('/')[-1]}.jsonl").write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in res))
         for lang in ("ja", "en"):
             rs = [r for r in res if r["lang"] == lang]
             acc = sum(r["correct"] for r in rs) / len(rs)

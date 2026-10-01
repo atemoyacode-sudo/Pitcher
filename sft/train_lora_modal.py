@@ -10,6 +10,12 @@
 全部の重みを学習する（フルファインチューニング）場合は --full。小さいモデル（0.8B）への蒸留用:
     modal run sft/train_lora_modal.py --run-name qwen08b-distill --base-model Qwen/Qwen3.5-0.8B --full --gpu H100 \
         --train-file distill_sft.jsonl --holdout 200 --lr 1e-5 --batch-size 2 --grad-accum 16 --max-len 2048 --drop-long --grad-ckpt
+
+蒸留済みの 0.8B から続けて学習する（Tengentoppa の利用条件を確認できた行だけ。無作為の版と Gemma の点数で選んだ版）:
+    modal run sft/train_lora_modal.py --run-name qwen08b-tengen-clean --base-model /models/qwen08b-distill/merged --full --gpu H100 \
+        --train-file tengentoppa_clean_train.jsonl --valid-file tengentoppa_clean_valid.jsonl --lr 1e-5 --epochs 1 \
+        --batch-size 2 --grad-accum 16 --max-len 2048 --drop-long --grad-ckpt
+    （点数で選んだ版は --run-name qwen08b-tengen-scored --train-file tengentoppa_clean_scored_train.jsonl）
 """
 
 import json
@@ -162,7 +168,8 @@ def train(train_rows: list[dict], valid_rows: list[dict], base_model: str, run_n
     # vLLM が読むための前処理設定・チャットテンプレートなど、重み以外のファイルを元モデルからそろえる。
     # キャッシュのフォルダには元モデルの重みも入っているので、重みと index は絶対にコピーしない
     # （vLLM はフォルダ内の safetensors を全部読むため、元の重みで学習結果が上書きされる）
-    snap = snapshot_download(base_model, allow_patterns=["*.json", "*.jinja", "*.txt"])
+    # 学習済みのモデル（Volume 上のフォルダ）から続けて学習するときは、そのフォルダからそろえる
+    snap = base_model if os.path.isdir(base_model) else snapshot_download(base_model, allow_patterns=["*.json", "*.jinja", "*.txt"])
     for f in os.listdir(snap):
         dst = f"{out_dir}/merged/{f}"
         if f.endswith((".json", ".jinja", ".txt")) and not f.endswith("index.json") and not os.path.exists(dst):
