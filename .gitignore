@@ -44,3 +44,4 @@ docs/
 data/tengentoppa/
 sft/tengentoppa_*.jsonl
 eval/luna/*.raw.txt
+data/mcqa/
