@@ -45,3 +45,4 @@ data/tengentoppa/
 sft/tengentoppa_*.jsonl
 eval/luna/*.raw.txt
 data/mcqa/
+sft/format_drill.jsonl
