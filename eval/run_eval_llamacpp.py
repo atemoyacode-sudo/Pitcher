@@ -9,6 +9,7 @@ Spark-X2.5 は transformers だと Mac の GPU でも毎秒十数トークンと
     python3 eval/run_eval_llamacpp.py mcqa --gguf tools/gguf/spark-ja2-4b-f16.gguf --run-name spark-ja2-4b
     python3 eval/run_eval_llamacpp.py eval140 --gguf ... --run-name ... --only know-   # 一部の質問だけ
     python3 eval/run_eval_llamacpp.py eval140 --gguf tools/gguf/spark-ja2-4b-f16.gguf --run-name spark-ja2-4b-long --only emo-none,gen --max-tokens 2048
+    python3 eval/run_eval_llamacpp.py eval140 --qwen --gguf tools/gguf/qwen08b-tengen-scored-fmt-Q4_K_M.gguf --run-name qwen08b-tengen-scored-fmt-q4km   # 0.8B の公開用 GGUF の確認
 """
 
 import argparse
@@ -23,6 +24,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 # run_eval_hf_colab.py と同じ生成設定（Spark-X2.5 の推奨値、思考なし）。llama.cpp の top_k=0 は「使わない」
 SAMPLED = dict(temperature=1.0, top_p=0.95, top_k=0, max_tokens=512)
+# Qwen3.5 系（0.8B など）は run_eval_modal.py と同じ Qwen の推奨値（--qwen）
+SAMPLED_QWEN = dict(temperature=1.0, top_p=1.0, top_k=20, min_p=0.0, presence_penalty=2.0, max_tokens=512)
 GREEDY = dict(temperature=0.0, max_tokens=256)
 N_SAMPLES = {"emotion": 5, "general": 3, "knowledge": 1, "knowledge_en": 1}
 PARALLEL = 8
@@ -73,9 +76,16 @@ def main():
     ap.add_argument("--run-name", required=True)
     ap.add_argument("--only", default="")
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--repeat-penalty", type=float, default=0, help="llama.cpp の repeat_penalty（直近64トークンに出た語を出にくくする）")
+    ap.add_argument("--qwen", action="store_true", help="Qwen3.5 系の推奨の生成設定を使う（0.8B など）")
     ap.add_argument("--max-tokens", type=int, default=0, help="回答の長さの上限（既定 512）。打ち切りの影響を調べる再テスト用")
     a = ap.parse_args()
 
+    if a.qwen:
+        SAMPLED.clear()
+        SAMPLED.update(SAMPLED_QWEN)
+    if a.repeat_penalty:  # 公開用の推奨設定の確認用（0.8B は笑い声などをまれに繰り返し続けるため）
+        SAMPLED["repeat_penalty"] = a.repeat_penalty
     if a.max_tokens:
         SAMPLED["max_tokens"] = a.max_tokens
     server = start_server(a.gguf, a.max_tokens)
