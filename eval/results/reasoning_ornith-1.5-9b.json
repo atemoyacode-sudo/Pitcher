@@ -1,0 +1,29 @@
+{
+ "run": "ornith-1.5-9b",
+ "aime": {
+  "n": 120,
+  "acc_at_cap": {
+   "4096": 0.1583,
+   "8192": 0.375,
+   "16384": 0.6,
+   "32768": 0.7667
+  },
+  "truncated": 0.2167,
+  "tokens_mean": 15439,
+  "tokens_median": 11334,
+  "tokens_mean_correct": 10566
+ },
+ "mmlu_pro_sci": {
+  "n": 300,
+  "acc_at_cap": {
+   "4096": 0.8167,
+   "8192": 0.86,
+   "16384": 0.8767,
+   "32768": 0.8933
+  },
+  "truncated": 0.0133,
+  "tokens_mean": 2321,
+  "tokens_median": 865,
+  "tokens_mean_correct": 1835
+ }
+}

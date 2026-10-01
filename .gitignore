@@ -48,3 +48,4 @@ sft/tengentoppa_*.jsonl
 eval/luna/*.raw.txt
 data/mcqa/
 sft/format_drill.jsonl
+eval/results/reasoning_raw/
