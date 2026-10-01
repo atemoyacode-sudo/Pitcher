@@ -1,0 +1,106 @@
+{
+ "qwen08b-distill-long": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 4.5,
+   "naturalness": 2.99,
+   "relevance": 3.96,
+   "persona": null,
+   "broken%": 1.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 4.333333333333333,
+   "naturalness": 2.966666666666667,
+   "relevance": 4.6,
+   "persona": null,
+   "broken%": 0.0
+  }
+ },
+ "qwen08b-tengen-long": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 4.67,
+   "naturalness": 3.32,
+   "relevance": 3.9,
+   "persona": null,
+   "broken%": 3.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 4.3,
+   "naturalness": 2.9,
+   "relevance": 4.366666666666666,
+   "persona": null,
+   "broken%": 0.0
+  }
+ },
+ "qwen08b-tengen-clean-long": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 4.44,
+   "naturalness": 3.35,
+   "relevance": 3.39,
+   "persona": null,
+   "broken%": 8.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 3.8666666666666667,
+   "naturalness": 2.6,
+   "relevance": 4.766666666666667,
+   "persona": null,
+   "broken%": 10.0
+  }
+ },
+ "qwen08b-tengen-scored-long": {
+  "キャラ設定なし（感情の質問）": {
+   "n": 100,
+   "consistency": 4.62,
+   "naturalness": 3.34,
+   "relevance": 3.66,
+   "persona": null,
+   "broken%": 4.0
+  },
+  "キャラ設定あり（4条件）": {
+   "n": 0,
+   "consistency": null,
+   "naturalness": null,
+   "relevance": null,
+   "persona": null,
+   "broken%": 0.0
+  },
+  "作文": {
+   "n": 30,
+   "consistency": 3.7666666666666666,
+   "naturalness": 2.433333333333333,
+   "relevance": 4.733333333333333,
+   "persona": null,
+   "broken%": 3.3333333333333335
+  }
+ }
+}

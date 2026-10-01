@@ -10,11 +10,13 @@ eval/luna/judge_outputs_<batch>.jsonl に1行ずつ保存してもらう。
 
 取り込み:
     python3 eval/luna_judge.py import
+    python3 eval/luna_judge.py import --batch 8   # 8回目だけ（同じ回で比べるとき）→ eval/results/judge-luna-b8_<run>.jsonl
     → eval/results/judge-luna_<run>.jsonl（judge_summary.py で judge-luna_ を指定して集計できる）
 """
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -41,11 +43,28 @@ def export(runs: list[str], full: bool, batch: str, max_chars: int = 2500):
     print(f"{len(rows)} 件を {out} に書き出しました")
 
 
-def import_():
-    # 書き出しは何回かに分けてよい（judge_prompts_<batch>.jsonl）。回答も judge_outputs_<batch>.jsonl に分けて置く
-    prompts = {json.loads(l)["id"] for f in sorted(LUNA_DIR.glob("judge_prompts_*.jsonl")) for l in f.read_text().splitlines() if l.strip()}
+# 回をまたいで取り込む（judge-luna_<run>.jsonl を作る）のは7回目まで。8回目からは、比べるモデルを毎回同じ回に入れて
+# --batch で回ごとに取り込む（judge-luna-b<回>_<run>.jsonl）。同じ回答が後の回で採点し直されても、報告済みの数字が変わらないようにするため
+LAST_MERGED_BATCH = 7
+
+
+def batch_no(f: Path) -> int:
+    return int(re.sub(r"\D", "", f.stem.split("_")[-1]) or 0)
+
+
+def batch_files(kind: str, batch: str | None) -> list[Path]:
+    """回の番号の順に並べた judge_<kind>_<batch>.jsonl（batch を指定したときはその回だけ）。"""
+    if batch:
+        return [LUNA_DIR / f"judge_{kind}_{batch}.jsonl"]
+    return sorted((f for f in LUNA_DIR.glob(f"judge_{kind}_*.jsonl") if batch_no(f) <= LAST_MERGED_BATCH), key=batch_no)
+
+
+def import_(batch: str | None = None):
+    # 書き出しは何回かに分けてよい（judge_prompts_<batch>.jsonl）。回答も judge_outputs_<batch>.jsonl に分けて置く。
+    # 同じ回答が複数の回で採点されているときは、後の回の採点を使う
+    prompts = {json.loads(l)["id"] for f in batch_files("prompts", batch) for l in f.read_text().splitlines() if l.strip()}
     outs = {}
-    for f in sorted(LUNA_DIR.glob("judge_outputs_*.jsonl")):
+    for f in batch_files("outputs", batch):
         for l in f.read_text().splitlines():
             if l.strip():
                 r = json.loads(l)
@@ -67,7 +86,7 @@ def import_():
         by_run.setdefault(run, []).append({"run": run, "id": item_id, "sample": int(sample), "category": r["category"],
                                            "persona": r["persona"], "judge": parse(text), "raw": text})
     for run, rows in by_run.items():
-        (HERE / "results" / f"judge-luna_{run}.jsonl").write_text("".join(json.dumps(x, ensure_ascii=False) + "\n" for x in rows))
+        (HERE / "results" / f"judge-luna{'-b' + batch if batch else ''}_{run}.jsonl").write_text("".join(json.dumps(x, ensure_ascii=False) + "\n" for x in rows))
         print(f"{run}: {len(rows)} 件（読み取り失敗 {sum(x['judge'] is None for x in rows)} 件）")
 
 
@@ -76,10 +95,10 @@ def main():
     ap.add_argument("mode", choices=["export", "import"])
     ap.add_argument("--runs", default="")
     ap.add_argument("--full", action="store_true", help="キャラ設定ありの回答も含める（1モデル530件）")
-    ap.add_argument("--batch", default="1", help="書き出しの回の名前（judge_prompts_<batch>.jsonl）")
+    ap.add_argument("--batch", default=None, help="回の名前（書き出し：judge_prompts_<batch>.jsonl、既定は 1。取り込み：その回だけを取り込む）")
     ap.add_argument("--max-chars", type=int, default=2500, help="採点役に渡す回答の最大文字数（上限を上げた再テストでは大きくする）")
     a = ap.parse_args()
-    export(a.runs.split(","), a.full, a.batch, a.max_chars) if a.mode == "export" else import_()
+    export(a.runs.split(","), a.full, a.batch or "1", a.max_chars) if a.mode == "export" else import_(a.batch)
 
 
 if __name__ == "__main__":
