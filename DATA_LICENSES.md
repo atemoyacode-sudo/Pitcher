@@ -18,6 +18,16 @@
 - リプレイの回答（`sft/replay_*.jsonl` など）：各モデル自身（Qwen3.5-0.8B / 4B、Spark-X2.5-4B。いずれも Apache 2.0）
 - 評価結果（`eval/results/`）：評価した各モデルの回答と、採点役（Gemma 4 31B、GPT-5.6 Luna）の採点
 
+## Qwen3.5-0.8B の日本語版（v1・v2）の学習に使ったデータ（リポジトリには含めていない）
+
+| 使い道 | 元データ・生成元 | ライセンス |
+|---|---|---|
+| 蒸留（v1・v2） | 質問：[llm-jp/magpie-sft-v1.0](https://huggingface.co/datasets/llm-jp/magpie-sft-v1.0)、回答：[Qwen/Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B)（公開版は [Takenoko12345678/Japanese-SFT-Qwen3.8-27B-10K](https://huggingface.co/datasets/Takenoko12345678/Japanese-SFT-Qwen3.8-27B-10K)） | Apache 2.0 |
+| 第2段階（v1・v2） | “[Tengentoppa-sft-v1.0](https://huggingface.co/datasets/DeL-TaiseiOzaki/Tengentoppa-sft-v1.0)” by DeL-TaiseiOzaki から選んだ行（公開版は [Takenoko12345678/Japanese-SFT-Tengentoppa-Curated-12K](https://huggingface.co/datasets/Takenoko12345678/Japanese-SFT-Tengentoppa-Curated-12K)。各行の元データとライセンスはその説明を参照） | CC BY 4.0（行ごとに Apache 2.0 / MIT / CC BY 4.0 の元データ） |
+| 追加の事前学習（v2） | 日本語版ウィキペディアの記事（Wikipedia contributors、[wikimedia/wikipedia](https://huggingface.co/datasets/wikimedia/wikipedia) の 20231101.ja） | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) / GFDL |
+| つぶやき・続けての会話の手本（v2） | [Qwen/Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B) による生成文（`sft/q08b_v2/gen_chat_modal.py`） | Apache 2.0 |
+| DPO（v2） | 0.8B 自身の回答。採点は [google/gemma-4-31B-it](https://huggingface.co/google/gemma-4-31B-it)（採点結果は選別にだけ使い、Gemma の生成文は学習に使っていない） | ― |
+
 ## このリポジトリに含めていないもの
 
 - JCommonsenseQA（CC BY-SA 4.0）・CommonsenseQA（MIT）の問題文：評価結果には問題番号・正解番号・モデルの回答だけを保存している

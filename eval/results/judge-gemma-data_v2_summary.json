@@ -1,0 +1,102 @@
+{
+ "judge": "google/gemma-4-31B-it (FP8, vLLM)",
+ "prompt": "sft/score_data_modal.py の evidence",
+ "summary": {
+  "qwen08b-tengen-scored-fmt": {
+   "emotion": {
+    "n": 100,
+    "consistency": 4.41,
+    "naturalness": 3.49,
+    "relevance": 3.24,
+    "broken%": 3.0
+   },
+   "general": {
+    "n": 30,
+    "consistency": 4.033,
+    "naturalness": 2.9,
+    "relevance": 3.6,
+    "broken%": 10.0
+   }
+  },
+  "qwen08b-wiki-sft": {
+   "emotion": {
+    "n": 100,
+    "consistency": 4.46,
+    "naturalness": 3.46,
+    "relevance": 3.13,
+    "broken%": 4.0
+   },
+   "general": {
+    "n": 30,
+    "consistency": 4.1,
+    "naturalness": 2.967,
+    "relevance": 3.833,
+    "broken%": 10.0
+   }
+  },
+  "qwen08b-wiki-chat": {
+   "emotion": {
+    "n": 100,
+    "consistency": 4.77,
+    "naturalness": 4.27,
+    "relevance": 3.4,
+    "broken%": 1.0
+   },
+   "general": {
+    "n": 30,
+    "consistency": 4.3,
+    "naturalness": 3.667,
+    "relevance": 3.767,
+    "broken%": 3.3
+   }
+  },
+  "qwen08b-wiki-dpo": {
+   "emotion": {
+    "n": 100,
+    "consistency": 4.79,
+    "naturalness": 4.2,
+    "relevance": 3.41,
+    "broken%": 1.0
+   },
+   "general": {
+    "n": 30,
+    "consistency": 4.233,
+    "naturalness": 3.6,
+    "relevance": 3.867,
+    "broken%": 3.3
+   }
+  },
+  "qwen08b-soup0.5": {
+   "emotion": {
+    "n": 100,
+    "consistency": 4.6,
+    "naturalness": 4.1,
+    "relevance": 3.46,
+    "broken%": 1.0
+   },
+   "general": {
+    "n": 30,
+    "consistency": 4.3,
+    "naturalness": 3.367,
+    "relevance": 4.067,
+    "broken%": 10.0
+   }
+  },
+  "qwen08b-soup0.7": {
+   "emotion": {
+    "n": 100,
+    "consistency": 4.79,
+    "naturalness": 4.0,
+    "relevance": 3.46,
+    "broken%": 2.0
+   },
+   "general": {
+    "n": 30,
+    "consistency": 4.167,
+    "naturalness": 3.367,
+    "relevance": 3.633,
+    "broken%": 10.0
+   }
+  }
+ }
+}

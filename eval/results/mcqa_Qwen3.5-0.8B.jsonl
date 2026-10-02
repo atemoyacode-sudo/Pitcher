@@ -1,11 +1,11 @@
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8939", "answer": 3, "pred": 3, "correct": true, "output": "3"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8939", "answer": 3, "pred": 4, "correct": false, "output": "4. ハードディスク"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8940", "answer": 3, "pred": 3, "correct": true, "output": "3. 田園"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8941", "answer": 1, "pred": 4, "correct": false, "output": "4. 寝る"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8941", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8942", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8943", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8944", "answer": 5, "pred": 4, "correct": false, "output": "4. 山腹"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8945", "answer": 5, "pred": 4, "correct": false, "output": "4"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8946", "answer": 3, "pred": 3, "correct": true, "output": "3. ノートパソコン"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8946", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8947", "answer": 3, "pred": 3, "correct": true, "output": "3. 喫煙"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8948", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8949", "answer": 5, "pred": 1, "correct": false, "output": "1"}
@@ -44,15 +44,15 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8982", "answer": 3, "pred": 3, "correct": true, "output": "3. ストア"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8983", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8984", "answer": 1, "pred": 1, "correct": true, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8985", "answer": 5, "pred": 4, "correct": false, "output": "4. ダスト"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8985", "answer": 5, "pred": 3, "correct": false, "output": "3. 冷蔵"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8986", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8987", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8988", "answer": 4, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8989", "answer": 3, "pred": 3, "correct": true, "output": "3. 動揺"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8989", "answer": 3, "pred": 4, "correct": false, "output": "4. 破壊"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8990", "answer": 1, "pred": 4, "correct": false, "output": "4. 気持ちを高揚させる"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8991", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8992", "answer": 4, "pred": 4, "correct": true, "output": "4. 身振り"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8993", "answer": 3, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8993", "answer": 3, "pred": 4, "correct": false, "output": "4. 殺人"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8994", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8995", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "8996", "answer": 2, "pred": 1, "correct": false, "output": "1"}
@@ -82,8 +82,8 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9020", "answer": 3, "pred": 4, "correct": false, "output": "4. 標識"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9021", "answer": 4, "pred": 4, "correct": true, "output": "4. 太刀持ち"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9022", "answer": 1, "pred": 4, "correct": false, "output": "4. 駄菓子屋"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9023", "answer": 3, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9024", "answer": 3, "pred": 4, "correct": false, "output": "4. 生命"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9023", "answer": 3, "pred": 4, "correct": false, "output": "4. 登山"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9024", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9025", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9026", "answer": 4, "pred": 4, "correct": true, "output": "4. トイレ"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9027", "answer": 2, "pred": 1, "correct": false, "output": "1"}
@@ -99,7 +99,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9037", "answer": 1, "pred": 4, "correct": false, "output": "4. 主人"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9038", "answer": 2, "pred": 4, "correct": false, "output": "4. 都道府県"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9039", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9040", "answer": 3, "pred": 4, "correct": false, "output": "4. 半弓"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9040", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9041", "answer": 4, "pred": 4, "correct": true, "output": "4. 甲州梅"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9042", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9043", "answer": 5, "pred": 4, "correct": false, "output": "4. 日本語"}
@@ -125,10 +125,10 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9063", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9064", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9065", "answer": 5, "pred": 5, "correct": true, "output": "5. 食品"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9066", "answer": 3, "pred": 4, "correct": false, "output": "4. カバン"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9066", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9067", "answer": 4, "pred": 4, "correct": true, "output": "4. 股引"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9068", "answer": 4, "pred": 4, "correct": true, "output": "4. 婦"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9069", "answer": 2, "pred": 3, "correct": false, "output": "3"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9069", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9070", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9071", "answer": 5, "pred": 4, "correct": false, "output": "4. トランプ"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9072", "answer": 2, "pred": 1, "correct": false, "output": "1"}
@@ -139,10 +139,10 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9077", "answer": 4, "pred": 4, "correct": true, "output": "4. 風呂"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9078", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9079", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9080", "answer": 5, "pred": 4, "correct": false, "output": "4. 墜落"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9080", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9081", "answer": 2, "pred": 4, "correct": false, "output": "4. 年末"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9082", "answer": 5, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9083", "answer": 3, "pred": 4, "correct": false, "output": "4"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9083", "answer": 3, "pred": 4, "correct": false, "output": "4. 韓国"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9084", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9085", "answer": 2, "pred": 3, "correct": false, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9086", "answer": 3, "pred": 1, "correct": false, "output": "1"}
@@ -153,7 +153,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9091", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9092", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9093", "answer": 3, "pred": 3, "correct": true, "output": "3. カレー丼"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9094", "answer": 5, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9094", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9095", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9096", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9097", "answer": 5, "pred": 4, "correct": false, "output": "4. 経典"}
@@ -185,11 +185,11 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9123", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9124", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9125", "answer": 5, "pred": 4, "correct": false, "output": "4. そんなわけはありません"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9126", "answer": 5, "pred": 5, "correct": true, "output": "5"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9126", "answer": 5, "pred": 5, "correct": true, "output": "5. 国"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9127", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9128", "answer": 3, "pred": 3, "correct": true, "output": "3. 難題"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9129", "answer": 5, "pred": 4, "correct": false, "output": "4. 天津飯"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9130", "answer": 1, "pred": 1, "correct": true, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9130", "answer": 1, "pred": 3, "correct": false, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9131", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9132", "answer": 4, "pred": 4, "correct": true, "output": "4. 棚"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9133", "answer": 2, "pred": 1, "correct": false, "output": "1"}
@@ -217,12 +217,12 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9155", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9156", "answer": 3, "pred": 4, "correct": false, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9157", "answer": 3, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9158", "answer": 5, "pred": 4, "correct": false, "output": "4"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9158", "answer": 5, "pred": 4, "correct": false, "output": "4. 早苗月"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9159", "answer": 1, "pred": 5, "correct": false, "output": "5. 先頭"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9160", "answer": 4, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9161", "answer": 2, "pred": 3, "correct": false, "output": "3"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9161", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9162", "answer": 3, "pred": 4, "correct": false, "output": "4. 馬車"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9163", "answer": 5, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9163", "answer": 5, "pred": 5, "correct": true, "output": "5. 支配人"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9164", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9165", "answer": 5, "pred": 4, "correct": false, "output": "4. 付箋"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9166", "answer": 3, "pred": 3, "correct": true, "output": "3. トイレ"}
@@ -248,7 +248,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9186", "answer": 4, "pred": 4, "correct": true, "output": "4. ひも"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9187", "answer": 3, "pred": 3, "correct": true, "output": "3. 寮"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9188", "answer": 4, "pred": 4, "correct": true, "output": "4. 表面"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9189", "answer": 3, "pred": 3, "correct": true, "output": "3. 野球場"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9189", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9190", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9191", "answer": 5, "pred": 5, "correct": true, "output": "5. 落葉"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9192", "answer": 3, "pred": 4, "correct": false, "output": "4. 絵はがき"}
@@ -265,7 +265,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9203", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9204", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9205", "answer": 1, "pred": 1, "correct": true, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9206", "answer": 4, "pred": 4, "correct": true, "output": "4. お墓"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9206", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9207", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9208", "answer": 3, "pred": 3, "correct": true, "output": "3. キーボード"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9209", "answer": 2, "pred": 1, "correct": false, "output": "1"}
@@ -281,7 +281,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9219", "answer": 1, "pred": 1, "correct": true, "output": "1. 食事をする"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9220", "answer": 4, "pred": 4, "correct": true, "output": "4. 卓"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9221", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9222", "answer": 3, "pred": 4, "correct": false, "output": "4. 筆"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9222", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9223", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9224", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9225", "answer": 1, "pred": 1, "correct": true, "output": "1"}
@@ -328,11 +328,11 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9266", "answer": 5, "pred": 5, "correct": true, "output": "5. 安心"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9267", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9268", "answer": 3, "pred": 3, "correct": true, "output": "3. サイレンサー"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9269", "answer": 3, "pred": 3, "correct": true, "output": "3. 美容院"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9269", "answer": 3, "pred": 4, "correct": false, "output": "4. 美容院"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9270", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9271", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9272", "answer": 1, "pred": 1, "correct": true, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9273", "answer": 3, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9273", "answer": 3, "pred": 4, "correct": false, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9274", "answer": 5, "pred": 5, "correct": true, "output": "5. 防衛"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9275", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9276", "answer": 3, "pred": 4, "correct": false, "output": "4. マット"}
@@ -342,7 +342,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9280", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9281", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9282", "answer": 1, "pred": 1, "correct": true, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9283", "answer": 2, "pred": 3, "correct": false, "output": "3"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9283", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9284", "answer": 4, "pred": 4, "correct": true, "output": "4. 千葉市"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9285", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9286", "answer": 4, "pred": 1, "correct": false, "output": "1"}
@@ -374,7 +374,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9312", "answer": 1, "pred": 4, "correct": false, "output": "4. 人身攻撃"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9313", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9314", "answer": 4, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9315", "answer": 1, "pred": 4, "correct": false, "output": "4. 海"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9315", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9316", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9317", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9318", "answer": 4, "pred": 4, "correct": true, "output": "4. 解答する"}
@@ -385,8 +385,8 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9323", "answer": 3, "pred": 3, "correct": true, "output": "3. 帽子"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9324", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9325", "answer": 5, "pred": 4, "correct": false, "output": "4. 歌舞伎狂言"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9326", "answer": 2, "pred": 4, "correct": false, "output": "4"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9327", "answer": 3, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9326", "answer": 2, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9327", "answer": 3, "pred": 4, "correct": false, "output": "4. ようだ"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9328", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9329", "answer": 3, "pred": 3, "correct": true, "output": "3. 楽器"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9330", "answer": 2, "pred": 5, "correct": false, "output": "5. ショップ"}
@@ -430,7 +430,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9368", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9369", "answer": 2, "pred": 1, "correct": false, "output": "1. シアター"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9370", "answer": 5, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9371", "answer": 3, "pred": 4, "correct": false, "output": "4"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9371", "answer": 3, "pred": 4, "correct": false, "output": "4. 漁船"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9372", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9373", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9374", "answer": 1, "pred": 1, "correct": true, "output": "1"}
@@ -474,7 +474,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9412", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9413", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9414", "answer": 5, "pred": 5, "correct": true, "output": "5. 学問"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9415", "answer": 4, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9415", "answer": 4, "pred": 4, "correct": true, "output": "4. 天井"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9416", "answer": 5, "pred": 1, "correct": false, "output": "1. ガレージ"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9417", "answer": 2, "pred": 4, "correct": false, "output": "4. 闇市"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9418", "answer": 3, "pred": 4, "correct": false, "output": "4. 二宮金次郎"}
@@ -515,7 +515,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9453", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9454", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9455", "answer": 5, "pred": 4, "correct": false, "output": "4. お皿"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9456", "answer": 2, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9456", "answer": 2, "pred": 4, "correct": false, "output": "4. 羊肉"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9457", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9458", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9459", "answer": 2, "pred": 3, "correct": false, "output": "3. ブタ"}
@@ -542,12 +542,12 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9480", "answer": 3, "pred": 3, "correct": true, "output": "3. 身体"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9481", "answer": 5, "pred": 4, "correct": false, "output": "4. 美しい"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9482", "answer": 1, "pred": 1, "correct": true, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9483", "answer": 5, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9483", "answer": 5, "pred": 5, "correct": true, "output": "5. 演芸場"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9484", "answer": 5, "pred": 4, "correct": false, "output": "4. 大河"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9485", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9486", "answer": 3, "pred": 4, "correct": false, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9487", "answer": 5, "pred": 5, "correct": true, "output": "5. 商品"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9488", "answer": 1, "pred": 1, "correct": true, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9488", "answer": 1, "pred": 4, "correct": false, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9489", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9490", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9491", "answer": 1, "pred": 1, "correct": true, "output": "1"}
@@ -568,7 +568,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9506", "answer": 2, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9507", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9508", "answer": 3, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9509", "answer": 2, "pred": 5, "correct": false, "output": "5"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9509", "answer": 2, "pred": 4, "correct": false, "output": "4. 泥沼"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9510", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9511", "answer": 1, "pred": 4, "correct": false, "output": "4. テキサス"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9512", "answer": 4, "pred": 4, "correct": true, "output": "4. 歯科"}
@@ -582,7 +582,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9520", "answer": 3, "pred": 3, "correct": true, "output": "3. 努力する"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9521", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9522", "answer": 5, "pred": 5, "correct": true, "output": "5. 補聴器"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9523", "answer": 2, "pred": 4, "correct": false, "output": "4. ベット"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9523", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9524", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9525", "answer": 4, "pred": 4, "correct": true, "output": "4. 降雪"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9526", "answer": 2, "pred": 1, "correct": false, "output": "1"}
@@ -601,7 +601,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9539", "answer": 4, "pred": 4, "correct": true, "output": "4. 生活"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9540", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9541", "answer": 3, "pred": 4, "correct": false, "output": "4"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9542", "answer": 4, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9542", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9543", "answer": 5, "pred": 4, "correct": false, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9544", "answer": 4, "pred": 4, "correct": true, "output": "4. カフェ"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9545", "answer": 4, "pred": 1, "correct": false, "output": "1"}
@@ -619,7 +619,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9557", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9558", "answer": 5, "pred": 4, "correct": false, "output": "4. 歌劇"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9559", "answer": 3, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9560", "answer": 3, "pred": 4, "correct": false, "output": "4. ティッシュ"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9560", "answer": 3, "pred": 3, "correct": true, "output": "3. テーブルクロス"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9561", "answer": 1, "pred": 4, "correct": false, "output": "4. カメラマン"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9562", "answer": 3, "pred": 4, "correct": false, "output": "4. ゴム手袋"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9563", "answer": 1, "pred": 1, "correct": true, "output": "1"}
@@ -632,13 +632,13 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9570", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9571", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9572", "answer": 1, "pred": 1, "correct": true, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9573", "answer": 3, "pred": 5, "correct": false, "output": "5. 同僚"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9573", "answer": 3, "pred": 4, "correct": false, "output": "4. 仲間"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9574", "answer": 2, "pred": 4, "correct": false, "output": "4. あげる"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9575", "answer": 3, "pred": 3, "correct": true, "output": "3. 冷蔵庫"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9576", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9577", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9578", "answer": 3, "pred": 3, "correct": true, "output": "3. 役員"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9579", "answer": 5, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9579", "answer": 5, "pred": 4, "correct": false, "output": "4. かぼちゃ"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9580", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9581", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9582", "answer": 4, "pred": 4, "correct": true, "output": "4. 成長"}
@@ -646,19 +646,19 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9584", "answer": 5, "pred": 4, "correct": false, "output": "4. 献立表"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9585", "answer": 5, "pred": 4, "correct": false, "output": "4. 自室"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9586", "answer": 3, "pred": 4, "correct": false, "output": "4. ひろい"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9587", "answer": 3, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9588", "answer": 3, "pred": 5, "correct": false, "output": "5. グラス"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9587", "answer": 3, "pred": 5, "correct": false, "output": "5. ソーホー"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9588", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9589", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9590", "answer": 4, "pred": 4, "correct": true, "output": "4. 家畜"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9591", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9592", "answer": 5, "pred": 5, "correct": true, "output": "5. 鏡の家"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9593", "answer": 2, "pred": 3, "correct": false, "output": "3. ひっくり返す"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9593", "answer": 2, "pred": 4, "correct": false, "output": "4. 庫入れ"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9594", "answer": 4, "pred": 4, "correct": true, "output": "4. 料理"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9595", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9596", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9597", "answer": 4, "pred": 4, "correct": true, "output": "4. 熱い"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9598", "answer": 5, "pred": 4, "correct": false, "output": "4"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9599", "answer": 2, "pred": 2, "correct": true, "output": "2. 階段"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9599", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9600", "answer": 1, "pred": 4, "correct": false, "output": "4. 岬"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9601", "answer": 2, "pred": 4, "correct": false, "output": "4. かわいい"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9602", "answer": 3, "pred": 3, "correct": true, "output": "3. 理容室"}
@@ -698,7 +698,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9636", "answer": 5, "pred": 4, "correct": false, "output": "4. 大津"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9637", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9638", "answer": 5, "pred": 4, "correct": false, "output": "4. ケチャップ"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9639", "answer": 3, "pred": 4, "correct": false, "output": "4. ツンドラ"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9639", "answer": 3, "pred": 4, "correct": false, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9640", "answer": 4, "pred": 4, "correct": true, "output": "4. グレートバリアリーフ"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9641", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9642", "answer": 1, "pred": 1, "correct": true, "output": "1"}
@@ -719,13 +719,13 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9657", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9658", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9659", "answer": 4, "pred": 4, "correct": true, "output": "4"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9660", "answer": 3, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9660", "answer": 3, "pred": 4, "correct": false, "output": "4. イチゴ"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9661", "answer": 3, "pred": 4, "correct": false, "output": "4. 信用する"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9662", "answer": 4, "pred": 4, "correct": true, "output": "4. うれしい"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9663", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9664", "answer": 5, "pred": 3, "correct": false, "output": "3. 取締役"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9665", "answer": 5, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9666", "answer": 3, "pred": 4, "correct": false, "output": "4. バイキング"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9666", "answer": 3, "pred": 3, "correct": true, "output": "3. ドリンク"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9667", "answer": 1, "pred": 4, "correct": false, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9668", "answer": 1, "pred": 4, "correct": false, "output": "4. 家"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9669", "answer": 2, "pred": 1, "correct": false, "output": "1"}
@@ -744,7 +744,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9682", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9683", "answer": 3, "pred": 3, "correct": true, "output": "3. 山登り"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9684", "answer": 3, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9685", "answer": 2, "pred": 3, "correct": false, "output": "3. タケノコ"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9685", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9686", "answer": 4, "pred": 4, "correct": true, "output": "4. 美しい"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9687", "answer": 5, "pred": 5, "correct": true, "output": "5. 買う"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9688", "answer": 1, "pred": 1, "correct": true, "output": "1"}
@@ -759,7 +759,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9697", "answer": 5, "pred": 5, "correct": true, "output": "5. 作動"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9698", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9699", "answer": 3, "pred": 3, "correct": true, "output": "3. 台所"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9700", "answer": 5, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9700", "answer": 5, "pred": 4, "correct": false, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9701", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9702", "answer": 5, "pred": 4, "correct": false, "output": "4. グレープ"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9703", "answer": 4, "pred": 4, "correct": true, "output": "4. 探知する"}
@@ -798,15 +798,15 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9736", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9737", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9738", "answer": 4, "pred": 4, "correct": true, "output": "4. 家屋"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9739", "answer": 2, "pred": 4, "correct": false, "output": "4. 中村区"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9740", "answer": 5, "pred": 5, "correct": true, "output": "5. 花火"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9739", "answer": 2, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9740", "answer": 5, "pred": 4, "correct": false, "output": "4. 屋形船"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9741", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9742", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9743", "answer": 4, "pred": 4, "correct": true, "output": "4. 建物"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9744", "answer": 5, "pred": 3, "correct": false, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9745", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9746", "answer": 1, "pred": 1, "correct": true, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9747", "answer": 3, "pred": 4, "correct": false, "output": "4. 走る"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9747", "answer": 3, "pred": 3, "correct": true, "output": "3. 小便に行く"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9748", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9749", "answer": 4, "pred": 4, "correct": true, "output": "4. 明るいこと"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9750", "answer": 3, "pred": 3, "correct": true, "output": "3. 肥満"}
@@ -831,7 +831,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9769", "answer": 5, "pred": 4, "correct": false, "output": "4. 掛け軸"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9770", "answer": 4, "pred": 4, "correct": true, "output": "4. ガレージ"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9771", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9772", "answer": 2, "pred": 3, "correct": false, "output": "3. 店"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9772", "answer": 2, "pred": 3, "correct": false, "output": "3. 郵便局"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9773", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9774", "answer": 4, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9775", "answer": 5, "pred": 1, "correct": false, "output": "1"}
@@ -839,7 +839,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9777", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9778", "answer": 4, "pred": 4, "correct": true, "output": "4. 夜雨"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9779", "answer": 4, "pred": 4, "correct": true, "output": "4. 滝"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9780", "answer": 2, "pred": 4, "correct": false, "output": "4"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9780", "answer": 2, "pred": 4, "correct": false, "output": "4. 小便に行く"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9781", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9782", "answer": 4, "pred": 4, "correct": true, "output": "4. 電化製品"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9783", "answer": 2, "pred": 1, "correct": false, "output": "1"}
@@ -865,7 +865,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9803", "answer": 4, "pred": 4, "correct": true, "output": "4. 息を付く"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9804", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9805", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9806", "answer": 2, "pred": 4, "correct": false, "output": "4"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9806", "answer": 2, "pred": 2, "correct": true, "output": "2"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9807", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9808", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9809", "answer": 5, "pred": 5, "correct": true, "output": "5. 霜"}
@@ -885,10 +885,10 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9823", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9824", "answer": 2, "pred": 4, "correct": false, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9825", "answer": 3, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9826", "answer": 2, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9826", "answer": 2, "pred": 3, "correct": false, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9827", "answer": 3, "pred": 4, "correct": false, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9828", "answer": 3, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9829", "answer": 2, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9829", "answer": 2, "pred": 3, "correct": false, "output": "3. 下水"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9830", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9831", "answer": 3, "pred": 4, "correct": false, "output": "4. 目を瞑る"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9832", "answer": 2, "pred": 1, "correct": false, "output": "1"}
@@ -913,7 +913,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9851", "answer": 5, "pred": 5, "correct": true, "output": "5. 部下"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9852", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9853", "answer": 1, "pred": 1, "correct": true, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9854", "answer": 3, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9854", "answer": 3, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9855", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9856", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9857", "answer": 2, "pred": 1, "correct": false, "output": "1"}
@@ -958,7 +958,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9896", "answer": 3, "pred": 4, "correct": false, "output": "4. 店頭"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9897", "answer": 2, "pred": 5, "correct": false, "output": "5. ファクシミリ"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9898", "answer": 1, "pred": 1, "correct": true, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9899", "answer": 5, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9899", "answer": 5, "pred": 5, "correct": true, "output": "5. インク"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9900", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9901", "answer": 4, "pred": 4, "correct": true, "output": "4. トランク"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9902", "answer": 5, "pred": 4, "correct": false, "output": "4. 説明する"}
@@ -990,7 +990,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9928", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9929", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9930", "answer": 4, "pred": 4, "correct": true, "output": "4. 鍵盤楽器"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9931", "answer": 2, "pred": 4, "correct": false, "output": "4. 用紙"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9931", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9932", "answer": 4, "pred": 4, "correct": true, "output": "4. ペットショップ"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9933", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9934", "answer": 1, "pred": 1, "correct": true, "output": "1"}
@@ -1004,7 +1004,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9942", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9943", "answer": 3, "pred": 3, "correct": true, "output": "3. 日誌"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9944", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9945", "answer": 2, "pred": 4, "correct": false, "output": "4. 綿"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9945", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9946", "answer": 2, "pred": 4, "correct": false, "output": "4. チタン"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9947", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9948", "answer": 5, "pred": 4, "correct": false, "output": "4. ガス"}
@@ -1024,7 +1024,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9962", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9963", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9964", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9965", "answer": 4, "pred": 4, "correct": true, "output": "4. 引き出し"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9965", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9966", "answer": 1, "pred": 3, "correct": false, "output": "3. 踵"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9967", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9968", "answer": 4, "pred": 4, "correct": true, "output": "4. 優越感"}
@@ -1035,16 +1035,16 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9973", "answer": 4, "pred": 4, "correct": true, "output": "4. 森"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9974", "answer": 5, "pred": 3, "correct": false, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9975", "answer": 5, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9976", "answer": 1, "pred": 4, "correct": false, "output": "4. ネクタイピン"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9976", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9977", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9978", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9979", "answer": 4, "pred": 4, "correct": true, "output": "4. 花火"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9980", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9981", "answer": 3, "pred": 3, "correct": true, "output": "3. 楽しむ"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9982", "answer": 3, "pred": 3, "correct": true, "output": "3. ブリッジ"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9983", "answer": 5, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9984", "answer": 4, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9985", "answer": 3, "pred": 4, "correct": false, "output": "4"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9983", "answer": 5, "pred": 5, "correct": true, "output": "5"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9984", "answer": 4, "pred": 4, "correct": true, "output": "4. 蛇"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9985", "answer": 3, "pred": 4, "correct": false, "output": "4. 板"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9986", "answer": 3, "pred": 3, "correct": true, "output": "3. 釣り人"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9987", "answer": 3, "pred": 4, "correct": false, "output": "4. トルコ"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9988", "answer": 1, "pred": 4, "correct": false, "output": "4. シルクロード"}
@@ -1053,20 +1053,20 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9991", "answer": 4, "pred": 4, "correct": true, "output": "4. 菌"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9992", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9993", "answer": 1, "pred": 1, "correct": true, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9994", "answer": 3, "pred": 3, "correct": true, "output": "3. 板張り"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9994", "answer": 3, "pred": 4, "correct": false, "output": "4. 神社"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9995", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9996", "answer": 3, "pred": 4, "correct": false, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9997", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9998", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9999", "answer": 5, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "9999", "answer": 5, "pred": 5, "correct": true, "output": "5. プール"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10000", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10001", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10002", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10003", "answer": 1, "pred": 1, "correct": true, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10004", "answer": 5, "pred": 5, "correct": true, "output": "5. 床下"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10004", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10005", "answer": 3, "pred": 3, "correct": true, "output": "3. 教室"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10006", "answer": 4, "pred": 4, "correct": true, "output": "4. 精神病患者"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10007", "answer": 4, "pred": 5, "correct": false, "output": "5"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10007", "answer": 4, "pred": 4, "correct": true, "output": "4. アンデス山脈"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10008", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10009", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10010", "answer": 3, "pred": 3, "correct": true, "output": "3. 計画"}
@@ -1090,7 +1090,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10028", "answer": 2, "pred": 4, "correct": false, "output": "4. 歌を歌う"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10029", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10030", "answer": 5, "pred": 4, "correct": false, "output": "4"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10031", "answer": 3, "pred": 3, "correct": true, "output": "3"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10031", "answer": 3, "pred": 4, "correct": false, "output": "4. 博物館"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10032", "answer": 2, "pred": 5, "correct": false, "output": "5. 犬"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10033", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "ja", "id": "10034", "answer": 1, "pred": 4, "correct": false, "output": "4. 飲み放題"}
@@ -1141,7 +1141,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "8d79cc5e4eea11f50fab18fdea20fd4f", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "e5ad2184e37ae88b2bf46bf6bc0ed2f4", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "b8b287b6277fccd4b7c9c72577177328", "answer": 4, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "f646f3e064f06423fc25b98500796cf0", "answer": 5, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "f646f3e064f06423fc25b98500796cf0", "answer": 5, "pred": 4, "correct": false, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "b0f7d7978ac41c465108a92660d70e84", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "54075de8b8b89ecef2e4eb4eaee2713d", "answer": 2, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "65435b996ce9d1685bebb74b49c1ba7f", "answer": 1, "pred": 1, "correct": true, "output": "1"}
@@ -1162,7 +1162,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "8f01273422a370a8dbda6bf473a395a0", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "e6586bba9fe96d38792e6e6d4f2703dc", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "6e433471d0e2590b8c73ceef275022b1", "answer": 4, "pred": 4, "correct": true, "output": "4"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "1bc986f8aea88d6927d8a45367855a94", "answer": 5, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "1bc986f8aea88d6927d8a45367855a94", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "8d1563697d751a364d688d6701ebdb39", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "91f512273a2da7ae796919069b20d6cf", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "49cda7eedbf63b3f38e59ba72f1ee1f9", "answer": 5, "pred": 4, "correct": false, "output": "4"}
@@ -1230,7 +1230,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "2c0030cc14a27be2401dcfdaa501f0fc", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "feb83263e6be392351db0794004efc3f", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "80697d599280d994d8a584c95824ef1f", "answer": 5, "pred": 5, "correct": true, "output": "5"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "3c1800e7dd96d37fdd3c51b9fe502342", "answer": 4, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "3c1800e7dd96d37fdd3c51b9fe502342", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "4da33e6f4b789776acb1bc10195baa83", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "ae038e9af9d5a511ada7456b5e73b15e", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "a400b9fd1e319f901471c4b42d401c52", "answer": 5, "pred": 5, "correct": true, "output": "5"}
@@ -1274,14 +1274,14 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "cb6766fb25daee911fc8e9816b98938c", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "54231f875bb7fe4d3e4afb6eae64387c", "answer": 4, "pred": 3, "correct": false, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "7d7f7d7a8ae3b20ca9fc0da6efe467b4", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "31b72d4e4ae7c672c20e27e42499ec79", "answer": 5, "pred": 3, "correct": false, "output": "3"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "31b72d4e4ae7c672c20e27e42499ec79", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "26ce83b8e9a263079aa8cdbd5258d667", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "30138608d4934a75cf0911a06b021374", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "01abce8c4964371d85a5be2019f75827", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "3e2222c99e11fca2ad4af2d470eb8ea2_1", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "847dbf5b73c3e8d49bb9a36491d95e79", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "fa031cff8e11e75c68d6a99ef0e5ca3a", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "c592258c88295756833e9796e881057b", "answer": 3, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "c592258c88295756833e9796e881057b", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "e1403a7c581bc263aea2ed8d179826d1", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "15c38f66e811d6ed68cde931bc31d93c", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "1ac54dbf6b67f27daa3d456416047584", "answer": 4, "pred": 1, "correct": false, "output": "1"}
@@ -1290,7 +1290,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "fff554fffa1a0adc64b8d1e21d55534b", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "8ea5720718c0e122efa6277edb511569", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "23e4257a49972efd8a97672f060be1c1", "answer": 1, "pred": 1, "correct": true, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "a018d65a74b9e77d81014fd8f6d78f77", "answer": 4, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "a018d65a74b9e77d81014fd8f6d78f77", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "24ceaf5c10863e73919b5f1b0f2db38e", "answer": 5, "pred": 3, "correct": false, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "900492bd731f8f615ed7c08155737d44", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "4e3f85dc92eaad4ae6bc6529d62e382c", "answer": 2, "pred": 1, "correct": false, "output": "1"}
@@ -1310,7 +1310,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "fee5ff19811750ad019665af7b36b3c4", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "e69da59cbcf2a302e4523571eba8186b", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "2dd138a63b5895cf737ced793cc668e7", "answer": 5, "pred": 5, "correct": true, "output": "5"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "b33047f46db680a9b630c13e8ca115cc", "answer": 5, "pred": 3, "correct": false, "output": "3"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "b33047f46db680a9b630c13e8ca115cc", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "f20d40bc4af588223e880e0bb58b27b8", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "b6b66d4519a84b8331ea55f84767e9df", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "952cf4b2f7a434b2eeae9f4c7ed89c0a", "answer": 5, "pred": 1, "correct": false, "output": "1"}
@@ -1352,7 +1352,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "77e2a0b469b56bea81921a4a945ffcb5", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "dc964e4f6df6b70815e81e466d0ff717", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "6b9221c1af583ffb43580857d6fde38a", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "4dc2c4596b08e9bfd893174e67bff40a", "answer": 4, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "4dc2c4596b08e9bfd893174e67bff40a", "answer": 4, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "8ae24d3ff199077a59e0d970feb665b7", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "d64a676e9d22e7edd12e7f4ce267a9f0", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "54ecb521df1d0f5b130a393c42b4126d", "answer": 3, "pred": 1, "correct": false, "output": "1"}
@@ -1373,7 +1373,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "f372587fa4c99d5bebf0d0eb987c44e2", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "d35a8a3bd560fdd651ecf314878ed30f", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "0542414710025f56b0c26e1bae5c4d06", "answer": 1, "pred": 5, "correct": false, "output": "5"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "1875f70cf736c68c7a9df3ef870224a1", "answer": 1, "pred": 1, "correct": true, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "1875f70cf736c68c7a9df3ef870224a1", "answer": 1, "pred": 3, "correct": false, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "83250ae2dfeb2e3886ead4cde8e1290f", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "70c39372c0d50566554fd72c768b75f6", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "c21ec5b367f409a0288d616f626555ae", "answer": 1, "pred": 1, "correct": true, "output": "1"}
@@ -1409,7 +1409,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "99af85081085e6228c6d78c95be01968", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "235094c966bcbdc94701b41b969f9c75", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "99789083502af9bf111876a00fae44ac", "answer": 3, "pred": 5, "correct": false, "output": "5"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "1d44fb5f4b7f1e23ff6c1c083db81ba1", "answer": 5, "pred": 3, "correct": false, "output": "3"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "1d44fb5f4b7f1e23ff6c1c083db81ba1", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "194b66240f6fab75749c1e30ed09ea09", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "83dad4fe630fddbdcd5b18ef890c66f2", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "3ebc5ddd2e97fe37fcb52aa2a9e2e1a7", "answer": 2, "pred": 2, "correct": true, "output": "2"}
@@ -1431,7 +1431,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "2ef2ae21a2d3a9ecbd5c45ff378d10e3", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "793672da43fbc609e8c5760630c7e239", "answer": 5, "pred": 3, "correct": false, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "558cb0bc25387ce38d71f64ef6f1fa57", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "2c9f4a98ce774cd734b6e384d95051a7", "answer": 2, "pred": 5, "correct": false, "output": "5"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "2c9f4a98ce774cd734b6e384d95051a7", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "33c84708785f88c19737ef5b0e31a64b", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "d867f76d000bdb59b9b4cb982bd7f0a0", "answer": 4, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "8c607d2e2e897d74048fcc794137b683", "answer": 4, "pred": 4, "correct": true, "output": "4"}
@@ -1595,7 +1595,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "d6644eacdb543a60545d2eb1ac7e6dbd", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "d1ad9b79f54205b6b9ac19a27f9c2be5", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "f116ee6620c0f171e5db54bc03a5f2e2", "answer": 3, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "ea82f9e938cbfce85fb498ce46264253", "answer": 3, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "ea82f9e938cbfce85fb498ce46264253", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "edbb57ac2f476679ae547f75ec2bef3e", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "07a99d5f2ca7028febeb9f09604b36c8", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "b42ef8be1748c19fa5938de5396f8fad", "answer": 2, "pred": 1, "correct": false, "output": "1"}
@@ -1614,7 +1614,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "7776b10c7bb96f3fe5e026678673634d", "answer": 2, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "f7c005244d406b9bde48dc8c22003af1", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "88501d528c855e2b533b3fea2f86183d", "answer": 4, "pred": 4, "correct": true, "output": "4"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "3d9c3253e24fb108cea9083e8a853cf2", "answer": 4, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "3d9c3253e24fb108cea9083e8a853cf2", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "9808782b2e2e1bfbfa27c41e605bfffe", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "c432b860fcd7297751ff5254ec4a7956", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "732af155f677a51d05d0c9e080d598b6", "answer": 4, "pred": 1, "correct": false, "output": "1"}
@@ -1624,7 +1624,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "c55c31b5a2aa996f3b75ad88c017a6b9", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "463521a93ae71e93bea8b97cdf7a6792", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "c036ce033bc429ac1aba0a6ac8d057e1", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "db7f2bfdabcf53d6778fd7af80b603d2", "answer": 1, "pred": 5, "correct": false, "output": "5"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "db7f2bfdabcf53d6778fd7af80b603d2", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "8605fd2affc796d79073d0f3ef0761c9", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "ad37795fd9e3a65553683ff305b5113d", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "bcd51af35d691f5c3b6b548096ab1559", "answer": 4, "pred": 1, "correct": false, "output": "1"}
@@ -1644,7 +1644,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "fe2a21ddb1bde76025a961126044a9a3", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "d03e09b22927542d6b0d5ebe233e467c", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "e63a210053cf7f961ca0b5a7e6eb355d", "answer": 3, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "a4b4242fab25e86a9d7ffedcaecdcdbe", "answer": 4, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "a4b4242fab25e86a9d7ffedcaecdcdbe", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "ec8797b12e3c6666ebe70b2a7680b66f", "answer": 4, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "4536489e5d8e02aadc3fcc7a55effe20", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "0854478d174c9127064f0d4b58df7e62", "answer": 3, "pred": 1, "correct": false, "output": "1"}
@@ -1683,7 +1683,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "bee2a6eadfaf7a4fa0a214e341ddbe5b", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "2f97a77d155cb99092e8a7c055737b03_1", "answer": 4, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "bc268cd19e2c95c78967fd6b9092fb90", "answer": 1, "pred": 1, "correct": true, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "060cad0d3c007ceb151db9907bfcb214", "answer": 4, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "060cad0d3c007ceb151db9907bfcb214", "answer": 4, "pred": 3, "correct": false, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "29c2cc0ba85b4afb9c9d29801469a68f", "answer": 4, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "6cb895ce89995f6be422f7c4167c7638", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "839f3c37622c1ed5eebc9cd0b9d658e8", "answer": 4, "pred": 3, "correct": false, "output": "3"}
@@ -1705,7 +1705,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "a0d02fc32878efdf0b0d420972943492", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "73fbd2caac2c3786ca810adfe7030273", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "6c515b068b4d3aa88a5382224d9b866d", "answer": 3, "pred": 3, "correct": true, "output": "3"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "0af371b94fb414860b13eea6009ccc31", "answer": 4, "pred": 5, "correct": false, "output": "5"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "0af371b94fb414860b13eea6009ccc31", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "38e61d4be0da46b3cbbd76dc20bce677", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "cebc07bd5080cc72862cb333b10d782d", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "de0386024f32cdf277a785a851b97544", "answer": 3, "pred": 1, "correct": false, "output": "1"}
@@ -1716,7 +1716,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "3a6140e475cbbd3ee1da5ba9a6953597_1", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "e75e0c11e2d5a7b634455a1b4b76856c", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "3b9ccdcb1c932c46a38e040d3e6c7f5b", "answer": 1, "pred": 1, "correct": true, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "6a29b657b29e1506284d8328dffbbd21", "answer": 2, "pred": 4, "correct": false, "output": "4"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "6a29b657b29e1506284d8328dffbbd21", "answer": 2, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "96cb628fb7ed2f53245598f707ed2b80", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "bd4e80fa6642a76c064d0bc924411fb0", "answer": 3, "pred": 4, "correct": false, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "05490e6c191fbc3c2fe0033ed0bd8aa0", "answer": 4, "pred": 3, "correct": false, "output": "3"}
@@ -1746,7 +1746,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "2067720531fc03c017af941cec2f6f40", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "70d3ebc00b165d9d08f9491a1dd85034", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "41bab71fea3fa04e5a4e10a2f86996df", "answer": 5, "pred": 3, "correct": false, "output": "3"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "e18dd9ffc7b7934c39f2b5e9dee5a8c2", "answer": 5, "pred": 5, "correct": true, "output": "5"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "e18dd9ffc7b7934c39f2b5e9dee5a8c2", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "449de58e919975867255218484a9fc89", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "9698232e3599157431c9dc8f2fe179cd", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "0b5d0c3bafbe06dd5334c20cd8ea7fe2", "answer": 4, "pred": 1, "correct": false, "output": "1"}
@@ -1880,7 +1880,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "2a32b1e541b1daae04690d0d3a4b3310", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "71cbfeb995b06b21e890c91040722252", "answer": 4, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "a15d564d0be6996251b5d523ac62db2a", "answer": 5, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "6bd170c8d3d99d3c47b3e96427bacaeb", "answer": 5, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "6bd170c8d3d99d3c47b3e96427bacaeb", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "7bc1198664b376f79d584725ad7f874b", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "d6c002d46d9bfa466637cec4a134f332", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "8cb45b421375243e788cfc64bd77b051", "answer": 5, "pred": 5, "correct": true, "output": "5"}
@@ -1946,7 +1946,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "af3b9a8b1962cd3bcd19e644d873e7bc", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "43a91955fd0717997a16897c3324e095", "answer": 4, "pred": 3, "correct": false, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "7f7a6f2b3087bf37dadbe8aa8d358047", "answer": 3, "pred": 3, "correct": true, "output": "3"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "37d88a9bb24913c1973cc26d4ce3394f", "answer": 5, "pred": 5, "correct": true, "output": "5"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "37d88a9bb24913c1973cc26d4ce3394f", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "001b0f5a841fd81d13fbe67c7c7179d6", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "9f9ca9bb06d6afc31b19c365fb29a1c9", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "d60c5a494539c66982c0f692afde9499", "answer": 2, "pred": 1, "correct": false, "output": "1"}
@@ -1971,7 +1971,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "9fdebd1c2cf498f1d726a025b780a39a", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "f36027954e43cfd926451bdf7cb0c3ac", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "7ec14907622c6d5a6087cd59a22d8c9d", "answer": 4, "pred": 4, "correct": true, "output": "4"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "efe488f67b53a4b6e69782c01c84f06c", "answer": 3, "pred": 3, "correct": true, "output": "3"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "efe488f67b53a4b6e69782c01c84f06c", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "7c62637437ad7515452886074010a438", "answer": 1, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "4f7be1c68654e2924c161c8eca652928", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "e4976ee741cf4b28b8a42780ffb15774", "answer": 2, "pred": 1, "correct": false, "output": "1"}
@@ -1979,7 +1979,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "004607228ad49b69eac932c1005d6106", "answer": 3, "pred": 4, "correct": false, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "a7f54ee1866d5db34eacf40efa53c93e", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "e56c56c3cfe50ba0c787c2bd67255be8", "answer": 4, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "6f48ee564a48293eb501cc0d8197bdd9", "answer": 3, "pred": 5, "correct": false, "output": "5"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "6f48ee564a48293eb501cc0d8197bdd9", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "13d2a103abbed930cabc9567a1ba12f2", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "0c1efb38e023ee9725486fbec4f2d797", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "b7ab4a5e0c19a98f41cd1ba3176f2dff", "answer": 3, "pred": 3, "correct": true, "output": "3"}
@@ -2019,17 +2019,17 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "1520a8fd3116e7b856947c5e308d7ce5", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "bd780fea2d4dd262583446e64c0f314d", "answer": 3, "pred": 4, "correct": false, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "99e0b2ddf88ebed98b977043b7c2331b", "answer": 5, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "eb0e0c4eaf19c1e9b4df3b4d3a11be3d", "answer": 3, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "eb0e0c4eaf19c1e9b4df3b4d3a11be3d", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "467a3b464b08b3ffc9922e2a726554f6", "answer": 2, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "dea70fe40fac9ad03bf319bf8a480efa", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "2f1680da0d388a8453150ff3637e4689", "answer": 5, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "8369adc4b4710d00f917d80a75d844d7", "answer": 3, "pred": 3, "correct": true, "output": "3"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "8369adc4b4710d00f917d80a75d844d7", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "20a3bb788cf408d9a3e25e610fe60905", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "36c1f50eec01c287b8ef6ffe69fe0528", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "5f4825137a27f369fe859e85dfe1793f", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "b3dc6d6a5e2f9d7da8eb72816c80b3f8_1", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "63bb6128026ce24209583d0eea75fc27", "answer": 4, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "e8a9142d2402f818273dd62cf5a7b559_1", "answer": 3, "pred": 3, "correct": true, "output": "3"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "e8a9142d2402f818273dd62cf5a7b559_1", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "ead9c9744aee08678759158efe005175", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "ab8bf60f76bc6119459271140ccae781", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "3c6e2d95a63316b31986e8c7979582c9", "answer": 3, "pred": 1, "correct": false, "output": "1"}
@@ -2068,7 +2068,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "d0bda97a087904320216e4d0b8a08a8d", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "e216381e9f0ddd1d248ee25fccca2b1f", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "b1fba9ad6193c6751ddb3f58f7f39b35", "answer": 1, "pred": 1, "correct": true, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "3ceae7a18073050bd2c0448abef1f393", "answer": 2, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "3ceae7a18073050bd2c0448abef1f393", "answer": 2, "pred": 3, "correct": false, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "f1182e3a070f5a1be529843aa6e5c20c", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "5799089c131e26473697afc54d5f6964", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "7ce1f99e8185489a7113e6d18c71abb0", "answer": 4, "pred": 4, "correct": true, "output": "4"}
@@ -2177,7 +2177,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "0b25bbd9e9aa976655e1975e31331709", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "925232b4c9bba945a38ac7ef0f15f8d0", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "3338109fcafaaa370c8900a53e1b3ed8", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "e172a93c72d305ee8262a8deb00d9fc3", "answer": 1, "pred": 5, "correct": false, "output": "5"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "e172a93c72d305ee8262a8deb00d9fc3", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "f1c2e37abf17d9e4ad16eb40f966c79f", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "d29252ddaf7c7ef491abcce342d7bb98", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "8c3c6b34bdb650a6517bca3786406c99", "answer": 5, "pred": 1, "correct": false, "output": "1"}
@@ -2185,7 +2185,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "c7526b682e64f355384631b35cd78fc9", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "0fba83d3997f048adcc31937221af77e", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "a5456dc611aa93b81d7ab6ed8e160f85", "answer": 4, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "11416df796f63d2f0dddc846b9c139d3", "answer": 4, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "11416df796f63d2f0dddc846b9c139d3", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "c908d7c4633c5e6add9463bdd47cb27e", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "7e522a60756f854c5331125f998bc36b", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "f4a75bf3f115b826a8097edfd0ff2781", "answer": 1, "pred": 1, "correct": true, "output": "1"}
@@ -2202,7 +2202,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "6714593a8d1f8ae39930c1f0316e9ffc", "answer": 4, "pred": 4, "correct": true, "output": "4"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "75cb55aec7e64f592c01eee5d4578dcd", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "0b30831fb1862bc62339bdf930cbc447", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "29c194d032a266a7160bff6f546a4d9d", "answer": 4, "pred": 1, "correct": false, "output": "1"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "29c194d032a266a7160bff6f546a4d9d", "answer": 4, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "ea33206992fb7ad1c3476e9673bb4a9c", "answer": 4, "pred": 5, "correct": false, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "2b7dd91da5dde1560ace2cd82af926de", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "eb50f536830ba18ab987c7ff652e2aba", "answer": 1, "pred": 1, "correct": true, "output": "1"}
@@ -2259,7 +2259,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "611a4cc0e288b8a11afa923f48cb2ab4", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "8e7941ce31996ca83cc0a68f7313c96d", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "ea02772e27f5bd40eced3b65e8c6427f", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "de54d03e69d9765872f95ff06ed21499", "answer": 2, "pred": 5, "correct": false, "output": "5"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "de54d03e69d9765872f95ff06ed21499", "answer": 2, "pred": 3, "correct": false, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "b231a732a3fdf0621391e7e385f8d651", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "b9121c3228f961c5ad68958c702cd94b", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "4015ab002ff8c233d1c7ef26f5156b88", "answer": 5, "pred": 1, "correct": false, "output": "1"}
@@ -2281,7 +2281,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "5365fd00ef8cec62ee5685e246a939db", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "5649bd90dbb57e223fd843b7a4563a0f", "answer": 4, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "0a2195ae8d4706abc5721578c9991466", "answer": 2, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "5d15989039d46156b417c149728591de", "answer": 2, "pred": 3, "correct": false, "output": "3"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "5d15989039d46156b417c149728591de", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "6eb57102b44ab74163d8f9821cbdabd0", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "63861ac5e633db9090704ae315ef6f93", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "8058c566a4f488033d00e6520b17caea", "answer": 4, "pred": 4, "correct": true, "output": "4"}
@@ -2317,7 +2317,7 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "2ca05683157a3cd89d82016f13e560ec", "answer": 2, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "1a8fbab20bbdf0bbf3961894662d5f7c", "answer": 5, "pred": 5, "correct": true, "output": "5"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "5b5d2a8b83282f61c68a870116042f64", "answer": 5, "pred": 1, "correct": false, "output": "1"}
-{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "cfa081b5ba90dae4d7ddb5b7ad9d369a", "answer": 5, "pred": 5, "correct": true, "output": "5"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "cfa081b5ba90dae4d7ddb5b7ad9d369a", "answer": 5, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "009a7aabffe0583fc2df46656b29c326", "answer": 3, "pred": 1, "correct": false, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "2521b3fe6bfd6aeb91f9107dc7c4fbee", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "3fe45ab3bd4a844ea290050fc0ece8c1_1", "answer": 5, "pred": 1, "correct": false, "output": "1"}
@@ -2338,3 +2338,303 @@
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "5074bcaf0f700c9f3c8c563067af156a", "answer": 3, "pred": 3, "correct": true, "output": "3"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "6a253e076cd2af00e17d9950d70daf47", "answer": 1, "pred": 1, "correct": true, "output": "1"}
 {"model": "Qwen/Qwen3.5-0.8B", "lang": "en", "id": "5af7c7860e3be61d4cfd814cc109f9d9", "answer": 3, "pred": 3, "correct": true, "output": "3"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4434", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9619", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9049", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9183", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4651", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4180", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3389", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10286", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9288", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9092", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3241", "answer": 8, "pred": 4, "correct": false, "output": "D"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9069", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3929", "answer": 10, "pred": 1, "correct": false, "output": "A\n\n**Step-by-step derivation:**\n\n1.  **Calculate the mass"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3844", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3047", "answer": 2, "pred": 2, "correct": true, "output": "B"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4125", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4291", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3526", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3721", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3784", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3576", "answer": 6, "pred": 3, "correct": false, "output": "C"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10212", "answer": 4, "pred": 3, "correct": false, "output": "C"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3675", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4188", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9382", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9722", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9765", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4473", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9825", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3685", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3079", "answer": 8, "pred": 2, "correct": false, "output": "B"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9587", "answer": 2, "pred": 3, "correct": false, "output": "C"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3803", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2981", "answer": 9, "pred": 9, "correct": true, "output": "I"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10210", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3787", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3914", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9876", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9268", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4252", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9553", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2982", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3615", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10273", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4529", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10221", "answer": 4, "pred": 1, "correct": false, "output": "A\n\n**Analysis:**\n\n1.  **Identify the Physical System:**"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10279", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9154", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3811", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4016", "answer": 10, "pred": 1, "correct": false, "output": "A\n\n**Step-by-step derivation:**\n\n1.  **Calculate the number"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9747", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3925", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3847", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3662", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3022", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3275", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4453", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9648", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9743", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3887", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9859", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3459", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10247", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4458", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2968", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4662", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3370", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3575", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3404", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3109", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9182", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4332", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4554", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4625", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9671", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9913", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9645", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9206", "answer": 5, "pred": 1, "correct": false, "output": "A\n\n**Step-by-step derivation:**\n\n1.  **Identify the"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9269", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9222", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3672", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9138", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9207", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3943", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9172", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10179", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3344", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3001", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3234", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3722", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3462", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4374", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9884", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4412", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9781", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3335", "answer": 4, "pred": 2, "correct": false, "output": "B"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10134", "answer": 5, "pred": 1, "correct": false, "output": "A\n\nTo find the maximum depth, we use the formula for hydraulic power:"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10220", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9290", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9101", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9555", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9370", "answer": 3, "pred": 1, "correct": false, "output": "A\n\n**Reasoning:**\nAccording to Newton's Second Law of Motion,"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3038", "answer": 7, "pred": 7, "correct": true, "output": "G"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2903", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9077", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3412", "answer": 10, "pred": 10, "correct": true, "output": "J"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9368", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9258", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10141", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9621", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10239", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9827", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4224", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10028", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9629", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9414", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4212", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9966", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2959", "answer": 8, "pred": 8, "correct": true, "output": "H"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3424", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4054", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4441", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2932", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3015", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9844", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9867", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9163", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3729", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4170", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4362", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3218", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9426", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3603", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9883", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4368", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3168", "answer": 3, "pred": 3, "correct": true, "output": "C"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9922", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9609", "answer": 6, "pred": 1, "correct": false, "output": "A."}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3610", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9558", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3311", "answer": 6, "pred": 6, "correct": true, "output": "F"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9059", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9578", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3148", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4144", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9472", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3309", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4273", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3726", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3865", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3090", "answer": 3, "pred": 3, "correct": true, "output": "C"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4615", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9890", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4137", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4594", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9642", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3892", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3742", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4148", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3172", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9173", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2999", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3423", "answer": 2, "pred": 2, "correct": true, "output": "B"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3678", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3358", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3185", "answer": 10, "pred": 10, "correct": true, "output": "J"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10045", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4027", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4329", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10071", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3736", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4409", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4617", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3073", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10182", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9907", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3243", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2893", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10164", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3956", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3225", "answer": 8, "pred": 8, "correct": true, "output": "H"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2934", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4607", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9565", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9755", "answer": 4, "pred": 1, "correct": false, "output": "A."}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9129", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3627", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9265", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4559", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3282", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3019", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9350", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2992", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9816", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4255", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10248", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3928", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3567", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3881", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2821", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9992", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9387", "answer": 5, "pred": 1, "correct": false, "output": "A\n\n**Reasoning:**\nThe problem asks for the time required to reduce"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4577", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9260", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3996", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10066", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10283", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3585", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9608", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3298", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4308", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2936", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4122", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9124", "answer": 10, "pred": 10, "correct": true, "output": "J"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9295", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9970", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4523", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3937", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9517", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10258", "answer": 10, "pred": 1, "correct": false, "output": "A\n\n**Step-by-step derivation:**\n\n1.  **Analyze the"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10217", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4428", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9640", "answer": 6, "pred": 3, "correct": false, "output": "C"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4175", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3004", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2904", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3572", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9323", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4056", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3356", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3717", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3072", "answer": 3, "pred": 3, "correct": true, "output": "C"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9909", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2930", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3261", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9270", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3594", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4358", "answer": 6, "pred": 1, "correct": false, "output": "A\n\n**Step-by-step derivation:**\n\n1.  **Identify the"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4295", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9244", "answer": 3, "pred": 1, "correct": false, "output": "A\n\n**Reasoning:**\nThe formula for the power of a thin lens"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9080", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9889", "answer": 1, "pred": 1, "correct": true, "output": "A\n\n**Reasoning:**\nThe power ($P$) of a light"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3697", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3315", "answer": 6, "pred": 6, "correct": true, "output": "F"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3834", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9627", "answer": 3, "pred": 1, "correct": false, "output": "A\n\n**Reasoning:**\nThis problem involves the conservation of momentum. Since"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3772", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9167", "answer": 3, "pred": 3, "correct": true, "output": "C"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3016", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9618", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3849", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10178", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3400", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9071", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9783", "answer": 3, "pred": 1, "correct": false, "output": "A\n\n**Step-by-step derivation:**\n\n1.  **Identify the"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9471", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2878", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4383", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3813", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4354", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3264", "answer": 5, "pred": 2, "correct": false, "output": "B"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3896", "answer": 7, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3174", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9047", "answer": 2, "pred": 3, "correct": false, "output": "C"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9945", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9657", "answer": 4, "pred": 1, "correct": false, "output": "A converging lens with a refractive power of $+15.0"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3210", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9769", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3046", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3559", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3463", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4233", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2871", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10162", "answer": 5, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9562", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10348", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4595", "answer": 9, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4573", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9230", "answer": 7, "pred": 3, "correct": false, "output": "C"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3597", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9622", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3569", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4355", "answer": 6, "pred": 1, "correct": false, "output": "A\n\n**Step-by-step Derivation:**\n\n1.  **Identify"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3017", "answer": 2, "pred": 2, "correct": true, "output": "B"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2913", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3546", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2921", "answer": 4, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9788", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9786", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-4191", "answer": 6, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3521", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9981", "answer": 1, "pred": 1, "correct": true, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3118", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9232", "answer": 3, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3171", "answer": 2, "pred": 2, "correct": true, "output": "B"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9423", "answer": 10, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-10033", "answer": 2, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-3188", "answer": 8, "pred": 1, "correct": false, "output": "A"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-2825", "answer": 7, "pred": 10, "correct": false, "output": "J"}
+{"model": "Qwen/Qwen3.5-0.8B", "lang": "sci", "id": "mmlupro-9904", "answer": 2, "pred": 1, "correct": false, "output": "A"}

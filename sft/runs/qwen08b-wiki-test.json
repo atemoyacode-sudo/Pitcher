@@ -1,0 +1,40 @@
+{
+ "run": "qwen08b-wiki",
+ "base": "/models/qwen08b-distill/merged",
+ "tokens_trained": 5242880,
+ "steps": 20,
+ "lr": 2e-05,
+ "micro": 4,
+ "accum": 32,
+ "train_seconds": 280.83819675445557,
+ "gpu": "NVIDIA H100 80GB HBM3",
+ "history": [
+  {
+   "step": 0,
+   "wiki_valid_loss": 3.1452,
+   "chat_valid_loss": 1.9531
+  },
+  {
+   "step": 10,
+   "loss": 2.783163458108902,
+   "lr": 1.1000000000000001e-05,
+   "tok_per_s": 15306
+  },
+  {
+   "step": 10,
+   "wiki_valid_loss": 2.9658,
+   "chat_valid_loss": 2.0126
+  },
+  {
+   "step": 20,
+   "loss": 2.847533978521824,
+   "lr": 2.0000000000000003e-06,
+   "tok_per_s": 18669
+  },
+  {
+   "step": 20,
+   "wiki_valid_loss": 2.9251,
+   "chat_valid_loss": 2.0213
+  }
+ ]
+}

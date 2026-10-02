@@ -42,6 +42,8 @@ docs/
 
 # Tengentoppa（大きいので git に入れない）
 data/tengentoppa/
+data/dpo/
+sft/chat_mix_train.jsonl
 sft/tengentoppa_*.jsonl
 eval/luna/*.raw.txt
 data/mcqa/

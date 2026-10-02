@@ -15,6 +15,7 @@ GPT-5.6 Luna の採点結果は、学習データの選別には使わない（O
     modal run sft/score_data_modal.py --calibrate   # 指示文の候補ごとに、人が採点した30件との一致を表示
     modal run sft/score_data_modal.py --pool sft/tengentoppa_clean_pool.jsonl   # 候補を採点（途中から再開できる）
     python3 sft/score_data_modal.py select sft/tengentoppa_clean_pool.jsonl     # 点数の高い順に長文 9,000・短文 3,000件を選ぶ
+    modal run sft/score_data_modal.py --responses data/dpo/responses_<run>.jsonl   # モデル自身の回答を採点（DPO 用）
 """
 
 import json
@@ -153,10 +154,30 @@ def select(pool: pathlib.Path, n_long: int = 9000, n_short: int = 3000):
     print(f"{out}：{len(picked)} 件")
 
 
+def score_responses(path: pathlib.Path, chunk: int = 3000):
+    """モデル自身の回答（sft/q08b_v2/dpo_modal.py の generate の出力。1行＝1問、samples に複数の回答）を採点する。
+    崩れにくくする学習（DPO）で、良い回答と崩れた回答の組を作るため。途中から再開できる。"""
+    rows = [json.loads(l) for l in path.read_text().splitlines() if l.strip()]
+    out = scores_path(path)
+    done = {(d["id"], d["k"]) for d in map(json.loads, out.read_text().splitlines())} if out.exists() else set()
+    todo = [(r, s) for r in rows for s in r["samples"] if (r["id"], s["k"]) not in done]
+    print(f"回答 {sum(len(r['samples']) for r in rows)} 件中 {len(done)} 件は採点済み、残り {len(todo)} 件")
+    scorer = Scorer()
+    for i in range(0, len(todo), chunk):
+        part = todo[i:i + chunk]
+        texts = scorer.score.remote([VARIANTS["evidence"].format(prompt=r["prompt"], output=s["output"].strip()[:2500]) for r, s in part])
+        with out.open("a") as f:
+            for (r, s), t in zip(part, texts):
+                f.write(json.dumps({"id": r["id"], "k": s["k"], "scores": parse(t), "raw": t}, ensure_ascii=False) + "\n")
+        print(f"{min(i + chunk, len(todo))} / {len(todo)}", flush=True)
+
+
 @app.local_entrypoint()
-def main(calibrate: bool = False, pool: str = ""):
+def main(calibrate: bool = False, pool: str = "", responses: str = ""):
     if pool:
         return score_pool(ROOT / pool)
+    if responses:
+        return score_responses(ROOT / responses)
     items = json.loads((ROOT / "private" / "human_eval" / "items_with_scores.json").read_text())
     res = json.loads((ROOT / "private" / "human_eval" / "human_eval_results.json").read_text())["results"]
     human = [res[str(i + 1)] for i in range(len(items))]

@@ -15,6 +15,7 @@
 - **元モデルを比べると、Qwen3.5-4B が日本語キャラの土台として最も良かった。** MiniCPM5 は日本語で書けずキャラも演じない。Spark-X2.5-4B は同じデータで LoRA しても、一貫性・自然さ・キャラ適合で Qwen3.5-4B に届かなかった（[`eval/results/model_comparison_report.md`](eval/results/model_comparison_report.md)）。
 - **リプレイには中国語の混入という副作用があった。** 元モデルの回答に中国語が混ざっていた（4B で約18%）ため、そのまま混ぜると中国語の混入が増えた。
 - **Qwen3.5-0.8B を日本語向けに学習し、[Qwen3.5-0.8B-Japanese-SFT](https://huggingface.co/Takenoko12345678/Qwen3.5-0.8B-Japanese-SFT) として公開した。** Qwen3.8-27B からの蒸留のあと、Tengentoppa から利用条件を確認できた行だけを Gemma 4 31B の採点で選んで学習した。JCommonsenseQA は 41.7% → 69.4%、中国語の混入は 0%、長すぎて途中で切れる回答も 0% になった。CPU だけでも1回の会話が約1秒で返る（詳しい評価・既知の問題・学習データの出どころはモデルカードに、評価結果の全データは `eval/results/` の `qwen08b-*` にある）。
+- **v2 では、崩れにくさと会話の自然さ、日本語の一般常識を伸ばし、[Qwen3.5-0.8B-Japanese-SFT-v2](https://huggingface.co/Takenoko12345678/Qwen3.5-0.8B-Japanese-SFT-v2) として公開した。** 日本語版 Wikipedia（約1億トークン）の追加の事前学習、先生役が作った「一言のつぶやきへの返事」と「続けての会話」の手本、自分の回答を Gemma で採点した DPO を足した。同じ言葉を止まらずに繰り返す回答は llama.cpp で 590回答中 8件 → 0件、Gemma の採点で会話の自然さ 3.49 → 4.10、一般常識（日本語）20 → 22問。会話の手本と DPO で一般常識が下がったため、知識の強い途中のモデルと重みを半分ずつ平均して取り戻した（スクリプトは [`sft/q08b_v2/`](sft/q08b_v2/)）。
 - **学習データを Gemma で採点して選ぶと、無作為に選ぶより良かった。** 同じ候補から選んだ同じ件数で比べると、知識の目安（JCommonsenseQA）が 58.7% → 69.9%、話が破綻した回答が 8% → 4%。採点の指示文は、人が採点した30件と判定が合うように調整した（30件中26件一致）。
 - **Spark-X2.5-4B の日本語化（思考なしの学習）で、思考ありの数学の力は落ちなかった。** AIME 2026 の正答率は元のモデル 53.3%、日本語化後 61.7%（各問2回、上限 32,768 トークン）。不正解のほとんどは考え終わる前の打ち切りで、差は誤差の範囲（[比較レポート](eval/results/model_comparison_report.md)の第7節）。
 
@@ -33,6 +34,7 @@
 - [x] 数学（AIME 2026、思考あり）の確認：日本語化で落ちなかった（比較レポートの第7節）
 - [x] 蒸留後のモデルでキャラクターの学習をやり直し、Hugging Face で公開（[Spark-X2.5-4B-Japanese-Pitcher](https://huggingface.co/Takenoko12345678/Spark-X2.5-4B-Japanese-Pitcher)、比較レポートの第8節）
 - [x] Qwen3.5-0.8B への蒸留と、短い回答を混ぜた追加学習（比較レポートの第10・11節）
+- [x] Qwen3.5-0.8B の日本語版 v2 を Hugging Face で公開（[Qwen3.5-0.8B-Japanese-SFT-v2](https://huggingface.co/Takenoko12345678/Qwen3.5-0.8B-Japanese-SFT-v2)、[GGUF 版](https://huggingface.co/Takenoko12345678/Qwen3.5-0.8B-Japanese-SFT-v2-GGUF)）
 - [x] Qwen3.5-0.8B の日本語版を Hugging Face で公開（[Qwen3.5-0.8B-Japanese-SFT](https://huggingface.co/Takenoko12345678/Qwen3.5-0.8B-Japanese-SFT)、[GGUF 版](https://huggingface.co/Takenoko12345678/Qwen3.5-0.8B-Japanese-SFT-GGUF)、学習データ [Japanese-SFT-Tengentoppa-Curated-12K](https://huggingface.co/datasets/Takenoko12345678/Japanese-SFT-Tengentoppa-Curated-12K)）
 - [x] 蒸留後のモデルの日本語の自然さの採点（GPT-5.6 Luna）：自然さは Qwen3.5-4B を上回り、決めておいた3つの基準をすべて満たした（[比較レポート](eval/results/model_comparison_report.md)の第6節）
 
@@ -156,4 +158,4 @@ python3 eval/score.py lora-4b --show emo-yandere          # 実際の回答を�
 
 - コード・報告書・自作の評価データ：[MIT License](LICENSE)
 - 他から取得したデータと、その翻訳・加工版：それぞれ元のライセンスに従います（MIT / CC BY 4.0 / Apache 2.0）。一覧と帰属表示は [`DATA_LICENSES.md`](DATA_LICENSES.md) にあります
-- 公開しているモデル（Hugging Face）：[Spark-X2.5-4B-Japanese](https://huggingface.co/Takenoko12345678/Spark-X2.5-4B-Japanese)、[GGUF 版](https://huggingface.co/Takenoko12345678/Spark-X2.5-4B-Japanese-GGUF)、蒸留データ [Japanese-SFT-Qwen3.8-27B-10K](https://huggingface.co/datasets/Takenoko12345678/Japanese-SFT-Qwen3.8-27B-10K)（いずれも Apache 2.0）、[Qwen3.5-0.8B-Japanese-SFT](https://huggingface.co/Takenoko12345678/Qwen3.5-0.8B-Japanese-SFT)・[GGUF 版](https://huggingface.co/Takenoko12345678/Qwen3.5-0.8B-Japanese-SFT-GGUF)（Apache 2.0）、学習データ [Japanese-SFT-Tengentoppa-Curated-12K](https://huggingface.co/datasets/Takenoko12345678/Japanese-SFT-Tengentoppa-Curated-12K)（CC BY 4.0）
+- 公開しているモデル（Hugging Face）：[Spark-X2.5-4B-Japanese](https://huggingface.co/Takenoko12345678/Spark-X2.5-4B-Japanese)、[GGUF 版](https://huggingface.co/Takenoko12345678/Spark-X2.5-4B-Japanese-GGUF)、蒸留データ [Japanese-SFT-Qwen3.8-27B-10K](https://huggingface.co/datasets/Takenoko12345678/Japanese-SFT-Qwen3.8-27B-10K)（いずれも Apache 2.0）、[Qwen3.5-0.8B-Japanese-SFT](https://huggingface.co/Takenoko12345678/Qwen3.5-0.8B-Japanese-SFT)・[GGUF 版](https://huggingface.co/Takenoko12345678/Qwen3.5-0.8B-Japanese-SFT-GGUF)（Apache 2.0）、[Qwen3.5-0.8B-Japanese-SFT-v2](https://huggingface.co/Takenoko12345678/Qwen3.5-0.8B-Japanese-SFT-v2)・[GGUF 版](https://huggingface.co/Takenoko12345678/Qwen3.5-0.8B-Japanese-SFT-v2-GGUF)（Apache 2.0）、学習データ [Japanese-SFT-Tengentoppa-Curated-12K](https://huggingface.co/datasets/Takenoko12345678/Japanese-SFT-Tengentoppa-Curated-12K)（CC BY 4.0）
