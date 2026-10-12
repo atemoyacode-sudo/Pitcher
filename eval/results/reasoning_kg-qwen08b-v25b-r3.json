@@ -1,0 +1,31 @@
+{
+ "run": "kg-qwen08b-v25b-r3",
+ "mmlu_pro_sci": {
+  "n": 300,
+  "acc_at_cap": {
+   "4096": 0.3833,
+   "8192": 0.3833,
+   "16384": 0.3833,
+   "32768": 0.3833
+  },
+  "acc": 0.3833,
+  "truncated": 0.1733,
+  "tokens_mean": 1277,
+  "tokens_median": 277,
+  "tokens_mean_correct": 496
+ },
+ "mgsm_ja": {
+  "n": 250,
+  "acc_at_cap": {
+   "4096": 0.276,
+   "8192": 0.276,
+   "16384": 0.276,
+   "32768": 0.276
+  },
+  "acc": 0.276,
+  "truncated": 0.0,
+  "tokens_mean": 181,
+  "tokens_median": 137,
+  "tokens_mean_correct": 125
+ }
+}

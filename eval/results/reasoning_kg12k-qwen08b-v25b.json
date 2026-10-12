@@ -1,0 +1,17 @@
+{
+ "run": "kg12k-qwen08b-v25b",
+ "mmlu_pro_sci": {
+  "n": 300,
+  "acc_at_cap": {
+   "4096": 0.3233,
+   "8192": 0.3333,
+   "16384": 0.3367,
+   "32768": 0.3367
+  },
+  "acc": 0.3367,
+  "truncated": 0.07,
+  "tokens_mean": 1863,
+  "tokens_median": 266,
+  "tokens_mean_correct": 636
+ }
+}

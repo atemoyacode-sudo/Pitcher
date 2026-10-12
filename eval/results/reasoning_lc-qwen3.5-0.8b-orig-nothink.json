@@ -1,0 +1,31 @@
+{
+ "run": "lc-qwen3.5-0.8b-orig-nothink",
+ "mmlu_pro_sci": {
+  "n": 300,
+  "acc_at_cap": {
+   "4096": 0.33,
+   "8192": 0.33,
+   "16384": 0.33,
+   "32768": 0.33
+  },
+  "acc": 0.33,
+  "truncated": 0.4933,
+  "tokens_mean": 2663,
+  "tokens_median": 3993,
+  "tokens_mean_correct": 1165
+ },
+ "mgsm_ja": {
+  "n": 250,
+  "acc_at_cap": {
+   "4096": 0.152,
+   "8192": 0.152,
+   "16384": 0.152,
+   "32768": 0.152
+  },
+  "acc": 0.152,
+  "truncated": 0.072,
+  "tokens_mean": 681,
+  "tokens_median": 311,
+  "tokens_mean_correct": 281
+ }
+}

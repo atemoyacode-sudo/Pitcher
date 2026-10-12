@@ -1,0 +1,31 @@
+{
+ "run": "lc-qwen08b-v25b-nothink",
+ "mmlu_pro_sci": {
+  "n": 300,
+  "acc_at_cap": {
+   "4096": 0.3133,
+   "8192": 0.3133,
+   "16384": 0.3133,
+   "32768": 0.3133
+  },
+  "acc": 0.3133,
+  "truncated": 0.0867,
+  "tokens_mean": 953,
+  "tokens_median": 237,
+  "tokens_mean_correct": 399
+ },
+ "mgsm_ja": {
+  "n": 250,
+  "acc_at_cap": {
+   "4096": 0.28,
+   "8192": 0.28,
+   "16384": 0.28,
+   "32768": 0.28
+  },
+  "acc": 0.28,
+  "truncated": 0.0,
+  "tokens_mean": 155,
+  "tokens_median": 105,
+  "tokens_mean_correct": 107
+ }
+}

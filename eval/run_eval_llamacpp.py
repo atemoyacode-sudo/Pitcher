@@ -32,9 +32,11 @@ PARALLEL = 8
 PORT = 8091
 
 
-def start_server(gguf: str, max_tokens: int = 0) -> subprocess.Popen:
+def start_server(gguf: str, max_tokens: int = 0, lora: str = "") -> subprocess.Popen:
     log = open(HERE / "results" / "llama-server.log", "w")
-    p = subprocess.Popen(["llama-server", "-m", gguf, "--port", str(PORT), "-ngl", "99", "-np", str(PARALLEL),
+    # 部品（LoRA の GGUF）を付けて測るときは --lora（効き具合 1）
+    extra = ["--lora", lora] if lora else []
+    p = subprocess.Popen(["llama-server", "-m", gguf, *extra, "--port", str(PORT), "-ngl", "99", "-np", str(PARALLEL),
                           "-c", str(max(4096, max_tokens + 1024) * PARALLEL), "--jinja", "--no-webui"], stdout=log, stderr=subprocess.STDOUT)
     for _ in range(300):
         try:
@@ -76,19 +78,26 @@ def main():
     ap.add_argument("--run-name", required=True)
     ap.add_argument("--only", default="")
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--presence", type=float, default=None, help="presence_penalty を変える（推奨の設定を見直すときの確認用）")
+    ap.add_argument("--temperature", type=float, default=None)
+    ap.add_argument("--top-p", type=float, default=None)
     ap.add_argument("--repeat-penalty", type=float, default=0, help="llama.cpp の repeat_penalty（直近64トークンに出た語を出にくくする）")
     ap.add_argument("--qwen", action="store_true", help="Qwen3.5 系の推奨の生成設定を使う（0.8B など）")
     ap.add_argument("--max-tokens", type=int, default=0, help="回答の長さの上限（既定 512）。打ち切りの影響を調べる再テスト用")
+    ap.add_argument("--lora", default="", help="付ける部品（LoRA の GGUF）")
     a = ap.parse_args()
 
     if a.qwen:
         SAMPLED.clear()
         SAMPLED.update(SAMPLED_QWEN)
+    for k, v in (("presence_penalty", a.presence), ("temperature", a.temperature), ("top_p", a.top_p)):
+        if v is not None:
+            SAMPLED[k] = v
     if a.repeat_penalty:  # 公開用の推奨設定の確認用（0.8B は笑い声などをまれに繰り返し続けるため）
         SAMPLED["repeat_penalty"] = a.repeat_penalty
     if a.max_tokens:
         SAMPLED["max_tokens"] = a.max_tokens
-    server = start_server(a.gguf, a.max_tokens)
+    server = start_server(a.gguf, a.max_tokens, a.lora)
     try:
         if a.mode == "eval140":
             items = json.loads((HERE / "prompts.json").read_text())["items"]
